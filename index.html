@@ -5,8 +5,143 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="header">
+      <div class="header__logo">
+        <p class="header__logo-text caps">Pink</p>
+      </div>
+      <button type="button" class="header__menu-button"></button>
+      <nav class="header__menu header__menu--hidden">
+        <ul class="header__menu-list">
+          <li class="header__menu-item caps">Главная</li>
+          <li class="header__menu-item caps">Фотографии</li>
+          <li class="header__menu-item caps">Конкурс</li>
+          <li class="header__menu-item caps">HTML Academy</li>
+        </ul>
+      </nav>
+      <img src="http://placehold.it/320x286" class="pink-image-1">
+    </header>
+    <main>
+      <section class="download">
+        <a class="download__button">Скачать приложение</a>
+        <ul class="download__choose-os">
+          <li class="download__os-item"><img src="http://placehold.it/50x50"></li>
+          <li class="download__os-item"><img src="http://placehold.it/50x50"></li>
+          <li class="download__os-item"><img src="http://placehold.it/50x50"></li>
+        </ul>
+        <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </section>
+      <section class="features">
+        <h1 class="features__header">Устали от серости мегаполиса?</h1>
+        <h2 class="features__header">Нам есть, что вам предложить!</h2>
+        <div class="features__feature">
+          <h3 class="features__feature-header">Поднимает настроение</h3>
+          <p class="features__feature-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </div>
+        <div class="features__feature">
+          <h3 class="features__feature-header">Меняет мир вокруг</h3>
+          <p class="features__feature-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+        <div class="features__feature">
+          <h3 class="features__feature-header">Заводит новых друзей</h3>
+          <p class="features__feature-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+        <img src="http://placehold.it/155x320" class="pink-image-2">
+      </section>
+      <section class="reviews">
+        <div class="reviews__review reviews__review--active">
+          <h3 class="reviews__review-header">Николай Петров</h3>
+          <p class="reviews__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+        <div class="reviews__review reviews__review--hidden">
+          <h3 class="reviews__review-header">Николай Петров</h3>
+          <p class="reviews__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+        <div class="reviews__review reviews__review--hidden">
+          <h3 class="reviews__review-header">Николай Петров</h3>
+          <p class="reviews__review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+        <div class="controls">
+          <label><input type="radio" class="controls__control-button controls__control-button--active"></label>
+          <label><input type="radio" class="controls__control-button"></label>
+          <label><input type="radio" class="controls__control-button"></label>
+        </div>
+      </section>
+      <section class="prices">
+        <div class="prices__price prices__price--hidden">
+        <div class="prices__price-header">
+          <h4 class="prices__price-plan">Стандарт</h4>
+          <h5 class="prices__price-amount">3,99 USD</h5>
+        </div>
+        <div class="prices__service-included">
+          <div class="prices__service-item">
+            <p class="prices__service-text">Розовый фильтр</p>
+            <svg class="prices__image-included"></svg>
+          </div>
+          <div class="prices__service-item">
+            <p class="prices__service-text">Смайлики</p>
+            <svg class="prices__image-excluded"></svg>
+          </div>
+          <div class="prices__service-item">
+            <p class="prices__service-text">Комментарии</p>
+            <svg class="prices__image-excluded"></svg>
+          </div>
+        </div>
+      </div>
+        <div class="prices__price prices__price--active">
+          <div class="prices__price-header">
+            <h4 class="prices__price-plan">Стандарт</h4>
+            <h5 class="prices__price-amount">3,99 USD</h5>
+          </div>
+          <div class="prices__service-included">
+            <div class="prices__service-item">
+              <p class="prices__service-text">Розовый фильтр</p>
+              <svg class="prices__image-included"></svg>
+            </div>
+            <div class="prices__service-item">
+              <p class="prices__service-text">Смайлики</p>
+              <svg class="prices__image-included"></svg>
+            </div>
+            <div class="prices__service-item">
+              <p class="prices__service-text">Комментарии</p>
+              <svg class="prices__image-excluded"></svg>
+            </div>
+          </div>
+        </div>
+        <div class="prices__price prices__price--hidden">
+          <div class="prices__price-header">
+            <h4 class="prices__price-plan">Стандарт</h4>
+            <h5 class="prices__price-amount">3,99 USD</h5>
+          </div>
+          <div class="prices__service-included">
+            <div class="prices__service-item">
+              <p class="prices__service-text">Розовый фильтр</p>
+              <svg class="prices__image-included"></svg>
+            </div>
+            <div class="prices__service-item">
+              <p class="prices__service-text">Смайлики</p>
+              <svg class="prices__image-included"></svg>
+            </div>
+            <div class="prices__service-item">
+              <p class="prices__service-text">Комментарии</p>
+              <svg class="prices__image-included"></svg>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <label><input type="radio" class="controls__control-button"></label>
+          <label><input type="radio" class="controls__control-button controls__control-button--active"></label>
+          <label><input type="radio" class="controls__control-button"></label>
+        </div>
+      </section>
+      <footer class="contacts">
+        <h3 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h3>
+        <h6 class="contacts__phone">Звоните:</h6>
+        <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
+        <h6 class="contacts__mail">Пишите:</h6>
+        <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
+        <h6 class="contacts__address">Приезжайте в гости:</h6>
+        <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+      </footer>
+    </main>
   </body>
 </html>
