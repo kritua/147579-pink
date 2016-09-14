@@ -1,10 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
 </head>
-<body>
-
-</body>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <p class="header__logo-text">Pink</p>
+      </div>
+      <button type="button" class="header__menu-button"></button>
+      <nav class="header__menu header__menu--hidden">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">Главная</li>
+          <li class="header__menu-item">Фотографии</li>
+          <li class="header__menu-item">Конкурс</li>
+          <li class="header__menu-item">HTML Academy</li>
+        </ul>
+        <h1 class="header__main-header">Фотографии пользователей</h1>
+      </nav>
+    </header>
+    <main>
+      <section class="photos">
+        <h2 class="photos__header">Взгляните на фотографии, которые выкладывают пользователи!
+          Видите, как не хватает ваших?</h2>
+        <div class="photos__item photos__item--best-photo">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__photo-of-the-day">
+            <p>Панорама дня</p>
+          </div>
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Анна</h3>
+            <h4 class="photos__comment-time">(5 минут назад)</h4>
+            <p class="photos__user-comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="photos__user-likes">Нравится: 215</p>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Левон</h3>
+            <h4 class="photos__comment-time">(5 часов назад)</h4>
+            <p class="photos__user-comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="photos__user-likes">Нравится: 356</p>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Антон</h3>
+            <h4 class="photos__comment-time">(12 часов назад)</h4>
+            <p class="photos__user-comment">Соседи будут рады!</p>
+            <p class="photos__user-likes">Нравится: 666</p>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Борис</h3>
+            <h4 class="photos__comment-time">(20 часов назад)</h4>
+            <p class="photos__user-comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <p class="photos__user-likes">Нравится: 215</p>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Сергей</h3>
+            <h4 class="photos__comment-time">(25 часов назад)</h4>
+            <p class="photos__user-comment">Самая кубанская в мире</p>
+            <p class="photos__user-likes">Нравится: 4</p>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Максим</h3>
+            <h4 class="photos__comment-time">(40 часов назад)</h4>
+            <p class="photos__user-comment">Всем GM и взаимные лайки!</p>
+            <p class="photos__user-likes">Нравится: 2560</p>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img src="http://placehold.it/320x140" class="photos__item-img">
+          <div class="photos__user-review">
+            <h3 class="photos__user-name">Надежда</h3>
+            <h4 class="photos__comment-time">(45 часов назад)</h4>
+            <p class="photos__user-comment">Где снег-то?</p>
+            <p class="photos__user-likes">Нравится: 150</p>
+          </div>
+        </div>
+      </section>
+      <section class="add-your-photo">
+        <h2 class="add-your-photo__header">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+        <div class="add-your-photo__editor">
+          <img src="http://placehold.it/300x370" class="add-your-photo__preview">
+          <div class="add-your-photo__tools">
+            <div class="add-your-photo__cut-photo">Cut</div>
+            <div class="add-your-photo__fill-photo">Fill</div>
+            <div class="add-your-photo__bright-contrast">Brightness-Contrast</div>
+            <div class="add-your-photo__slider-control"></div>
+          </div>
+          <div class="add-your-photo__buttons">
+            <button type="button" class="add-your-photo__button-add">Запостить</button>
+            <button type="button" class="add-your-photo__button-cancel" disabled>Отмена</button>
+          </div>
+        </div>
+      </section>
+      <footer class="form-footer">
+        <img src="http://placehold.it/150x30" class="pink-logo">
+        <div class="social">
+          <div class="social__button social__button--twitter">Twitter</div>
+          <div class="social__button social__button--facebook">Facebook</div>
+          <div class="social__button social__button--youtube">Youtube</div>
+        </div>
+        <div class="designed-by">
+          <div class="designed-by__text">Разработано</div>
+          <img src="http://placehold.it/30x30" class="designed-by__img">
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
