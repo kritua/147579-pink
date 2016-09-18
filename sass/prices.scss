@@ -1,0 +1,40 @@
+@import 'vars';
+
+.prices {
+  background-color: #f2f2f2;
+  transform: skewY(-5deg);
+  padding-top: 77px;
+  margin-top: 34px;
+  &__item {
+    transform: skewY(5deg);
+  }
+
+  &__header {
+    background-color: #283645;
+    text-align: center;
+    color: #ffffff;
+    padding: 17px 0 22px;
+  }
+  &__price-plan {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &__amount {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+    font-weight: lighter;
+  }
+  &__image,
+  &__service-text {
+    display: inline-block;
+  }
+  &__image {
+    width: 20px;
+    height: 20px;
+  }
+
+
+}

@@ -1,0 +1,31 @@
+@import 'vars';
+
+.controls {
+  box-sizing: border-box;
+  &__control-button {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #bec2c7;
+    margin: 22px 7px;
+    &:hover {
+      background-color: #7e868f;
+    }
+    &:active {
+      background-color: #e9ebec;
+    }
+  }
+}
+
+#first-slide:checked ~ .controls__label[for='first-slide'],
+#second-slide:checked ~ .controls__label[for='second-slide'],
+#third-slide:checked ~ .controls__label[for='third-slide'] {
+  border: 3px solid #283645;
+  background-color: #ffffff;
+}

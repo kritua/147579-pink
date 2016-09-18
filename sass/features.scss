@@ -1,0 +1,28 @@
+@import 'vars';
+
+.features {
+  background-color: #f2f2f2;
+  transform: skewY(-5deg);
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: -48px;
+  &__item {
+    transform: skewY(5deg);
+  }
+  &__header {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #283645;
+    margin-top: -7px;
+    margin-bottom: 32px;
+  }
+  &__pink-image {
+    transform: skewY(5deg);
+    margin-top: 9px;
+  }
+}

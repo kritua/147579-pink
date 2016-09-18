@@ -1,0 +1,44 @@
+@import 'vars';
+
+@mixin bg-color-opacity($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+.header {
+  background: $bg-color url('../img/bg-back-mobile@1x.jpg') no-repeat center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    background-color: transparentize($bg-color, 0.7);
+    padding: 20px 20px 15px;
+  }
+
+  &__logo-img,
+  &__button-menu {
+    flex-basis: 50%;
+  }
+
+  &__logo-img {
+    text-align: left;
+  }
+
+  &__button-menu {
+    text-align: right;
+  }
+
+  &__button-menu button {
+    border: none;
+    background-color: $no-bg-color;
+    padding: 0;
+  }
+
+  &__menu--hidden {
+    display: none;
+  }
+  &__pink-image {
+    padding-top: 110px;
+    margin-bottom: -5px;
+  }
+}

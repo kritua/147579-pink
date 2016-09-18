@@ -1,0 +1,18 @@
+@import 'vars';
+
+.headers {
+  &__item-h1,
+  &__item-h2 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #283645;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 40px;
+  }
+
+  &__item-h2 {
+    margin-top: 30px;
+    margin-bottom: 47px;
+  }
+}
