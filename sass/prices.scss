@@ -5,33 +5,33 @@
   transform: skewY(-5deg);
   padding-top: 77px;
   margin-top: 34px;
-  &__item {
+  .prices__item {
     transform: skewY(5deg);
   }
 
-  &__header {
+  .prices__header {
     background-color: #283645;
     text-align: center;
     color: #ffffff;
     padding: 17px 0 22px;
   }
-  &__price-plan {
+  .prices__price-plan {
     font-size: 18px;
     line-height: 30px;
     margin: 0;
     text-transform: uppercase;
   }
-  &__amount {
+  .prices__amount {
     font-size: 24px;
     line-height: 30px;
     margin: 0;
     font-weight: lighter;
   }
-  &__image,
-  &__service-text {
+  .prices__image,
+  .prices__service-text {
     display: inline-block;
   }
-  &__image {
+  .prices__image {
     width: 20px;
     height: 20px;
   }

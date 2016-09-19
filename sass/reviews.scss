@@ -8,24 +8,24 @@
   & .main-container {
     overflow: hidden;
   }
-  &__slider {
+  .reviews__slider {
     width: 300%;
   }
-  &__item {
+  .reviews__item {
     float: left;
     width: 33.33%;
   }
 
-  &__item--hidden {
+  .reviews__item--hidden {
     visibility: hidden;
   }
 
-  &__header {
+  .reviews__header {
     font-size: 18px;
     line-height: 30px;
   }
 
-  &__text {
+  .reviews__text {
     font-size: 14px;
     line-height: 30px;
     color: #283645;

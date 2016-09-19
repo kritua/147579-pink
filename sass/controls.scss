@@ -2,11 +2,11 @@
 
 .controls {
   box-sizing: border-box;
-  &__control-button {
+  .controls__control-button {
     display: none;
   }
 
-  &__label {
+  .controls__label {
     display: inline-block;
     vertical-align: middle;
     width: 6px;
