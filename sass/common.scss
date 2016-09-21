@@ -21,10 +21,21 @@
 
 .body {
   width: 320px;
-  @include font-type('OpenSansLight');
+  @include font-type('OpenSans');
   margin: 0;
 }
 
 .main-container {
   padding: 0 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .body {
+    width: 660px;
+    margin: 0 auto;
+  }
 }

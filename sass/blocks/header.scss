@@ -1,18 +1,15 @@
 @import '../vars';
 
-@mixin bg-color-opacity($color, $opacity: 0.3) {
-  background: $color;
-  background: rgba($color, $opacity);
-}
-
 .header {
   background: $bg-darkblue url('../img/bg-back-mobile@1x.jpg') no-repeat center;
-
+  &--menu-opened {
+    background-position: 50% 258px;
+  }
   .header__logo {
     display: flex;
     align-items: center;
     background-color: transparentize($bg-darkblue, 0.7);
-    padding: 20px 20px 15px;
+    padding: 20px;
   }
 
   .header__logo-img,
@@ -35,16 +32,36 @@
   }
 
   .header__menu--hidden {
-    //display: none;
+    display: none;
   }
   .header__pink-image {
+    display: block;
+    margin: 0 auto -5px;
     padding-top: 110px;
-    margin-bottom: -5px;
   }
 
   .header__menu-list {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-darkblue;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
   }
-  
+
+  .header__menu-item {
+    padding: 15px;
+    border-top: 2px solid #485461;
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
 
 }

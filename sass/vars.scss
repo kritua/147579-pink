@@ -1,10 +1,30 @@
+
+//Backgrounds
+
 $bg-darkblue: #1d2631;
-$no-bg-color: transparent;
-$content-padding: 0 20px;
 $bg-white: #ffffff;
 $bg-lightgrey: #f2f2f2;
-$tablet-widths: "(min-width: 660px)";
-$desktop-widths: "(min-width: 960px)";
+$no-bg-color: transparent;
+
+//Colors
+
+$clr-darkblue: #283645;
+$clr-pink: #d22856;
+
+//Margin Padding
+
+$content-padding: 0 20px;
+
+
+
+//Media queries
+
+$tablet-widths: (min-width: 660px);
+$desktop-widths: (min-width: 960px);
+
+
+
+//Mixins
 
 @mixin font-type($font-weight) {
   font-family: $font-weight, 'Helvetica Neue', Arial, sans-serif;

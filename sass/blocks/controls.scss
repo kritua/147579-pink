@@ -2,10 +2,10 @@
 
 .controls {
   box-sizing: border-box;
+  text-align: center;
   .controls__control-button {
     display: none;
   }
-
   .controls__label {
     display: inline-block;
     vertical-align: middle;
@@ -25,7 +25,10 @@
 
 #first-slide:checked ~ .controls__label[for='first-slide'],
 #second-slide:checked ~ .controls__label[for='second-slide'],
-#third-slide:checked ~ .controls__label[for='third-slide'] {
-  border: 3px solid #283645;
+#third-slide:checked ~ .controls__label[for='third-slide'],
+#first-control:checked ~ .controls__label[for='first-control'],
+#second-control:checked ~ .controls__label[for='second-control'],
+#third-control:checked ~ .controls__label[for='third-control'] {
+  border: 3px solid $clr-darkblue;
   background-color: #ffffff;
 }

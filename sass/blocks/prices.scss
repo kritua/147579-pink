@@ -5,14 +5,18 @@
   transform: skewY(-5deg);
   padding-top: 77px;
   margin-top: 34px;
+
+  .controls {
+    transform: skewY(5deg);
+    padding: 30px 0 50px;
+  }
+
   .prices__item {
     transform: skewY(5deg);
     &--hidden {
       display: none;
     }
   }
-
-
   .prices__header {
     background-color: #283645;
     text-align: center;

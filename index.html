@@ -14,13 +14,14 @@
           <img src="./img/logo-pink-white-mobile.svg">
         </div>
         <div class="header__button-menu">
-          <button type="button"><img src="./img/icon-menu-burger.svg"></button>
+          <button class="header__button-burger" type="button"><img src="./img/icon-menu-burger.svg"></button>
+          <button class="header__button-close" type="button"><img src="./img/icon-menu-cross.svg"></button>
         </div>
       </div>
       <nav class="header__menu header__menu--hidden">
         <ul class="header__menu-list">
           <li class="header__menu-item"><a href="#">Главная</a></li>
-          <li class="header__menu-item"><a href="#">Фотографии</a></li>
+          <li class="header__menu-item"><a href="photo.html">Фотографии</a></li>
           <li class="header__menu-item"><a href="#">Конкурс</a></li>
           <li class="header__menu-item"><a href="#">HTML Academy</a></li>
         </ul>
@@ -181,24 +182,30 @@
           </div>
         </div>
         <div class="controls">
-          <label><input type="radio" class="controls__control-button"></label>
-          <label><input type="radio" class="controls__control-button controls__control-button--active"></label>
-          <label><input type="radio" class="controls__control-button"></label>
+          <input name="toggle" id="first-control" type="radio" class="controls__control-button controls__control-button--active" checked>
+          <label for="first-control" class="controls__label controls__label--active"></label>
+          <input name="toggle" id="second-control" type="radio" class="controls__control-button">
+          <label for="second-control" class="controls__label controls__label--active"></label>
+          <input name="toggle" id="third-control" type="radio" class="controls__control-button">
+          <label for="third-control" class="controls__label controls__label--active"></label>
         </div>
       </div>
     </section>
-    <footer class="contacts">
-      <div class="main-container">
-        <h3 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h3>
-        <h6 class="contacts__phone">Звоните:</h6>
-        <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
-        <h6 class="contacts__mail">Пишите:</h6>
-        <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
-        <h6 class="contacts__address">Приезжайте в гости:</h6>
-        <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
-        <div class="contacts__map"><img class="contacts__map-image" src="http://placehold.it/320x100"></div>
-      </div>
-    </footer>
   </main>
+  <footer class="contacts">
+    <div class="main-container">
+      <h3 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h3>
+      <h6 class="contacts__small-header">Звоните:</h6>
+      <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
+      <h6 class="contacts__small-header">Пишите:</h6>
+      <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
+      <h6 class="contacts__small-header">Приезжайте в гости:</h6>
+      <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+    </div>
+    <div class="contacts__map-container">
+      <img src="./img/icon-map-marker.svg" class="contacts__map-point">
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
