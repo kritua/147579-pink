@@ -1,8 +1,8 @@
-@import 'vars';
+@import '../vars';
 
-.headers {
-  &__item-h1,
-  &__item-h2 {
+.page-headers {
+  .page-headers__item-h1,
+  .page-headers__item-h2 {
     font-size: 24px;
     line-height: 28px;
     color: #283645;
@@ -11,7 +11,7 @@
     margin-top: 40px;
   }
 
-  &__item-h2 {
+  .page-headers__item-h2 {
     margin-top: 30px;
     margin-bottom: 47px;
   }

@@ -1,8 +1,8 @@
-@import 'vars';
+@import '../vars';
 
 .reviews {
   position: relative;
-  background-color: #ffffff;
+  background-color: $bg-white;
   text-align: center;
   padding-top: 26px;
   & .main-container {

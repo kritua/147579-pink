@@ -1,27 +1,27 @@
-@import 'vars';
+@import '../vars';
 
 .features {
-  background-color: #f2f2f2;
+  background-color: $bg-lightgrey;
   transform: skewY(-5deg);
   padding-top: 50px;
   text-align: center;
   margin-bottom: -48px;
-  &__item {
+  .features__item {
     transform: skewY(5deg);
   }
-  &__header {
+  .features__header {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
   }
-  &__text {
+  .features__text {
     font-size: 14px;
     line-height: 24px;
     color: #283645;
     margin-top: -7px;
     margin-bottom: 32px;
   }
-  &__pink-image {
+  .features__pink-image {
     transform: skewY(5deg);
     margin-top: 9px;
   }

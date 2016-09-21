@@ -1,7 +1,7 @@
-@import 'vars';
+@import '../vars';
 
 .download {
-  background-color: $bg-color;
+  background-color: $bg-darkblue;
 
   & .main-container {
     padding-top: 30px;

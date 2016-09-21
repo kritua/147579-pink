@@ -1,4 +1,4 @@
-@import 'vars';
+@import '../vars';
 
 @mixin bg-color-opacity($color, $opacity: 0.3) {
   background: $color;
@@ -6,12 +6,12 @@
 }
 
 .header {
-  background: $bg-color url('../img/bg-back-mobile@1x.jpg') no-repeat center;
+  background: $bg-darkblue url('../img/bg-back-mobile@1x.jpg') no-repeat center;
 
   .header__logo {
     display: flex;
     align-items: center;
-    background-color: transparentize($bg-color, 0.7);
+    background-color: transparentize($bg-darkblue, 0.7);
     padding: 20px 20px 15px;
   }
 
@@ -35,10 +35,16 @@
   }
 
   .header__menu--hidden {
-    display: none;
+    //display: none;
   }
   .header__pink-image {
     padding-top: 110px;
     margin-bottom: -5px;
   }
+
+  .header__menu-list {
+    list-style: none;
+  }
+  
+
 }

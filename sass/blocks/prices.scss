@@ -1,4 +1,4 @@
-@import 'vars';
+@import '../vars';
 
 .prices {
   background-color: #f2f2f2;
@@ -7,13 +7,19 @@
   margin-top: 34px;
   .prices__item {
     transform: skewY(5deg);
+    &--hidden {
+      display: none;
+    }
   }
+
 
   .prices__header {
     background-color: #283645;
     text-align: center;
     color: #ffffff;
     padding: 17px 0 22px;
+    border: 2px solid #e5e5e5;
+    border-top-style: none;
   }
   .prices__price-plan {
     font-size: 18px;
@@ -27,14 +33,24 @@
     margin: 0;
     font-weight: lighter;
   }
+
+  .prices__service-item {
+    border: 2px solid #e5e5e5;
+    border-top-style: none;
+    background-color: $bg-white;
+  }
   .prices__image,
   .prices__service-text {
     display: inline-block;
   }
   .prices__image {
-    width: 20px;
-    height: 20px;
+    width: 27px;
+    height: 27px;
   }
-
-
+  .prices__image-included {
+    fill: #3dc644;
+  }
+  .prices__image-excluded {
+    fill: #f25b26;
+  }
 }
