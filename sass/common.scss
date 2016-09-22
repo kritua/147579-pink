@@ -8,6 +8,12 @@
 }
 
 @font-face {
+  font-family: "OpenSansSemibold";
+  src: url('../fonts/opensans.woff'),
+  url('../fonts/opensans.woff2');
+}
+
+@font-face {
   font-family: "OpenSansBold";
   src: url('../fonts/opensansbold.woff'),
        url('../fonts/opensansbold.woff2');
@@ -20,22 +26,16 @@
 }
 
 .body {
-  width: 320px;
-  @include font-type('OpenSans');
-  margin: 0;
+  width: $mobile-width;
+  margin: 0 auto;
+  @include adaptive(tablet) {
+    width: $tablet-width;
+  }
+  @include adaptive(desktop) {
+    //width: $desktop-width;
+  }
 }
 
 .main-container {
   padding: 0 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-@media (min-width: 660px) {
-  .body {
-    width: 660px;
-    margin: 0 auto;
-  }
 }

@@ -1,60 +1,88 @@
 @import '../vars';
 
 .prices {
-  background-color: #f2f2f2;
-  transform: skewY(-5deg);
-  padding-top: 77px;
-  margin-top: 34px;
+  background: linear-gradient(-4.5deg, #f2f2f2 92%, #ffffff 92%);
+  padding-top: 110px;
 
+  .main-container {
+    overflow: hidden;
+  }
   .controls {
-    transform: skewY(5deg);
     padding: 30px 0 50px;
   }
-
+  .prices__items-wrapper {
+    display: flex;
+    width: 300%;
+    transform: translateX(-33.33%);
+  }
   .prices__item {
-    transform: skewY(5deg);
+    flex-basis: 33.33%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e5e5;
     &--hidden {
-      display: none;
+      //display: none;
     }
   }
   .prices__header {
-    background-color: #283645;
+    position: relative;
+    background-color: $clr-darkblue;
     text-align: center;
     color: #ffffff;
     padding: 17px 0 22px;
-    border: 2px solid #e5e5e5;
     border-top-style: none;
   }
   .prices__price-plan {
+    @include font-bold();
     font-size: 18px;
     line-height: 30px;
     margin: 0;
     text-transform: uppercase;
   }
   .prices__amount {
+    @include font-light();
     font-size: 24px;
     line-height: 30px;
     margin: 0;
-    font-weight: lighter;
   }
-
   .prices__service-item {
-    border: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
     border-top-style: none;
     background-color: $bg-white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
-  .prices__image,
   .prices__service-text {
-    display: inline-block;
+    @include font-regular();
+    font-size: 14px;
+    line-height: 30px;
+    text-align: left;
+    color: $clr-darkblue;
+    flex-basis: 63%;
   }
   .prices__image {
     width: 27px;
     height: 27px;
+
   }
   .prices__image-included {
     fill: #3dc644;
   }
   .prices__image-excluded {
     fill: #f25b26;
+  }
+  .prices__hit-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .prices__hit-text {
+    position: absolute;
+    top: -1px;
+    left: 9px;
+    transform: rotate(-45deg);
+    @include font-semibold();
+    text-transform: uppercase;
   }
 }

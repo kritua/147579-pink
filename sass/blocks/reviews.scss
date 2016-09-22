@@ -21,14 +21,16 @@
   }
 
   .reviews__header {
+    @include font-bold();
     font-size: 18px;
     line-height: 30px;
   }
 
   .reviews__text {
+    @include font-regular();
     font-size: 14px;
     line-height: 30px;
-    color: #283645;
+    color: $clr-darkblue;
     margin-top: -6px;
   }
 }

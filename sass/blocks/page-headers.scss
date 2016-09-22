@@ -1,18 +1,26 @@
 @import '../vars';
 
 .page-headers {
-  .page-headers__item-h1,
   .page-headers__item-h2 {
+    @include font-light();
     font-size: 24px;
     line-height: 28px;
-    color: #283645;
+    color: $clr-darkblue;
     text-align: center;
-    font-weight: lighter;
     margin-top: 40px;
+    @include adaptive(tablet) {
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 0;
+    }
   }
 
-  .page-headers__item-h2 {
+  .page-headers__item-h2:last-child {
     margin-top: 30px;
-    margin-bottom: 47px;
+    @include adaptive(tablet) {
+      margin-top: 0;
+      margin-bottom: 50px;
+      padding: 0 50px;
+    }
   }
 }
