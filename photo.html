@@ -2,96 +2,173 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-  <body>
-  <header class="header">
+<body class="body">
+  <header class="header header--menu-opened">
     <div class="header__logo">
       <div class="header__logo-img">
         <img src="./img/logo-pink-white-mobile.svg">
       </div>
       <div class="header__button-menu">
-        <button type="button"><img src="./img/icon-menu-burger.svg"></button>
+        <button class="header__button-burger header__button--hidden" type="button"><img src="./img/icon-menu-burger.svg"></button>
+        <button class="header__button-close" type="button"><img src="./img/icon-menu-cross.svg"></button>
       </div>
     </div>
-    <nav class="header__menu header__menu--hidden">
+    <nav class="header__menu">
       <ul class="header__menu-list">
         <li class="header__menu-item"><a href="#">Главная</a></li>
         <li class="header__menu-item"><a href="photo.html">Фотографии</a></li>
-        <li class="header__menu-item"><a href="#">Конкурс</a></li>
+        <li class="header__menu-item"><a href="form.html">Конкурс</a></li>
         <li class="header__menu-item"><a href="#">HTML Academy</a></li>
       </ul>
     </nav>
+    <div class="header__main-content">
+      <h1 class="header__photo-header">Фотографии пользователей</h1>
+    </div>
   </header>
     <main>
       <section class="photos">
-        <h2 class="photos__header">Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, как не хватает ваших?</h2>
-        <div class="photos__item photos__item--best-photo">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__photo-of-the-day">
-            <p>Панорама дня</p>
+        <div class="main-container">
+          <h2 class="photos__header">Взгляните на фотографии, которые выкладывают пользователи!
+            Видите, как не хватает ваших?</h2>
+          <div class="photos__item photos__item--best-photo">
+            <img src="./img/panorama-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__photo-of-the-day">
+              <p class="photos__photo-of-the-day-text">Панорама дня</p>
+            </div>
+            <div class="photos__user-review">
+              <p class="photos__user-name">Анна <span class="photos__comment-time">(5 минут назад)</span></p>
+              <p class="photos__user-comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <button type="button" class="photos__heart-icon">
+                <svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 215</p>
+            </div>
           </div>
-          <div class="photos__user-review">
-            <p class="photos__user-name">Анна <span class="photos__comment-time">(5 минут назад)</span></p>
-            <p class="photos__user-comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 215</p>
+          <div class="photos__item">
+            <img src="./img/photo-1-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__user-review">
+              <p class="photos__user-name">Левон <span class="photos__comment-time">(5 часов назад)</span></p>
+              <p class="photos__user-comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <button type="button" class="photos__heart-icon">
+                <svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 356</p>
+            </div>
           </div>
-        </div>
-        <div class="photos__item">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__user-review">
-            <p class="photos__user-name">Левон <span class="photos__comment-time">(5 часов назад)</span></p>
-            <p class="photos__user-comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 356</p>
+          <div class="photos__item">
+            <img src="./img/photo-2-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__user-review">
+              <p class="photos__user-name">Антон <span class="photos__comment-time">(12 часов назад)</span></p>
+              <p class="photos__user-comment">Соседи будут рады!</p>
+              <button type="button" class="photos__heart-icon">
+                <svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 666</p>
+            </div>
           </div>
-        </div>
-        <div class="photos__item">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__user-review">
-            <p class="photos__user-name">Антон <span class="photos__comment-time">(12 часов назад)</span></p>
-            <p class="photos__user-comment">Соседи будут рады!</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 666</p>
+          <div class="photos__item">
+            <img src="./img/photo-3-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__user-review">
+              <p class="photos__user-name">Борис <span class="photos__comment-time">(20 часов назад)</span></p>
+              <p class="photos__user-comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <button type="button" class="photos__heart-icon"><svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 215</p>
+            </div>
           </div>
-        </div>
-        <div class="photos__item">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__user-review">
-            <p class="photos__user-name">Борис <span class="photos__comment-time">(20 часов назад)</span></p>
-            <p class="photos__user-comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 215</p>
+          <div class="photos__item">
+            <img src="./img/photo-4-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__user-review">
+              <p class="photos__user-name">Сергей <span class="photos__comment-time">(25 часов назад)</span></p>
+              <p class="photos__user-comment">Самая кубанская в мире</p>
+              <button type="button" class="photos__heart-icon">
+                <svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 4</p>
+            </div>
           </div>
-        </div>
-        <div class="photos__item">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__user-review">
-            <p class="photos__user-name">Сергей <span class="photos__comment-time">(25 часов назад)</span></p>
-            <p class="photos__user-comment">Самая кубанская в мире</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 4</p>
+          <div class="photos__item">
+            <img src="./img/photo-5-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__user-review">
+              <p class="photos__user-name">Максим <span class="photos__comment-time">(40 часов назад)</span></p>
+              <p class="photos__user-comment">Всем GM и взаимные лайки!</p>
+              <button type="button" class="photos__heart-icon">
+                <svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 2560</p>
+            </div>
           </div>
-        </div>
-        <div class="photos__item">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__user-review">
-            <p class="photos__user-name">Максим <span class="photos__comment-time">(40 часов назад)</span></p>
-            <p class="photos__user-comment">Всем GM и взаимные лайки!</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 2560</p>
-          </div>
-        </div>
-        <div class="photos__item">
-          <img src="http://placehold.it/320x140" class="photos__item-img">
-          <div class="photos__user-review">
-            <p class="photos__user-name">Надежда <span class="photos__comment-time">(45 часов назад)</span></p>
-            <p class="photos__user-comment">Где снег-то?</p>
-            <button class="photos__heart-icon">Heart</button>
-            <p class="photos__user-likes">Нравится: 150</p>
+          <div class="photos__item">
+            <img src="./img/photo-6-mobile@1x.jpg" class="photos__item-img">
+            <div class="photos__user-review">
+              <p class="photos__user-name">Надежда <span class="photos__comment-time">(45 часов назад)</span></p>
+              <p class="photos__user-comment">Где снег-то?</p>
+              <button type="button" class="photos__heart-icon">
+                <svg class="photos__heart-icon-svg" version="1.1" x="0px" y="0px" viewBox="0 0 12.5 12" style="enable-background:new 0 0 12.5 12;" xml:space="preserve">
+                  <g>
+                    <path class="photos__heart-icon-svg-path" d="M6.2,12c-0.2,0-0.4-0.1-0.6-0.2C1.9,7.4,1,6.4,0.8,6.2h0C0.3,5.5,0,4.7,0,3.8C0,1.7,1.7,0,3.8,0
+                      c0.9,0,1.8,0.3,2.5,0.9C7,0.3,7.8,0,8.7,0c2.1,0,3.8,1.7,3.8,3.8c0,0.9-0.3,1.8-0.9,2.4l-4.9,5.6C6.6,11.9,6.4,12,6.2,12L6.2,12z
+                       M2,5.3c0.2,0.3,2.5,2.8,4.2,4.9l4.3-4.9c0.3-0.4,0.5-0.9,0.5-1.4c0-1.3-1-2.3-2.3-2.3C8,1.5,7.3,1.8,6.8,2.4
+                      C6.7,2.6,6.5,2.7,6.3,2.7C6,2.7,5.8,2.6,5.7,2.4C5.2,1.8,4.6,1.5,3.8,1.5c-1.3,0-2.3,1-2.3,2.3C1.5,4.5,1.7,5,2,5.3
+                      C2,5.3,2,5.3,2,5.3z"/>
+                  </g>
+                </svg>
+              </button>
+              <p class="photos__user-likes">Нравится: 150</p>
+            </div>
           </div>
         </div>
       </section>
@@ -99,12 +176,33 @@
         <form>
           <h2 class="add-your-photo__header">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
           <div class="add-your-photo__editor">
-            <img src="http://placehold.it/300x370" class="add-your-photo__preview">
+            <img src="./img/photo-7-mobile@1x.jpg" class="add-your-photo__preview">
             <div class="add-your-photo__tools">
-              <div class="add-your-photo__cut-photo">Cut</div>
-              <div class="add-your-photo__fill-photo">Fill</div>
-              <div class="add-your-photo__bright-contrast">Brightness-Contrast</div>
-              <div class="add-your-photo__slider-control"></div>
+              <button class="add-your-photo__cut-photo">
+                <svg class="add-your-photo__cut-photo-svg" version="1.1" x="0px" y="0px"viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                  <path d="M34,30h4V14c0-2.2-1.8-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.2,1.8,4,4,4h20v8h4v-8h8v-4H14z"/>
+                </svg>
+              </button>
+              <button class="add-your-photo__fill-photo">
+                <svg version="1.1" class="add-your-photo__fill-photo-svg" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+                  <path d="M33.1,17.9L15.2,0l-2.8,2.8l4.8,4.8L6.9,17.9c-1.2,1.2-1.2,3.1,0,4.2l11,11c0.6,0.6,1.3,0.9,2.1,0.9s1.5-0.3,2.1-0.9l11-11
+                    C34.3,21,34.3,19,33.1,17.9z M10.4,20l9.6-9.6l9.6,9.6H10.4z M38,23c0,0-4,4.3-4,7c0,2.2,1.8,4,4,4s4-1.8,4-4C42,27.3,38,23,38,23z"
+                    />
+                  <rect y="40" width="48" height="3"/>
+                </svg>
+              </button>
+              <button class="add-your-photo__bright-contrast">
+                <svg class="add-your-photo__bright-contrast-svg" version="1.1" x="0px" y="0px" viewBox="0 0 31.9 31.9" style="enable-background:new 0 0 31.9 31.9;" xml:space="preserve">
+                  <path d="M16,4.4c6.6,0,12,5.4,12,12s-5.4,12-12,12s-12-5.4-12-12S9.4,4.4,16,4.4 M16,0.4c-8.8,0-16,7.1-16,16c0,8.8,7.1,16,16,16s16-7.1,16-16C31.9,7.5,24.8,0.4,16,0.4L16,0.4z"/>
+                  <path d="M16,24.7c4.7,0,8.5-3.8,8.5-8.5c0-4.7-3.8-8.5-8.5-8.5"/>
+                </svg>
+              </button>
+              <button class="add-your-photo__slider-control">
+                <svg class="add-your-photo__slider-control-svg" version="1.1" x="0px" y="0px" viewBox="0 0 253 253" style="enable-background:new 0 0 253 253;" xml:space="preserve">
+                  <path d="M126.5,0C56.6,0,0,56.6,0,126.5S56.6,253,126.5,253S253,196.4,253,126.5C253,56.6,196.4,0,126.5,0z
+                   M126.5,237.2c-60.8,0-110.2-49.3-110.2-110.2S65.7,16.9,126.5,16.9c60.8,0,110.2,49.3,110.2,110.2S187.3,237.2,126.5,237.2z"/>
+                </svg>
+              </button>
             </div>
             <div class="add-your-photo__buttons">
               <button type="button" class="add-your-photo__button-add">Запостить</button>
@@ -127,5 +225,6 @@
         </div>
       </footer>
     </main>
-  </body>
+  <script src="js/script.js"></script>
+</body>
 </html>

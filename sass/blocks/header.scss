@@ -44,6 +44,7 @@
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+    text-align: center;
     @include adaptive(tablet) {
       flex-direction: row;
     }
@@ -148,6 +149,13 @@
     font-size: 14px;
     line-height: 24px;
     text-align: center;
+  }
+  .header__photo-header {
+    @include font-light();
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+    padding: $content-padding;
   }
 }
 
