@@ -54,24 +54,38 @@
   padding: 16px 12px;
   cursor: pointer;
   background: transparent;
+  &--cancel {
+    border-color: transparentize($clr-darkblue, 0.9);
+    color: transparentize($clr-darkblue, 0.9);
+  }
+  &--header {
+    border-color: #ffffff;
+    color: white;
+  }
+  &--add-photo {
+    border-color: $clr-pink;
+    color: $clr-pink;
+    margin-top: 38px;
+    margin-bottom: 12px;
+  }
 }
 
-.big-button--header {
-  border-color: #ffffff;
-  color: white;
+.huge-button {
+  width: 100%;
+  background-color: $clr-green;
+  border: none;
+  border-radius: 2px;
+  padding: 17px;
+  @include font-bold();
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
-.big-button--add-photo {
-  border-color: $clr-pink;
-  color: $clr-pink;
-  margin-top: 38px;
-  margin-bottom: 12px;
-}
 
-.big-button--cancel {
-  border-color: transparentize($clr-darkblue, 0.9);
-  color: transparentize($clr-darkblue, 0.9);
-}
+
+
 
 .pink-logo {
   width: 150px;
