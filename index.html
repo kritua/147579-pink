@@ -2,147 +2,226 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="header">
-      <div class="header__logo">
-        <img src="" class="header__logo-text">
+<body class="body">
+  <header class="header header--menu-opened">
+    <div class="header__logo">
+      <div class="header__logo-img">
+        <img src="./img/logo-pink-white-mobile.svg">
       </div>
-      <button type="button" class="header__menu-button"></button>
-      <nav class="header__menu header__menu--hidden">
-        <ul class="header__menu-list">
-          <li class="header__menu-item">Главная</li>
-          <li class="header__menu-item">Фотографии</li>
-          <li class="header__menu-item">Конкурс</li>
-          <li class="header__menu-item">HTML Academy</li>
-        </ul>
-      </nav>
-      <img src="http://placehold.it/320x286" class="pink-image-1">
-    </header>
-    <main>
-      <section class="download">
-        <a class="download__button">Скачать приложение</a>
-        <ul class="download__choose-os">
-          <li class="download__os-item"><img src="http://placehold.it/50x50"></li>
-          <li class="download__os-item"><img src="http://placehold.it/50x50"></li>
-          <li class="download__os-item"><img src="http://placehold.it/50x50"></li>
-        </ul>
-        <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </section>
-      <section class="features">
-        <h1 class="features__header-h1">Устали от серости мегаполиса?</h1>
-        <h2 class="features__header-h2">Нам есть, что вам предложить!</h2>
-        <div class="features__item">
-          <h3 class="features__header">Поднимает настроение</h3>
-          <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      <div class="header__button-menu">
+        <button class="header__button-burger header__button--hidden" type="button"><img src="./img/icon-menu-burger.svg"></button>
+        <button class="header__button-close" type="button"><img src="./img/icon-menu-cross.svg"></button>
+      </div>
+    </div>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item"><a href="#">Главная</a></li>
+        <li class="header__menu-item"><a href="photo.html">Фотографии</a></li>
+        <li class="header__menu-item"><a href="form.html">Конкурс</a></li>
+        <li class="header__menu-item"><a href="#">HTML Academy</a></li>
+      </ul>
+    </nav>
+    <div class="header__main-content header__main-content--main-page">
+      <img src="./img/iphone-hand-mobile@1x.png" class="header__pink-image">
+      <article class="header__download">
+        <div class="main-container">
+          <h1 class="header__main-header header__main-header--hidden">Взгляните<br> на жизнь<br> иначе!</h1>
+          <a class="big-button big-button--header">Скачать приложение</a>
+          <ul class="header__choose-os">
+            <li class="header__os-item"><img src="./img/logo-apple.svg"></li>
+            <li class="header__os-item"><img src="./img/logo-android.svg"></li>
+            <li class="header__os-item"><img src="./img/logo-microsoft.svg"></li>
+          </ul>
+          <p class="header__download-description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <div class="features__item">
-          <h3 class="features__header">Меняет мир вокруг</h3>
-          <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </div>
-        <div class="features__item">
-          <h3 class="features__header">Заводит новых друзей</h3>
-          <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-        </div>
-        <img src="http://placehold.it/155x320" class="pink-image-2">
-      </section>
-      <section class="reviews">
-        <div class="reviews__item reviews__item--active">
-          <h3 class="reviews__header">Николай Петров</h3>
-          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        </div>
-        <div class="reviews__item reviews__item--hidden">
-          <h3 class="reviews__header">Николай Петров</h3>
-          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        </div>
-        <div class="reviews__item reviews__item--hidden">
-          <h3 class="reviews__header">Николай Петров</h3>
-          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        </div>
-        <div class="controls">
-          <label><input type="radio" class="controls__control-button controls__control-button--active"></label>
-          <label><input type="radio" class="controls__control-button"></label>
-          <label><input type="radio" class="controls__control-button"></label>
-        </div>
-      </section>
-      <section class="prices">
-        <div class="prices__item prices__item--hidden">
-        <div class="prices__header">
-          <h4 class="prices__price-plan">Стандарт</h4>
-          <h5 class="prices__amount">3,99 USD</h5>
-        </div>
-        <div class="prices__service-included">
-          <div class="prices__service-item">
-            <p class="prices__service-text">Розовый фильтр</p>
-            <svg class="prices__image-included"></svg>
+      </article>
+    </div>
+  </header>
+  <main>
+    <section class="page-headers">
+      <div class="main-container">
+        <h2 class="page-headers__item-h2">Устали от серости мегаполиса?</h2>
+        <h2 class="page-headers__item-h2">Нам есть, что вам предложить!</h2>
+      </div>
+    </section>
+    <section class="features">
+      <div class="main-container">
+        <div class="features__content">
+          <div class="features__text-content">
+            <div class="features__item">
+              <h3 class="features__header">Поднимает настроение</h3>
+              <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
+            <div class="features__item">
+              <h3 class="features__header">Меняет мир вокруг</h3>
+              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
+            <div class="features__item">
+              <h3 class="features__header">Заводит новых друзей</h3>
+              <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
           </div>
-          <div class="prices__service-item">
-            <p class="prices__service-text">Смайлики</p>
-            <svg class="prices__image-excluded"></svg>
-          </div>
-          <div class="prices__service-item">
-            <p class="prices__service-text">Комментарии</p>
-            <svg class="prices__image-excluded"></svg>
+          <div class="features__images-content">
+            <img src="./img/iphone-screen-mobile@1x.png" class="features__pink-image">
           </div>
         </div>
       </div>
-        <div class="prices__item prices__item--active">
-          <div class="prices__header">
-            <h4 class="prices__price-plan">Стандарт</h4>
-            <h5 class="prices__amount">3,99 USD</h5>
+    </section>
+    <section class="reviews">
+      <div class="main-container">
+        <div class="reviews__slider">
+          <div class="reviews__item reviews__item--active">
+            <h3 class="reviews__header">Николай Петров</h3>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
-          <div class="prices__service-included">
-            <div class="prices__service-item">
-              <p class="prices__service-text">Розовый фильтр</p>
-              <svg class="prices__image-included"></svg>
-            </div>
-            <div class="prices__service-item">
-              <p class="prices__service-text">Смайлики</p>
-              <svg class="prices__image-included"></svg>
-            </div>
-            <div class="prices__service-item">
-              <p class="prices__service-text">Комментарии</p>
-              <svg class="prices__image-excluded"></svg>
-            </div>
+          <div class="reviews__item reviews__item--hidden">
+            <h3 class="reviews__header">Николай Петров</h3>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
-        </div>
-        <div class="prices__item prices__item--hidden">
-          <div class="prices__header">
-            <h4 class="prices__price-plan">Стандарт</h4>
-            <h5 class="prices__amount">3,99 USD</h5>
-          </div>
-          <div class="prices__service-included">
-            <div class="prices__service-item">
-              <p class="prices__service-text">Розовый фильтр</p>
-              <svg class="prices__image-included"></svg>
-            </div>
-            <div class="prices__service-item">
-              <p class="prices__service-text">Смайлики</p>
-              <svg class="prices__image-included"></svg>
-            </div>
-            <div class="prices__service-item">
-              <p class="prices__service-text">Комментарии</p>
-              <svg class="prices__image-included"></svg>
-            </div>
+          <div class="reviews__item reviews__item--hidden">
+            <h3 class="reviews__header">Николай Петров</h3>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </div>
         <div class="controls">
-          <label><input type="radio" class="controls__control-button"></label>
-          <label><input type="radio" class="controls__control-button controls__control-button--active"></label>
-          <label><input type="radio" class="controls__control-button"></label>
+          <input name="toggle-reviews" id="first-slide" type="radio" class="controls__control-button controls__control-button--active" checked>
+          <label for="first-slide" class="controls__label controls__label--active"></label>
+          <input name="toggle-reviews" id="second-slide" type="radio" class="controls__control-button">
+          <label for="second-slide" class="controls__label controls__label--active"></label>
+          <input name="toggle-reviews" id="third-slide" type="radio" class="controls__control-button">
+          <label for="third-slide" class="controls__label controls__label--active"></label>
         </div>
-      </section>
-      <footer class="contacts">
-        <h3 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h3>
-        <h6 class="contacts__phone">Звоните:</h6>
-        <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
-        <h6 class="contacts__mail">Пишите:</h6>
-        <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
-        <h6 class="contacts__address">Приезжайте в гости:</h6>
-        <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
-        <div class="contacts__map"><img class="contacts__map-image" src="http://placehold.it/320x100"></div>
-      </footer>
-    </main>
-  </body>
+      </div>
+    </section>
+    <section class="prices">
+      <div class="main-container">
+        <div class="prices__items-wrapper">
+
+          <div class="prices__item prices__item--hidden">
+            <div class="prices__header">
+              <h4 class="prices__price-plan">База</h4>
+              <h5 class="prices__amount">1,99 USD</h5>
+            </div>
+            <div class="prices__service-included">
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Розовый фильтр</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 21.7 16.1" style="enable-background:new 0 0 21.7 16.1;" xml:space="preserve">
+                  <path class="prices__image-included" d="M21.4,0.3c-0.4-0.4-1-0.4-1.4,0L6.6,13.7L1.7,8.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.6,5.6
+    c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l14.1-14C21.8,1.3,21.8,0.7,21.4,0.3z"/>
+                </svg>
+              </div>
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Смайлики</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 26.8 26.8" style="enable-background:new 0 0 26.8 26.8;" xml:space="preserve">
+                  <path class="prices__image-excluded" d="M15.5,13.4L26.3,2.6c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L13.4,11.3L2.6,0.4C2-0.1,1-0.1,0.4,0.4
+    C-0.1,1-0.1,2,0.4,2.6l10.8,10.8L0.4,24.2c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l10.8-10.8l10.8,10.8
+    c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L15.5,13.4z"/>
+                </svg>
+              </div>
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Комментарии</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 26.8 26.8" style="enable-background:new 0 0 26.8 26.8;" xml:space="preserve">
+                  <path class="prices__image-excluded" d="M15.5,13.4L26.3,2.6c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L13.4,11.3L2.6,0.4C2-0.1,1-0.1,0.4,0.4
+    C-0.1,1-0.1,2,0.4,2.6l10.8,10.8L0.4,24.2c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l10.8-10.8l10.8,10.8
+    c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L15.5,13.4z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="prices__item prices__item--active">
+            <div class="prices__header">
+              <h4 class="prices__price-plan">Стандарт</h4>
+              <h5 class="prices__amount">3,99 USD</h5>
+              <div class="prices__hit">
+                <img class="prices__hit-img" src="./img/bg-hit.svg">
+                <p class="prices__hit-text">Хит</p>
+              </div>
+            </div>
+            <div class="prices__service-included">
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Розовый фильтр</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 21.7 16.1" style="enable-background:new 0 0 21.7 16.1;" xml:space="preserve">
+                  <path class="prices__image-included" d="M21.4,0.3c-0.4-0.4-1-0.4-1.4,0L6.6,13.7L1.7,8.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.6,5.6
+    c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l14.1-14C21.8,1.3,21.8,0.7,21.4,0.3z"/>
+                </svg>
+              </div>
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Смайлики</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 21.7 16.1" style="enable-background:new 0 0 21.7 16.1;" xml:space="preserve">
+                  <path class="prices__image-included" d="M21.4,0.3c-0.4-0.4-1-0.4-1.4,0L6.6,13.7L1.7,8.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.6,5.6
+    c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l14.1-14C21.8,1.3,21.8,0.7,21.4,0.3z"/>
+                </svg>
+              </div>
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Комментарии</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 26.8 26.8" style="enable-background:new 0 0 26.8 26.8;" xml:space="preserve">
+                  <path class="prices__image-excluded" d="M15.5,13.4L26.3,2.6c0.6-0.6,0.6-1.5,0-2.1s-1.5-0.6-2.1,0L13.4,11.3L2.6,0.4C2-0.1,1-0.1,0.4,0.4
+    C-0.1,1-0.1,2,0.4,2.6l10.8,10.8L0.4,24.2c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l10.8-10.8l10.8,10.8
+    c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L15.5,13.4z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="prices__item prices__item--hidden">
+            <div class="prices__header">
+              <h4 class="prices__price-plan">Анлим</h4>
+              <h5 class="prices__amount">9,99 USD</h5>
+            </div>
+            <div class="prices__service-included">
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Розовый фильтр</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 21.7 16.1" style="enable-background:new 0 0 21.7 16.1;" xml:space="preserve">
+                  <path class="prices__image-included" d="M21.4,0.3c-0.4-0.4-1-0.4-1.4,0L6.6,13.7L1.7,8.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.6,5.6
+    c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l14.1-14C21.8,1.3,21.8,0.7,21.4,0.3z"/>
+                </svg>
+              </div>
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Смайлики</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 21.7 16.1" style="enable-background:new 0 0 21.7 16.1;" xml:space="preserve">
+                  <path class="prices__image-included" d="M21.4,0.3c-0.4-0.4-1-0.4-1.4,0L6.6,13.7L1.7,8.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.6,5.6
+    c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l14.1-14C21.8,1.3,21.8,0.7,21.4,0.3z"/>
+                </svg>
+              </div>
+              <div class="prices__service-item">
+                <p class="prices__service-text prices__service-text--hidden">Комментарии</p>
+                <svg class="prices__image" version="1.1" x="0px" y="0px" viewBox="0 0 21.7 16.1" style="enable-background:new 0 0 21.7 16.1;" xml:space="preserve">
+                  <path class="prices__image-included" d="M21.4,0.3c-0.4-0.4-1-0.4-1.4,0L6.6,13.7L1.7,8.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.6,5.6
+    c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l14.1-14C21.8,1.3,21.8,0.7,21.4,0.3z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls controls--prices">
+          <input name="toggle-prices" id="first-control" type="radio" class="controls__control-button controls__control-button--active" checked>
+          <label for="first-control" class="controls__label controls__label--active"></label>
+          <input name="toggle-prices" id="second-control" type="radio" class="controls__control-button">
+          <label for="second-control" class="controls__label controls__label--active"></label>
+          <input name="toggle-prices" id="third-control" type="radio" class="controls__control-button">
+          <label for="third-control" class="controls__label controls__label--active"></label>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="contacts">
+    <div class="main-container">
+      <h3 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h3>
+      <h6 class="contacts__small-header">Звоните:</h6>
+      <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
+      <h6 class="contacts__small-header">Пишите:</h6>
+      <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
+      <h6 class="contacts__small-header">Приезжайте в гости:</h6>
+      <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+    </div>
+    <div class="contacts__map-container">
+      <img src="./img/icon-map-marker.svg" class="contacts__map-point">
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
 </html>
