@@ -1,44 +1,48 @@
 @import '../vars';
 
 .contacts {
-  //background:  url('../../img/bg-triangle-white-footer.svg') no-repeat 50% 400px, url('../../img/bg-map-mobile@1x.png') no-repeat 50% 400px;
   background-color: #ffffff;
   background-size: contain, cover;
   text-align: center;
-  padding: 30px 0 0;
+  padding: 19px 0 0;
   margin-top: -30px;
   position: relative;
+}
 
-  .contacts__header {
-    @include font-light();
-    font-size: 24px;
-    line-height: 29px;
-    color: $clr-darkblue;
-  }
+.contacts__header {
+  @include font-light();
+  font-size: 24px;
+  line-height: 29px;
+  color: $clr-darkblue;
+  margin-bottom: 33px;
+}
 
-  .contacts__small-header {
-    @include font-bold();
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: $clr-darkblue;
-  }
+.contacts__small-header {
+  @include font-bold();
+  font-size: 18px;
+  color: $clr-darkblue;
+  margin-bottom: 0;
+  margin-top: 24px;
+}
 
-  .contacts__text {
-    @include font-light();
-    font-size: 24px;
-    color: $clr-pink;
-    text-decoration: none;
-  }
+.contacts__text {
+  @include font-light();
+  font-size: 24px;
+  line-height: 29px;
+  color: $clr-pink;
+  text-decoration: none;
+  margin-top: 6px;
+  margin-bottom: 37px;
+}
 
-  .contacts__map-container {
-    background:  url('../../img/bg-triangle-white-footer.svg') no-repeat top, url('../../img/bg-map-mobile@1x.png') no-repeat center;
-    position: relative;
-    z-index: 3;
-    padding-bottom: 200px;
-  }
+.contacts__map-container {
+  background: url('../../img/bg-triangle-white-footer.svg') no-repeat top, url('../../img/bg-map-mobile@1x.png') no-repeat center;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 200px;
+}
 
-  .contacts__map-point {
-    position: absolute;
-    top: 50%;
-  }
+.contacts__map-point {
+  position: absolute;
+  top: 50%;
 }

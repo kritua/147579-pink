@@ -57,3 +57,11 @@ $desktop-width: 960px;
     }
   }
 }
+
+@mixin placeholder-style() {
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  opacity: 1;
+}

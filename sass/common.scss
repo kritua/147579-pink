@@ -39,3 +39,71 @@
 .main-container {
   padding: 0 20px;
 }
+
+.big-button {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  border: 3px solid;
+  @include font-bold();
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 30px;
+  white-space: nowrap;
+  padding: 16px 12px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.big-button--header {
+  border-color: #ffffff;
+  color: white;
+}
+
+.big-button--add-photo {
+  border-color: $clr-pink;
+  color: $clr-pink;
+  margin-top: 38px;
+  margin-bottom: 12px;
+}
+
+.big-button--cancel {
+  border-color: transparentize($clr-darkblue, 0.9);
+  color: transparentize($clr-darkblue, 0.9);
+}
+
+.pink-logo {
+  width: 150px;
+  height: 40px;
+  margin: 40px 0;
+  .st0 {
+    fill: $clr-darkblue;
+  }
+  .st1 {
+    fill: #ffffff;
+  }
+  .st2 {
+    fill: $clr-pink;
+  }
+}
+
+.footer {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  @include placeholder-style();
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  @include placeholder-style();
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  @include placeholder-style();
+}
+
+:-ms-input-placeholder {
+  @include placeholder-style();
+}

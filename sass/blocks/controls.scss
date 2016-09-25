@@ -3,23 +3,28 @@
 .controls {
   box-sizing: border-box;
   text-align: center;
-  .controls__control-button {
-    display: none;
+  &--prices {
+    padding: 19px 0 54px;
   }
-  .controls__label {
-    display: inline-block;
-    vertical-align: middle;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #bec2c7;
-    margin: 22px 8px;
-    &:hover {
-      background-color: #7e868f;
-    }
-    &:active {
-      background-color: #e9ebec;
-    }
+}
+
+.controls__control-button {
+  display: none;
+}
+
+.controls__label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  margin: 22px 8px;
+  &:hover {
+    background-color: #7e868f;
+  }
+  &:active {
+    background-color: #e9ebec;
   }
 }
 
