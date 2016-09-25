@@ -1,0 +1,57 @@
+@import '../vars';
+
+.social {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.social__button {
+  flex-basis: 33.33%;
+}
+
+.social__button-icon {
+  border: 3px solid transparentize($clr-darkblue, 0.9);
+  border-radius: 50%;
+  width: 51px;
+  height: 51px;
+  margin: 0 auto;
+}
+
+.social__button-twitter-svg {
+  width: 18px;
+  height: 15px;
+  padding: 17px;
+}
+
+.social__button-youtube-svg {
+  width: 15px;
+  height: 14px;
+  padding: 17px 20px;
+}
+
+.social__button-facebook-svg {
+  width: 9px;
+  height: 19px;
+  padding: 15px;
+}
+
+.social__designed-by {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social__text {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 18px;
+  color: $clr-darkblue;
+  text-decoration: none;
+}
+
+.social__designed-by-svg {
+  width: 27px;
+  height: 34px;
+  fill: $clr-pink;
+  vertical-align: middle;
+  padding-left: 15px;
+}

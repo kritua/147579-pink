@@ -1,0 +1,43 @@
+@import '../vars';
+
+.form-text {
+  margin-top: 44px;
+  &--contacts {
+    margin-top: 30px;
+  }
+}
+.form-text__header {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-darkblue;
+}
+
+.form-text__fieldset {
+  border: none;
+  padding: 0;
+  margin: 33px 0 27px;
+}
+
+.form-text__item {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-text__label {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-pink;
+  text-transform: uppercase;
+  padding-left: 23px;
+  flex-basis: 100%;
+}
+
+.form-text__text-input {
+  border: 2px solid #e5e5e5;
+  padding: 20px;
+  margin-top: 5px;
+  flex-basis: 100%;
+}
