@@ -1,0 +1,27 @@
+@import '../vars';
+
+.form-textarea {
+
+}
+
+.form-textarea__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-textarea__header {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-pink;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-textarea__textarea-input {
+  width: 100%;
+  padding: 20px;
+  min-height: 200px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,25 @@
+@import '../vars';
+
+.popup-window {
+  text-align: center;
+  box-shadow: 0 0 13px 0 #ccc;
+}
+
+.popup-window__header {
+  @include font-bold();
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.popup-window__text {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
+  color: $clr-darkblue;
+}
+
+.popup-window__button {
+  background-color: $bg-lightgrey;
+  padding: 50px 20px;
+}

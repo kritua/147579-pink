@@ -1,0 +1,59 @@
+@import '../vars';
+
+.form-radio {
+  background: $bg-lightgrey;
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.form-radio__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-radio__header {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 18px;
+  color: $clr-pink;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-radio__item {
+  display: flex;
+  position: relative;
+  margin: 44px 0 44px 20px;
+}
+
+.form-radio__label {
+  margin-left: 50px;
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+  }
+}
+
+.form-radio__radio-input:checked ~ .form-radio__label::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $clr-pink;
+}

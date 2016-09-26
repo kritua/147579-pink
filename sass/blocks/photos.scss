@@ -1,0 +1,91 @@
+@import '../vars';
+
+.photos__header {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.photos__item {
+  background-color: $bg-lightgrey;
+  margin-bottom: 20px;
+  position: relative;
+  &--best-photo {
+    .photos__item-img {
+      margin-left: -20px;
+    }
+  }
+}
+
+.photos__photo-of-the-day {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $clr-pink;
+
+}
+
+.photos__photo-of-the-day-text {
+  @include font-bold();
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  padding: 5px 20px;
+}
+
+.photos__user-name {
+  @include font-bold();
+  font-size: 14px;
+  line-height: 24px;
+  color: $clr-darkblue;
+}
+
+.photos__comment-time {
+  @include font-light();
+  font-size: 12px;
+  line-height: 24px;
+  color: $clr-darkblue;
+  text-transform: uppercase;
+}
+
+.photos__user-review {
+  padding: $content-padding;
+}
+
+.photos__user-comment {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
+  color: $clr-darkblue;
+}
+
+.photos__heart-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.photos__heart-icon-svg {
+  width: 13px;
+  height: 12px;
+}
+
+.photos__heart-icon-svg-path {
+  fill: $clr-pink;
+}
+
+.photos__user-likes {
+  display: inline-block;
+  @include font-regular();
+  font-size: 12px;
+  line-height: 24px;
+  color: $clr-pink;
+}
+
+
