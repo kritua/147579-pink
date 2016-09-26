@@ -46,14 +46,3 @@
   }
 }
 
-.controls #first-slide:checked  .reviews__slider {
-  transform: translateX(0);
-}
-
-.controls #second-slide:checked ~ .reviews__slider {
-  transform: translateX(33.33%);
-}
-
-.controls #first-slide:checked ~ .reviews__slider {
-  transform: translateX(66.66%);
-}
