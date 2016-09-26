@@ -1,0 +1,123 @@
+@import 'vars';
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  src: url('../fonts/opensans.woff'),
+       url('../fonts/opensans.woff2');
+}
+
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url('../fonts/opensans.woff'),
+  url('../fonts/opensans.woff2');
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url('../fonts/opensansbold.woff'),
+       url('../fonts/opensansbold.woff2');
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url('../fonts/opensanslight.woff'),
+       url('../fonts/opensanslight.woff2');
+}
+
+.body {
+  width: $mobile-width;
+  margin: 0 auto;
+  @include adaptive(tablet) {
+    width: $tablet-width;
+  }
+  @include adaptive(desktop) {
+    //width: $desktop-width;
+  }
+}
+
+.main-container {
+  padding: 0 20px;
+}
+
+.big-button {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  border: 3px solid;
+  @include font-bold();
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 30px;
+  white-space: nowrap;
+  padding: 16px 12px;
+  cursor: pointer;
+  background: transparent;
+  &--cancel {
+    border-color: transparentize($clr-darkblue, 0.9);
+    color: transparentize($clr-darkblue, 0.9);
+  }
+  &--header {
+    border-color: #ffffff;
+    color: white;
+  }
+  &--add-photo {
+    border-color: $clr-pink;
+    color: $clr-pink;
+    margin-top: 38px;
+    margin-bottom: 12px;
+  }
+}
+
+.huge-button {
+  width: 100%;
+  background-color: $clr-green;
+  border: none;
+  border-radius: 2px;
+  padding: 17px;
+  @include font-bold();
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+
+
+
+
+.pink-logo {
+  width: 150px;
+  height: 40px;
+  margin: 40px 0;
+  .st0 {
+    fill: $clr-darkblue;
+  }
+  .st1 {
+    fill: #ffffff;
+  }
+  .st2 {
+    fill: $clr-pink;
+  }
+}
+
+.footer {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  @include placeholder-style();
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  @include placeholder-style();
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  @include placeholder-style();
+}
+
+:-ms-input-placeholder {
+  @include placeholder-style();
+}

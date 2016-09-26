@@ -1,0 +1,17 @@
+@import '../vars';
+
+.send-form {
+
+}
+
+.send-form__required {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $clr-darkblue;
+}
+
+.send-form__required-star {
+  color: $clr-pink;
+}

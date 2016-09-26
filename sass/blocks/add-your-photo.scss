@@ -1,0 +1,86 @@
+@import '../vars';
+
+.add-your-photo__editor {
+  background-color: $bg-lightgrey;
+}
+
+.add-your-photo__header {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  text-align: center;
+}
+
+.add-your-photo__preview {
+  padding: 20px;
+}
+
+.add-your-photo__tools {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.add-your-photo__fill-photo,
+.add-your-photo__cut-photo,
+.add-your-photo__bright-contrast,
+.add-your-photo__slider-control {
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-basis: 33.33%;
+}
+
+.add-your-photo__slider-control {
+  flex-grow: 1;
+  position: relative;
+}
+
+.add-your-photo__slider-control::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #283645;
+  margin: 40px 38px 34px;
+}
+
+.add-your-photo__slider-control-svg {
+  width: 14px;
+  height: 14px;
+  fill: $clr-pink;
+  margin: 40px auto 34px;
+  position: relative;
+  right: -25%;
+  .st1 {
+    fill: #ffffff;
+  }
+}
+
+.add-your-photo__cut-photo-svg {
+  width: 44px;
+  height: 44px;
+  fill: $clr-pink;
+}
+
+.add-your-photo__fill-photo-svg {
+  width: 48px;
+  height: 43px;
+  fill: #b5b9be;
+}
+
+.add-your-photo__bright-contrast-svg {
+  width: 32px;
+  height: 32px;
+  fill: #b5b9be;
+}
+
+.add-your-photo__buttons {
+  padding-bottom: 40px;
+}
+
+
+

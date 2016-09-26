@@ -1,0 +1,39 @@
+@import '../vars';
+
+.controls {
+  box-sizing: border-box;
+  text-align: center;
+  &--prices {
+    padding: 19px 0 54px;
+  }
+}
+
+.controls__control-button {
+  display: none;
+}
+
+.controls__label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  margin: 22px 8px;
+  &:hover {
+    background-color: #7e868f;
+  }
+  &:active {
+    background-color: #e9ebec;
+  }
+}
+
+#first-slide:checked ~ .controls__label[for='first-slide'],
+#second-slide:checked ~ .controls__label[for='second-slide'],
+#third-slide:checked ~ .controls__label[for='third-slide'],
+#first-control:checked ~ .controls__label[for='first-control'],
+#second-control:checked ~ .controls__label[for='second-control'],
+#third-control:checked ~ .controls__label[for='third-control'] {
+  border: 3px solid $clr-darkblue;
+  background-color: #ffffff;
+}

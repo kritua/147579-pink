@@ -1,0 +1,39 @@
+@import '../vars';
+
+.reviews {
+  position: relative;
+  background-color: $bg-white;
+  text-align: center;
+  padding-top: 26px;
+  & .main-container {
+    overflow: hidden;
+  }
+}
+
+.reviews__slider {
+  width: 300%;
+}
+
+.reviews__item {
+  float: left;
+  width: 33.33%;
+}
+
+.reviews__item--hidden {
+  visibility: hidden;
+}
+
+.reviews__header {
+  @include font-bold();
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.reviews__text {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  margin-top: -6px;
+}
+
