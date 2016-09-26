@@ -32,12 +32,18 @@
     width: $tablet-width;
   }
   @include adaptive(desktop) {
-    //width: $desktop-width;
+    width: $desktop-width;
   }
 }
 
 .main-container {
   padding: 0 20px;
+  @include adaptive(tablet) {
+    padding: 0 40px;
+  }
+  @include adaptive(desktop) {
+    padding: 0 130px;
+  }
 }
 
 .big-button {

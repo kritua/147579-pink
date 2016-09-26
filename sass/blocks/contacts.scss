@@ -9,12 +9,40 @@
   position: relative;
 }
 
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include adaptive(tablet) {
+    flex-direction: row;
+  }
+}
+.contacts__item {
+  @include adaptive(tablet) {
+    flex-basis: 50%;
+    &:last-child {
+      flex-grow: 1;
+    }
+  }
+  @include adaptive(desktop) {
+    flex-basis: 33.33%;
+    &:last-child {
+      flex-grow: 0;
+    }
+  }
+}
+
 .contacts__header {
   @include font-light();
   font-size: 24px;
   line-height: 29px;
   color: $clr-darkblue;
   margin-bottom: 33px;
+  text-align: center;
+  @include adaptive(tablet) {
+    font-size: 40px;
+    line-height: 49px;
+  }
 }
 
 .contacts__small-header {
