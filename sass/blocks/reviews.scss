@@ -12,18 +12,18 @@
 
 .reviews__slider {
   width: 300%;
+  display: flex;
 }
 
 .reviews__item {
-  float: left;
-  width: 33.33%;
+  flex-basis: 33.33%;
 }
 
 .reviews__item--hidden {
   visibility: hidden;
 }
 
-.reviews__header {
+.reviews__author {
   @include font-bold();
   font-size: 18px;
   line-height: 30px;
@@ -37,3 +37,23 @@
   margin-top: -6px;
 }
 
+.reviews__author-info {
+  &--hidden-mobile {
+    display: none;
+  }
+  @include adaptive(tablet) {
+    display: block;
+  }
+}
+
+.controls #first-slide:checked  .reviews__slider {
+  transform: translateX(0);
+}
+
+.controls #second-slide:checked ~ .reviews__slider {
+  transform: translateX(33.33%);
+}
+
+.controls #first-slide:checked ~ .reviews__slider {
+  transform: translateX(66.66%);
+}
