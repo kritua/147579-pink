@@ -42,7 +42,7 @@
   @include adaptive(tablet) {
     width: 264px;
   }
-  @include adaptive(tablet) {
+  @include adaptive(desktop) {
     width: 183px;
   }
   &--hidden-mobile {

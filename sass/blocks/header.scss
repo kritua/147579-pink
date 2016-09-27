@@ -1,9 +1,19 @@
 @import '../vars';
 
 .header {
-  background-color: #1d2631;
-  background: url(../../img/iphone-hand-mobile@1x.png) no-repeat, url(../../img/bg-back-mobile@1x.jpg) no-repeat;
+  display: flex;
+  flex-direction: column;
+  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
 
+  &--index {
+    background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 50% 39%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
+  }
+  &--background {
+    background-color: #1d2631;
+  }
+  &--menu-opened {
+    background-position: 50% 62%, 50% 49%;
+  }
   @include adaptive(tablet) {
     background-size: 470px 550px, cover;
     background-position: 75% bottom, top;
@@ -29,7 +39,15 @@
 }
 
 .header__navbar {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+
+  @include adaptive(tablet) {
+
+  }
+  @include adaptive(desktop) {
+    flex-direction: row;
+  }
 }
 
 .header__logo {
@@ -56,10 +74,10 @@
   position: relative;
   text-align: center;
   @include adaptive(tablet) {
-    margin-top: 40px;
+
   }
   @include adaptive(desktop) {
-    margin-top: 200px;
+
   }
   &--main-page {
     display: flex;
@@ -133,14 +151,13 @@
 .header__download {
   background-color: $bg-darkblue;
   @include adaptive(tablet) {
-    order: 1;
     background-color: transparent;
     position: relative;
     flex-basis: 55%;
   }
-  & .main-container {
-    padding-top: 27px;
-    padding-bottom: 15px;
+  .main-container {
+    padding-top: 66px;
+    padding-bottom: 93px;
   }
 }
 

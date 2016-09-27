@@ -3,7 +3,9 @@
 .prices {
   background: linear-gradient(-4.5deg, #f2f2f2 92%, #ffffff 92%);
   padding-top: 106px;
-
+  @include adaptive(tablet) {
+    padding-bottom: 100px;
+  }
   .main-container {
     overflow: hidden;
   }
