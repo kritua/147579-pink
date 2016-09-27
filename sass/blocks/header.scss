@@ -1,12 +1,16 @@
 @import '../vars';
 
 .header {
-  background: $bg-darkblue url('../../img/bg-back-mobile@1x.jpg') no-repeat top;
+  background-color: #1d2631;
+  background: url(../../img/iphone-hand-mobile@1x.png) no-repeat, url(../../img/bg-back-mobile@1x.jpg) no-repeat;
+
   @include adaptive(tablet) {
-    background-size: cover;
+    background-size: 470px 550px, cover;
+    background-position: 75% bottom, top;
   }
-  &--menu-opened {
-    background-position: 50% 258px;
+  @include adaptive(desktop) {
+    background-size: 555px 645px, cover;
+    background-position: 75% bottom, top;
   }
 }
 
@@ -24,8 +28,13 @@
   }
 }
 
+.header__navbar {
+    display: flex;
+}
+
 .header__logo {
   display: flex;
+  flex-basis: 100%;
   align-items: center;
   background-color: transparentize($bg-darkblue, 0.7);
   padding: 20px;
@@ -46,6 +55,12 @@
 .header__main-content {
   position: relative;
   text-align: center;
+  @include adaptive(tablet) {
+    margin-top: 40px;
+  }
+  @include adaptive(desktop) {
+    margin-top: 200px;
+  }
   &--main-page {
     display: flex;
     flex-direction: column;
@@ -61,9 +76,13 @@
 
 .header__button-menu {
   text-align: right;
+  @include adaptive(desktop) {
+    display: none;
+  }
 }
 
-.header__button-menu button {
+.header__button-burger,
+.header__button-close {
   border: none;
   background-color: $no-bg-color;
   padding: 0;
@@ -133,6 +152,13 @@
   margin-top: 30px;
   margin-bottom: 20px;
   padding-left: 37px;
+  @include adaptive(tablet) {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    margin-top: 45px;
+    margin-bottom: 32px;
+  }
 }
 
 .header__os-item {
@@ -142,6 +168,9 @@
 .header__os-item:nth-child(2) {
   @include adaptive(tablet) {
     opacity: 0.4;
+  }
+  @include adaptive(desktop) {
+    opacity: 1;
   }
 }
 
