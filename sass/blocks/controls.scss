@@ -5,6 +5,14 @@
   text-align: center;
   &--prices {
     padding: 19px 0 54px;
+    @include adaptive(tablet) {
+      display: none;
+    }
+  }
+  &--reviews {
+    @include adaptive(desktop) {
+      display: none;
+    }
   }
 }
 
