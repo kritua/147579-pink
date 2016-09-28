@@ -3,7 +3,7 @@
 .pink-effect {
   background-color: $bg-white;
   position: relative;
-  padding-top: 50px;
+  padding: 50px 0;
   .main-container {
     display: flex;
   }
@@ -15,12 +15,18 @@
   }
 }
 
-.pink-effect__clock {
-  flex-basis: 40%;
+.pink-effect__timer,
+.pink-effect__text-block {
+  flex-basis: 50%;
 }
 
 .pink-effect__text-block {
-  flex-basis: 60%;
+  margin-top: 17px;
+}
+
+.pink-effect__clock {
+  width: 238px;
+  height: 276px;
 }
 
 .pink-effect_header {
@@ -35,6 +41,8 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-darkblue;
+  margin-bottom: 9px;
+  margin-top: -14px;
 }
 
 .pink-effect__link {

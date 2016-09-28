@@ -1,7 +1,7 @@
 @import '../vars';
 
 .page-headers {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .page-headers__item-h2 {
@@ -10,7 +10,7 @@
   line-height: 28px;
   color: $clr-darkblue;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 34px;
   @include adaptive(tablet) {
     font-size: 40px;
     line-height: 48px;

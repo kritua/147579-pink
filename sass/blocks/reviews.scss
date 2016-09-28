@@ -5,8 +5,12 @@
   background-color: $bg-white;
   text-align: center;
   padding-top: 26px;
-  & .main-container {
+  .main-container {
     overflow: hidden;
+  }
+  @include adaptive(tablet) {
+    padding-top: 55px;
+    margin-bottom: -7px;
   }
 }
 
@@ -29,10 +33,11 @@
   @include font-bold();
   font-size: 18px;
   line-height: 30px;
-  margin-bottom: 0;
+  margin-bottom: 17px;
   @include adaptive(tablet) {
     font-size: 20px;
     order: 2;
+    margin-bottom: -5px;
   }
 }
 

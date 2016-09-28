@@ -3,24 +3,58 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
-
-  &--index {
-    background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 50% 39%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
+  background: url('../../img/iphone-hand-mobile@1x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% -1%;
+  @include adaptive(retina) {
+    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 31%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0%;
+    background-size: 258px auto, 700px auto;
   }
+  @include adaptive(tablet) {
+    background: url(../../img/iphone-hand-tablet@1x.png) no-repeat 0 100%, url(../../img/bg-back-tablet@1x.jpg) no-repeat 50% 0;
+    @include adaptive(retina) {
+      background: url('../../img/iphone-hand-tablet@2x.png') no-repeat 0 100%, url('../../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+      background-size: 700px auto, 1200px auto;
+    }
+  }
+  @include adaptive(desktop) {
+    background: url(../../img/iphone-hand-tablet@1x.png) no-repeat 0 100%, url(../../img/bg-back-tablet@1x.jpg) no-repeat 50% 0;
+    @include adaptive(retina) {
+      background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 100%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+      background-size: 700px auto, 1200px auto;
+    }
+  }
+
+  &--pages {
+    background: url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
+    @include adaptive(retina) {
+      background: url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+    }
+    @include adaptive(tablet) {
+      background: url('../../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
+      @include adaptive(retina) {
+        background: url('../../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+      }
+    }
+    @include adaptive(desktop) {
+      background: url('../../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
+      @include adaptive(retina) {
+        background: url('../../img/bg-back-desktop@2x.jpg') no-repeat 50% 0;
+      }
+    }
+  }
+
   &--background {
     background-color: #1d2631;
   }
   &--menu-opened {
-    background-position: 50% 62%, 50% 49%;
+    background-position: 0 62%, 50% 49%;
+    @include adaptive(tablet) {
+      background-position: 50% 100%, 50% 100%;
+    }
   }
-  @include adaptive(tablet) {
-    background-size: 470px 550px, cover;
-    background-position: 75% bottom, top;
-  }
+
   @include adaptive(desktop) {
-    background-size: 555px 645px, cover;
-    background-position: 75% bottom, top;
+    //background-size: 555px 645px, cover;
+    //background-position: 75% bottom, top;
   }
 }
 
@@ -41,7 +75,7 @@
 .header__navbar {
   display: flex;
   flex-direction: column;
-
+  background-color: transparentize($bg-darkblue, 0.7);
   @include adaptive(tablet) {
 
   }
@@ -54,10 +88,10 @@
   display: flex;
   flex-basis: 100%;
   align-items: center;
-  background-color: transparentize($bg-darkblue, 0.7);
   padding: 20px;
   @include adaptive(tablet) {
     padding: 40px;
+    align-items: baseline;
   }
 }
 
@@ -73,8 +107,9 @@
 .header__main-content {
   position: relative;
   text-align: center;
+  padding-top: 395px;
   @include adaptive(tablet) {
-
+    padding-top: 0;
   }
   @include adaptive(desktop) {
 
@@ -111,6 +146,12 @@
   display: none;
 }
 
+.header__menu--hidden {
+  @include adaptive(desktop) {
+   display: block;
+  }
+}
+
 .header__pink-image {
   display: block;
   padding-top: 110px;
@@ -134,6 +175,11 @@
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  @include adaptive(desktop) {
+    background: none;
+    flex-direction: row;
+
+  }
 }
 
 .header__menu-item {
@@ -145,6 +191,14 @@
     color: #ffffff;
     font-size: 18px;
     line-height: 32px;
+    @include adaptive(desktop) {
+      @include font-regular();
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+  @include adaptive(desktop) {
+    border: none;
   }
 }
 
@@ -156,8 +210,7 @@
     flex-basis: 55%;
   }
   .main-container {
-    padding-top: 66px;
-    padding-bottom: 93px;
+    padding: 67px 20px 93px;
   }
 }
 
@@ -168,13 +221,11 @@
   align-items: baseline;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding-left: 37px;
   @include adaptive(tablet) {
-    list-style: none;
-    display: flex;
-    align-items: baseline;
+    text-align: center;
     margin-top: 45px;
     margin-bottom: 32px;
+    padding: 0 53px;
   }
 }
 

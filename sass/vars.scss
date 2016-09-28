@@ -19,7 +19,8 @@ $content-padding: 0 20px;
 $mobile-width: 320px;
 $tablet-width: 700px;
 $desktop-width: 1200px;
-
+$retina: "min-resolution: 144dpi";
+$retina1: "min-resolution: 1.5dppx";
 
 //Mixins
 
@@ -54,7 +55,14 @@ $desktop-width: 1200px;
       @content;
     }
   }
+  @if $media == retina {
+    @media ($retina), ($retina1) {
+    @content;
+    }
+  }
 }
+
+
 
 @mixin placeholder-style() {
   @include font-regular();
@@ -63,3 +71,4 @@ $desktop-width: 1200px;
   color: $clr-darkblue;
   opacity: 1;
 }
+
