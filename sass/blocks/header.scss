@@ -1,12 +1,26 @@
 @import '../vars';
 
 .header {
-  background: $bg-darkblue url('../../img/bg-back-mobile@1x.jpg') no-repeat top;
-  @include adaptive(tablet) {
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
+
+  &--index {
+    background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 50% 39%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
+  }
+  &--background {
+    background-color: #1d2631;
   }
   &--menu-opened {
-    background-position: 50% 258px;
+    background-position: 50% 62%, 50% 49%;
+  }
+  @include adaptive(tablet) {
+    background-size: 470px 550px, cover;
+    background-position: 75% bottom, top;
+  }
+  @include adaptive(desktop) {
+    background-size: 555px 645px, cover;
+    background-position: 75% bottom, top;
   }
 }
 
@@ -24,8 +38,21 @@
   }
 }
 
+.header__navbar {
+  display: flex;
+  flex-direction: column;
+
+  @include adaptive(tablet) {
+
+  }
+  @include adaptive(desktop) {
+    flex-direction: row;
+  }
+}
+
 .header__logo {
   display: flex;
+  flex-basis: 100%;
   align-items: center;
   background-color: transparentize($bg-darkblue, 0.7);
   padding: 20px;
@@ -46,6 +73,12 @@
 .header__main-content {
   position: relative;
   text-align: center;
+  @include adaptive(tablet) {
+
+  }
+  @include adaptive(desktop) {
+
+  }
   &--main-page {
     display: flex;
     flex-direction: column;
@@ -61,9 +94,13 @@
 
 .header__button-menu {
   text-align: right;
+  @include adaptive(desktop) {
+    display: none;
+  }
 }
 
-.header__button-menu button {
+.header__button-burger,
+.header__button-close {
   border: none;
   background-color: $no-bg-color;
   padding: 0;
@@ -114,14 +151,13 @@
 .header__download {
   background-color: $bg-darkblue;
   @include adaptive(tablet) {
-    order: 1;
     background-color: transparent;
     position: relative;
     flex-basis: 55%;
   }
-  & .main-container {
-    padding-top: 27px;
-    padding-bottom: 15px;
+  .main-container {
+    padding-top: 66px;
+    padding-bottom: 93px;
   }
 }
 
@@ -133,6 +169,13 @@
   margin-top: 30px;
   margin-bottom: 20px;
   padding-left: 37px;
+  @include adaptive(tablet) {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    margin-top: 45px;
+    margin-bottom: 32px;
+  }
 }
 
 .header__os-item {
@@ -143,6 +186,9 @@
   @include adaptive(tablet) {
     opacity: 0.4;
   }
+  @include adaptive(desktop) {
+    opacity: 1;
+  }
 }
 
 .header__download-description {
@@ -151,6 +197,9 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  @include adaptive(tablet) {
+    font-size: 18px;
+  }
 }
 
 .header__photo-header,

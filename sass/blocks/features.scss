@@ -10,12 +10,22 @@
     margin-bottom: -65px;
     padding-top: 0;
   }
+  @include adaptive(desktop) {
+    position: relative;
+    margin-bottom: 0;
+  }
 }
 
 .features__header {
   @include font-bold();
   font-size: 18px;
   line-height: 24px;
+  color: #000000;
+  @include adaptive(desktop) {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+  }
 }
 
 .features__text {
@@ -32,6 +42,21 @@
   @include adaptive(tablet) {
     width: 264px;
   }
+  @include adaptive(desktop) {
+    width: 183px;
+  }
+  &--hidden-mobile {
+    display: none;
+    @include adaptive(desktop) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &--hidden-desktop {
+    @include adaptive(desktop) {
+      display: none;
+    }
+  }
 }
 
 .features__content {
@@ -40,6 +65,9 @@
   align-items: center;
   @include adaptive(tablet) {
     flex-direction: row;
+  }
+  @include adaptive(desktop) {
+    display: block;
   }
 }
 
@@ -51,10 +79,17 @@
 }
 
 .features__text-content {
+  display: flex;
+  flex-direction: column;
   @include adaptive(tablet) {
     order: 2;
     flex-basis: 50%;
     text-align: left;
     padding-left: 20px;
+  }
+  @include adaptive(desktop) {
+    flex-direction: row;
+    flex-basis: 100%;
+    text-align: center;
   }
 }

@@ -1,0 +1,45 @@
+@import '../vars';
+
+.pink-effect {
+  background-color: $bg-white;
+  position: relative;
+  padding-top: 50px;
+  .main-container {
+    display: flex;
+  }
+  &--hidden-mobile {
+    display: none;
+  }
+  @include adaptive(tablet) {
+    display: block;
+  }
+}
+
+.pink-effect__clock {
+  flex-basis: 40%;
+}
+
+.pink-effect__text-block {
+  flex-basis: 60%;
+}
+
+.pink-effect_header {
+  @include font-bold();
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.pink-effect__text {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
+  color: $clr-darkblue;
+}
+
+.pink-effect__link {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
+  color: $clr-pink;
+}
