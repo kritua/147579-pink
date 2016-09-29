@@ -14,20 +14,35 @@
     display: block;
     padding: 54px 0 47px;
   }
+  @include adaptive(desktop) {
+    background-color: $bg-lightgrey;
+    padding: 54px 0 59px;
+  }
 }
 
 .pink-effect__timer,
 .pink-effect__text-block {
   flex-basis: 50%;
+  @include adaptive(desktop) {
+    flex-basis: 39%;
+  }
 }
 
 .pink-effect__text-block {
   margin-top: 17px;
+  @include adaptive(desktop) {
+    margin-top: 67px;
+    flex-basis: 56%;
+  }
 }
 
 .pink-effect__clock {
   width: 238px;
   height: 276px;
+  @include adaptive(desktop) {
+    width: 298px;
+    height: 345px;
+  }
 }
 
 .pink-effect_header {
@@ -38,6 +53,15 @@
   @include adaptive(tablet) {
     margin-bottom: 22px;
   }
+  @include adaptive(desktop) {
+    line-height: 30px;
+    margin-bottom: 38px;
+  }
+  br {
+    @include adaptive(desktop) {
+      display: none;
+    }
+  }
 }
 
 .pink-effect__text {
@@ -47,6 +71,11 @@
   color: $clr-darkblue;
   margin-bottom: 9px;
   margin-top: -14px;
+  @include adaptive(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 31px;
+  }
 }
 
 .pink-effect__link {
@@ -54,4 +83,8 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-pink;
+  @include adaptive(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

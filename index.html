@@ -13,7 +13,7 @@
       <div class="header__logo">
         <div class="header__logo-img">
           <picture>
-            <source media="(min-width: 1200px)" srcset="./img/logo-pink-blue-desktop.svg">
+            <source media="(min-width: 1200px)" srcset="./img/logo-pink-white-desktop.svg">
             <source media="(min-width: 700px)" srcset="./img/logo-pink-white-tablet.svg">
             <img src="./img/logo-pink-white-mobile.svg" alt="Pink">
           </picture>
@@ -60,17 +60,26 @@
         <div class="features__content">
           <div class="features__text-content">
             <div class="features__item">
-              <img src="./img/iphone-screen-mobile@1x.png" class="features__pink-image features__pink-image--hidden-mobile">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/iphone-screen-1-desktop@1x.png, ./img/iphone-screen-1-desktop@2x.png 2x">
+                <img srcset="./img/iphone-screen-1-desktop@1x.png, ./img/iphone-screen-1-desktop@2x.png 2x" class="features__pink-image features__pink-image--hidden-mobile">
+              </picture>
               <h3 class="features__header">Поднимает настроение</h3>
               <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </div>
             <div class="features__item">
-              <img src="./img/iphone-screen-mobile@1x.png" class="features__pink-image features__pink-image--hidden-mobile">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/iphone-screen-2-desktop@1x.png, ./img/iphone-screen-2-desktop@2x.png 2x">
+                <img srcset="./img/iphone-screen-2-desktop@1x.png, ./img/iphone-screen-2-desktop@2x.png 2x" class="features__pink-image features__pink-image--hidden-mobile">
+              </picture>
               <h3 class="features__header">Меняет мир вокруг</h3>
               <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </div>
             <div class="features__item">
-              <img src="./img/iphone-screen-mobile@1x.png" class="features__pink-image features__pink-image--hidden-mobile">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/iphone-screen-3-desktop@1x.png, ./img/iphone-screen-3-desktop@2x.png 2x">
+                <img srcset="./img/iphone-screen-3-desktop@1x.png, ./img/iphone-screen-3-desktop@2x.png 2x" class="features__pink-image features__pink-image--hidden-mobile">
+              </picture>
               <h3 class="features__header">Заводит новых друзей</h3>
               <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
             </div>
@@ -92,13 +101,14 @@
         </div>
         <div class="pink-effect__text-block">
           <h2 class="pink-effect_header">Эффект<br> на 24 часа!</h2>
-          <p class="pink-effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <p class="pink-effect__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от использования приложения длится целые сутки!</p>
           <a href="#" class="pink-effect__link">Узнать больше об исследовании</a>
         </div>
       </div>
     </section>
     <section class="reviews">
       <div class="main-container">
+        <img src="./img/icon-quotes.svg" class="reviews__quotes reviews__quotes--hidden">
         <div class="reviews__slider">
           <div class="reviews__item reviews__item--active">
             <h3 class="reviews__author">Николай Петров</h3>

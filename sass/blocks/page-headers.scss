@@ -2,6 +2,9 @@
 
 .page-headers {
   padding-top: 15px;
+  @include adaptive(desktop) {
+    padding-top: 35px;
+  }
 }
 
 .page-headers__item-h2 {
@@ -16,6 +19,10 @@
     line-height: 48px;
     margin-bottom: 0;
   }
+  @include adaptive(desktop) {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .page-headers__item-h2:last-child {
@@ -24,5 +31,8 @@
     margin-top: 0;
     margin-bottom: 50px;
     padding: 0 50px;
+  }
+  @include adaptive(desktop) {
+    padding: 0 260px;
   }
 }

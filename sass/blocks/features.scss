@@ -13,6 +13,7 @@
   @include adaptive(desktop) {
     position: relative;
     margin-bottom: 0;
+    background: linear-gradient(-4.5deg, #f2f2f2 80%, #ffffff 80%);
   }
 }
 
@@ -27,7 +28,8 @@
   @include adaptive(desktop) {
     font-size: 30px;
     line-height: 30px;
-    padding: 0 20px;
+    margin-top: 53px;
+    padding: 0 30px;
   }
 }
 
@@ -38,6 +40,12 @@
   color: $clr-darkblue;
   margin-top: -7px;
   margin-bottom: 14px;
+  @include adaptive(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 26px;
+    margin-top: 26px;
+  }
 }
 
 .features__pink-image {
@@ -97,5 +105,14 @@
     flex-direction: row;
     flex-basis: 100%;
     text-align: center;
+  }
+}
+
+.features__item {
+  @include adaptive(desktop) {
+    flex-basis: 33%;
+  }
+  &:nth-child(2) {
+    margin: 0 20px;
   }
 }

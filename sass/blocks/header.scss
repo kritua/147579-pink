@@ -16,7 +16,7 @@
     }
   }
   @include adaptive(desktop) {
-    background: url(../../img/iphone-hand-tablet@1x.png) no-repeat 0 100%, url(../../img/bg-back-tablet@1x.jpg) no-repeat 50% 0;
+    background: url(../../img/iphone-hand-desktop@1x.png) no-repeat 97% 100%, url(../../img/bg-back-desktop@1x.jpg) no-repeat 50% 0;
     @include adaptive(retina) {
       background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 100%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
       background-size: 700px auto, 1200px auto;
@@ -53,8 +53,7 @@
   }
 
   @include adaptive(desktop) {
-    //background-size: 555px 645px, cover;
-    //background-position: 75% bottom, top;
+
   }
 }
 
@@ -69,6 +68,11 @@
     @include adaptive(tablet) {
       display: block;
     }
+    @include adaptive(desktop) {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 51px;
+    }
   }
 }
 
@@ -81,6 +85,8 @@
   }
   @include adaptive(desktop) {
     flex-direction: row;
+    justify-content: space-around;
+    padding: 31px 8px;
   }
 }
 
@@ -92,6 +98,11 @@
   @include adaptive(tablet) {
     padding: 30px 40px 40px;
     align-items: baseline;
+  }
+  @include adaptive(desktop) {
+    padding: 0;
+    flex-basis: 0;
+    margin-left: 68px;
   }
 }
 
@@ -141,6 +152,13 @@
   padding: 0;
 }
 
+.header__menu {
+  @include adaptive(desktop) {
+    flex-basis: 0;
+    white-space: nowrap;
+  }
+}
+
 .header__button--hidden,
 .header__menu--hidden {
   display: none;
@@ -178,6 +196,8 @@
   @include adaptive(desktop) {
     background: none;
     flex-direction: row;
+    margin-left: 48px;
+    margin-top: 2px;
 
   }
 }
@@ -195,6 +215,8 @@
       @include font-regular();
       font-size: 18px;
       line-height: 18px;
+      text-transform: none;
+      margin-right: 50px;
     }
   }
   @include adaptive(desktop) {
@@ -211,6 +233,13 @@
   }
   .main-container {
     padding: 67px 20px 93px;
+    @include adaptive(desktop) {
+      padding: 67px 110px 93px;
+    }
+  }
+  @include adaptive(desktop) {
+    flex-basis: 47%;
+    margin-top: 7px;
   }
 }
 
@@ -226,6 +255,10 @@
     margin-top: 45px;
     margin-bottom: 32px;
     padding: 0 53px;
+  }
+  @include adaptive(desktop) {
+    margin-top: 67px;
+    margin-bottom: 51px;
   }
 }
 
@@ -250,6 +283,9 @@
   text-align: center;
   @include adaptive(tablet) {
     font-size: 18px;
+  }
+  @include adaptive(desktop) {
+    margin-bottom: 27px;
   }
 }
 

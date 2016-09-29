@@ -70,6 +70,9 @@
     @include adaptive(tablet) {
       padding: 16px 22px;
     }
+    @include adaptive(desktop) {
+      font-size: 21px;
+    }
   }
   &--add-photo {
     border-color: $clr-pink;
