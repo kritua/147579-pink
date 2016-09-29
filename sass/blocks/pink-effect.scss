@@ -12,6 +12,7 @@
   }
   @include adaptive(tablet) {
     display: block;
+    padding: 54px 0 47px;
   }
 }
 
@@ -34,6 +35,9 @@
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+  @include adaptive(tablet) {
+    margin-bottom: 22px;
+  }
 }
 
 .pink-effect__text {

@@ -3,17 +3,27 @@
 .social {
   display: flex;
   flex-wrap: nowrap;
+  @include adaptive(tablet) {
+    align-self: center;
+  }
 }
 
 .social__button {
   flex-basis: 33.33%;
+  @include adaptive(tablet) {
+    margin-right: 10px;
+    margin-top: 12px;
+    &:first-child {
+      margin-left: -8px;
+    }
+  }
 }
 
 .social__button-icon {
   border: 3px solid transparentize($clr-darkblue, 0.9);
   border-radius: 50%;
-  width: 51px;
-  height: 51px;
+  width: 47px;
+  height: 47px;
   margin: 0 auto;
 }
 
@@ -21,23 +31,35 @@
   width: 18px;
   height: 15px;
   padding: 17px;
+  @include adaptive(tablet) {
+    padding: 15px;
+  }
 }
 
 .social__button-youtube-svg {
   width: 15px;
   height: 14px;
   padding: 17px 20px;
+  @include adaptive(tablet) {
+    padding: 15px 18px;
+  }
 }
 
 .social__button-facebook-svg {
   width: 9px;
   height: 19px;
   padding: 15px;
+  @include adaptive(tablet) {
+    padding: 12px;
+  }
 }
 
 .social__designed-by {
   text-align: center;
   margin-top: 40px;
+  @include adaptive(tablet) {
+    margin-top: 49px;
+  }
 }
 
 .social__text {
@@ -54,4 +76,7 @@
   fill: $clr-pink;
   vertical-align: middle;
   padding-left: 15px;
+  @include adaptive(tablet) {
+    padding-left: 12px;
+  }
 }

@@ -96,6 +96,9 @@
   width: 150px;
   height: 40px;
   margin: 40px 0;
+  @include adaptive(tablet) {
+    margin: 35px 0 45px;
+  }
   .st0 {
     fill: $clr-darkblue;
   }
@@ -109,7 +112,21 @@
 
 .footer {
   text-align: center;
+  @include adaptive(tablet) {
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
+
+.footer--hidden-mobile {
+  display: none;
+  @include adaptive(tablet) {
+    display: block;
+  }
+}
+
 
 ::-webkit-input-placeholder {
   @include placeholder-style();
