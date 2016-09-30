@@ -3,9 +3,9 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: url('../../img/iphone-hand-mobile@1x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% -1%;
+  background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 0 31%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0;
   @include adaptive(retina) {
-    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 31%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0%;
+    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 31%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
     background-size: 258px auto, 700px auto;
   }
   @include adaptive(tablet) {
@@ -46,7 +46,7 @@
     background-color: #1d2631;
   }
   &--menu-opened {
-    background-position: 0 62%, 50% 49%;
+    background-position: 0 53%, 50% 49%;
     @include adaptive(tablet) {
       background-position: 50% 100%, 50% 100%;
     }

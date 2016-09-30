@@ -89,4 +89,8 @@
   width: 78px;
   height: 63px;
   padding-left: 7px;
+  display: none;
+  @include adaptive(desktop) {
+    display: block;
+  }
 }

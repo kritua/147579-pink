@@ -34,10 +34,13 @@
   border: 1px solid #e5e5e5;
   &--hidden {
     display: none;
-    @include adaptive(tablet) {
-      display: block;
-      border-bottom: none;
-    }
+  }
+  @include adaptive(tablet) {
+    display: block;
+    border-bottom: none;
+  }
+  @include adaptive(desktop) {
+    border-bottom: none;
   }
 }
 
