@@ -6,6 +6,9 @@
   @include adaptive(tablet) {
     align-self: center;
   }
+  @include adaptive(desktop) {
+    margin-left: 22px;
+  }
 }
 
 .social__button {
@@ -71,6 +74,9 @@
   line-height: 18px;
   color: $clr-darkblue;
   text-decoration: none;
+  @include adaptive(desktop) {
+    font-size: 18px;
+  }
 }
 
 .social__designed-by-svg {
@@ -81,5 +87,8 @@
   padding-left: 15px;
   @include adaptive(tablet) {
     padding-left: 12px;
+  }
+  @include adaptive(tablet) {
+    padding-left: 9px;
   }
 }

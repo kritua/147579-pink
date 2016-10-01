@@ -46,7 +46,7 @@
     background-color: #1d2631;
   }
   &--menu-opened {
-    background-position: 0 53%, 50% 49%;
+    background-position: 0 61.5%, 50% 49%;
     @include adaptive(tablet) {
       background-position: 50% 100%, 50% 100%;
     }
@@ -67,6 +67,7 @@
     display: none;
     @include adaptive(tablet) {
       display: block;
+      margin-bottom: 30px;
     }
     @include adaptive(desktop) {
       font-size: 50px;
@@ -229,10 +230,13 @@
   @include adaptive(tablet) {
     background-color: transparent;
     position: relative;
-    flex-basis: 55%;
+    flex-basis: 54%;
   }
   .main-container {
-    padding: 67px 20px 93px;
+    padding: 29px 20px 15px;
+    @include adaptive(tablet) {
+      padding: 65px 20px 93px;
+    }
     @include adaptive(desktop) {
       padding: 67px 110px 93px;
     }
@@ -254,11 +258,13 @@
     text-align: center;
     margin-top: 45px;
     margin-bottom: 32px;
-    padding: 0 53px;
+    padding: 0 50px;
   }
   @include adaptive(desktop) {
-    margin-top: 67px;
-    margin-bottom: 51px;
+    margin-top: 65px;
+    margin-bottom: 53px;
+    margin-left: -4px;
+    padding: 0 54px;
   }
 }
 

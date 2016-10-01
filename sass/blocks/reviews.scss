@@ -61,9 +61,11 @@
   @include adaptive(tablet) {
     order: 1;
     font-size: 18px;
+    margin-bottom: 13px;
   }
   @include adaptive(desktop) {
     padding: 0 86px;
+    margin-bottom: 19px;
     &::before,
     &::after {
       content: '';
@@ -83,6 +85,12 @@
   }
 }
 
+.reviews__span {
+  @include adaptive(desktop) {
+    display: none;
+  }
+}
+
 .reviews__author-info {
   @include font-regular();
   font-size: 14px;
@@ -95,6 +103,7 @@
   @include adaptive(tablet) {
     display: block;
     order: 3;
+    margin-top: 8px;
   }
   @include adaptive(desktop) {
     font-size: 18px;

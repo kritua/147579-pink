@@ -1,7 +1,10 @@
 @import '../vars';
 
 .page-headers {
-  padding-top: 15px;
+  padding-top: 6px;
+  @include adaptive(tablet) {
+    padding-top: 15px;
+  }
   @include adaptive(desktop) {
     padding-top: 35px;
   }

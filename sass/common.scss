@@ -121,6 +121,11 @@
       justify-content: space-between;
     }
   }
+  @include adaptive(desktop) {
+    .main-container {
+      margin: 35px 0 45px;
+    }
+  }
 }
 
 .footer--hidden-mobile {
