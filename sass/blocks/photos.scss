@@ -6,16 +6,23 @@
   line-height: 30px;
   color: $clr-darkblue;
   text-align: center;
-  padding: 0 15px;
+  padding: 34px 15px 37px;
+}
+
+.photos__items-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .photos__item {
+  display: flex;
+  flex-direction: column;
   background-color: $bg-lightgrey;
   margin-bottom: 20px;
   position: relative;
   &--best-photo {
     .photos__item-img {
-      margin-left: -20px;
+      margin: 0 -20px;
     }
   }
 }
@@ -54,7 +61,7 @@
 }
 
 .photos__user-review {
-  padding: $content-padding;
+  padding: 4px 18px 7px;
 }
 
 .photos__user-comment {
@@ -62,13 +69,17 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-darkblue;
+  margin-top: -15px;
+  margin-bottom: -1px;
 }
 
 .photos__heart-icon {
+  display: inline-block;
+  vertical-align: middle;
   background: none;
   border: none;
   cursor: pointer;
-  display: inline-block;
+  padding: 0 14px 0 0;
 }
 
 .photos__heart-icon-svg {
@@ -86,6 +97,7 @@
   font-size: 12px;
   line-height: 24px;
   color: $clr-pink;
+  text-transform: uppercase;
 }
 
 

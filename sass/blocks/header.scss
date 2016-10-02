@@ -40,6 +40,10 @@
         background: url('../../img/bg-back-desktop@2x.jpg') no-repeat 50% 0;
       }
     }
+    &.header--menu-opened {
+      background-position: 50% 821%;
+      background-size: 220%;
+    }
   }
 
   &--background {
@@ -50,10 +54,6 @@
     @include adaptive(tablet) {
       background-position: 50% 100%, 50% 100%;
     }
-  }
-
-  @include adaptive(desktop) {
-
   }
 }
 
@@ -123,9 +123,6 @@
   @include adaptive(tablet) {
     padding-top: 0;
   }
-  @include adaptive(desktop) {
-
-  }
   &--main-page {
     display: flex;
     flex-direction: column;
@@ -135,7 +132,7 @@
     }
   }
   &--pages {
-    padding: 13px 0 39px;
+    padding: 13px 0 68px;
   }
 }
 

@@ -1,7 +1,12 @@
 @import '../vars';
 
+.add-your-photo {
+  margin-top: 22px;
+}
+
 .add-your-photo__editor {
   background-color: $bg-lightgrey;
+  margin-top: 43px;
 }
 
 .add-your-photo__header {
@@ -10,6 +15,9 @@
   line-height: 30px;
   color: $clr-darkblue;
   text-align: center;
+  span {
+    padding: 0 60px;
+  }
 }
 
 .add-your-photo__preview {
