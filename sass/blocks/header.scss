@@ -3,9 +3,9 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 0 31%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0;
+  background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 0 39%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0;
   @include adaptive(retina) {
-    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 31%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
     background-size: 258px auto, 700px auto;
   }
   @include adaptive(tablet) {
@@ -41,8 +41,12 @@
       }
     }
     &.header--menu-opened {
-      background-position: 50% 821%;
-      background-size: 220%;
+      background-position: 50% 255px;
+      background-size: 700px auto;
+      @include adaptive(tablet) {
+        background-position: 50% 260px;
+        background-size: 1200px auto;
+      }
     }
   }
 
@@ -133,6 +137,9 @@
   }
   &--pages {
     padding: 13px 0 68px;
+    @include adaptive(tablet) {
+      padding: 36px 0 106px;
+    }
   }
 }
 
@@ -232,10 +239,10 @@
   .main-container {
     padding: 29px 20px 15px;
     @include adaptive(tablet) {
-      padding: 65px 20px 93px;
+      padding: 65px 40px 93px;
     }
     @include adaptive(desktop) {
-      padding: 67px 110px 93px;
+      padding: 67px 130px 93px;
     }
   }
   @include adaptive(desktop) {
@@ -255,13 +262,13 @@
     text-align: center;
     margin-top: 45px;
     margin-bottom: 32px;
-    padding: 0 50px;
+    padding: 0 30px;
   }
   @include adaptive(desktop) {
     margin-top: 65px;
     margin-bottom: 53px;
     margin-left: -4px;
-    padding: 0 54px;
+    padding: 0 34px;
   }
 }
 
@@ -299,6 +306,11 @@
   line-height: 29px;
   color: #ffffff;
   padding: $content-padding;
+  @include adaptive(tablet) {
+    font-size: 50px;
+    line-height: 60px;
+    padding: 0 100px;
+  }
 }
 
 

@@ -3,11 +3,14 @@
 .social {
   display: flex;
   flex-wrap: nowrap;
+  padding: 0 45px;
   @include adaptive(tablet) {
     align-self: center;
+    padding: 0;
   }
   @include adaptive(desktop) {
     margin-left: 22px;
+    padding: 0;
   }
 }
 
@@ -19,6 +22,10 @@
     &:first-child {
       margin-left: -8px;
     }
+    @include adaptive(desktop) {
+      margin-right: 11px;
+      margin-top: 4px;
+    }
   }
   svg {
     fill: $clr-pink;
@@ -28,15 +35,15 @@
 .social__button-icon {
   border: 3px solid transparentize($clr-darkblue, 0.9);
   border-radius: 50%;
-  width: 47px;
-  height: 47px;
+  width: 45px;
+  height: 45px;
   margin: 0 auto;
 }
 
 .social__button-twitter-svg {
   width: 18px;
   height: 15px;
-  padding: 17px;
+  padding: 17px 14px;
   @include adaptive(tablet) {
     padding: 15px;
   }
@@ -45,7 +52,7 @@
 .social__button-youtube-svg {
   width: 15px;
   height: 14px;
-  padding: 17px 20px;
+  padding: 17px;
   @include adaptive(tablet) {
     padding: 15px 18px;
   }

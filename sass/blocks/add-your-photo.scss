@@ -1,12 +1,36 @@
 @import '../vars';
 
 .add-your-photo {
-  margin-top: 22px;
+  margin-top: 23px;
+  @include adaptive(tablet) {
+    margin-top: 47px;
+  }
 }
 
 .add-your-photo__editor {
   background-color: $bg-lightgrey;
   margin-top: 43px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  @include adaptive(tablet) {
+    margin-top: 69px;
+    padding: 57px 40px 32px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.add-your-photo__tools-wrapper {
+  @include adaptive(tablet) {
+    flex-basis: 50%;
+  }
+}
+
+.add-your-photo__image {
+  @include adaptive(tablet) {
+    flex-basis: 50%;
+  }
 }
 
 .add-your-photo__header {
@@ -18,16 +42,35 @@
   span {
     padding: 0 60px;
   }
+  @include adaptive(tablet) {
+    font-size: 18px;
+    span {
+      padding: 0 260px;
+    }
+  }
 }
 
-.add-your-photo__preview {
-  padding: 20px;
+
+.add-your-photo__item {
+  @include adaptive(tablet) {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 41px;
+    flex-basis: 100%;
+  }
 }
 
 .add-your-photo__tools {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid #dddfe0;
+  margin-top: 40px;
+  padding: 0 20px;
+  @include adaptive(tablet) {
+    flex-direction: column;
+    margin-top: 6px;
+    padding: 0;
+  }
 }
 
 .add-your-photo__fill-photo,
@@ -38,11 +81,32 @@
   background: none;
   cursor: pointer;
   flex-basis: 33.33%;
+  @include adaptive(tablet) {
+    padding: 0;
+    margin-left: -3px;
+
+  }
+}
+.add-your-photo__fill-photo,
+.add-your-photo__cut-photo,
+.add-your-photo__bright-contrast {
+  @include adaptive(tablet) {
+    margin-right: 5px;
+  }
 }
 
 .add-your-photo__slider-control {
   flex-grow: 1;
   position: relative;
+  @include adaptive(tablet) {
+    display: none;
+  }
+  &--hidden {
+    display: none;
+    @include adaptive(tablet) {
+      display: block;
+    }
+  }
 }
 
 .add-your-photo__slider-control::before {
@@ -53,41 +117,58 @@
   right: 0;
   height: 2px;
   background-color: #283645;
-  margin: 40px 38px 34px;
+  margin-top: 23px;
+  @include adaptive(tablet) {
+    left: -12px;
+    right: 17px;
+    margin-top: 6px;
+  }
 }
 
 .add-your-photo__slider-control-svg {
   width: 14px;
   height: 14px;
   fill: $clr-pink;
-  margin: 40px auto 34px;
+  margin: 23px auto 22px;
   position: relative;
-  right: -25%;
+  right: -34%;
   .st1 {
     fill: #ffffff;
+  }
+  @include adaptive(tablet) {
+    margin: 7px 0 6px;
   }
 }
 
 .add-your-photo__cut-photo-svg {
-  width: 44px;
-  height: 44px;
+  width: 24px;
+  height: 24px;
   fill: $clr-pink;
 }
 
 .add-your-photo__fill-photo-svg {
-  width: 48px;
-  height: 43px;
+  width: 24px;
+  height: 22px;
   fill: #b5b9be;
+  @include adaptive(tablet) {
+    fill: $clr-pink;
+    margin-top: 6px;
+  }
 }
 
 .add-your-photo__bright-contrast-svg {
-  width: 32px;
-  height: 32px;
+  width: 16px;
+  height: 16px;
   fill: #b5b9be;
+  @include adaptive(tablet) {
+    fill: $clr-pink;
+    margin-top: 4px;
+    margin-left: 2px;
+  }
 }
 
 .add-your-photo__buttons {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 
