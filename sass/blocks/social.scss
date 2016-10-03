@@ -4,9 +4,11 @@
   display: flex;
   flex-wrap: nowrap;
   padding: 0 45px;
+  margin-top: -5px;
   @include adaptive(tablet) {
     align-self: center;
     padding: 0;
+    margin-top: 0;
   }
   @include adaptive(desktop) {
     margin-left: 22px;
@@ -17,8 +19,8 @@
 .social__button {
   flex-basis: 33.33%;
   @include adaptive(tablet) {
-    margin-right: 10px;
-    margin-top: 12px;
+    margin-right: 13px;
+    margin-top: 7px;
     &:first-child {
       margin-left: -8px;
     }
@@ -54,7 +56,7 @@
   height: 14px;
   padding: 17px;
   @include adaptive(tablet) {
-    padding: 15px 18px;
+    padding: 15px;
   }
 }
 

@@ -25,7 +25,7 @@
        url('../fonts/opensanslight.woff2');
 }
 
-.body {
+.body-container {
   width: $mobile-width;
   margin: 0 auto;
   @include adaptive(tablet) {
@@ -65,9 +65,12 @@
     color: transparentize($clr-darkblue, 0.9);
     padding: 16px 100px;
     @include adaptive(tablet) {
-      margin-top: 24px;
-      margin-left: 36px;
+      margin-top: 13px;
+      margin-left: 3px;
       padding: 16px 92px;
+    }
+    @include adaptive(desktop) {
+      margin: 0;
     }
   }
   &--header {
@@ -87,10 +90,13 @@
     margin-top: 38px;
     margin-bottom: 12px;
     @include adaptive(tablet) {
-      margin-top: 41px;
-      margin-left: 36px;
-      padding: 16px 78px;
+      margin-top: 44px;
+      margin-left: 4px;
+      padding: 15px 79px;
     }
+  }
+  @include adaptive(desktop) {
+    margin: 0;
   }
 }
 
