@@ -2,8 +2,14 @@
 
 .form-radio {
   background: $bg-lightgrey;
+  margin-top: 36px;
+  padding-top: 34px;
+  padding-bottom: 4px;
   input[type="radio"] {
     display: none;
+  }
+  @include adaptive(tablet) {
+    order: 2;
   }
 }
 
@@ -25,7 +31,7 @@
 .form-radio__item {
   display: flex;
   position: relative;
-  margin: 44px 0 44px 20px;
+  margin: 41px 0 44px 20px;
 }
 
 .form-radio__label {

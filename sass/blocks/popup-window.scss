@@ -3,6 +3,17 @@
 .popup-window {
   text-align: center;
   box-shadow: 0 0 13px 0 #ccc;
+  padding-top: 24px;
+  padding-bottom: 55px;
+  &--success {
+    .popup-window__text {
+      margin-bottom: 33px;
+    }
+    .popup-window__button {
+      box-shadow: 0 0 13px 0 #ccc;
+      padding: 46px 20px 51px;
+    }
+  }
 }
 
 .popup-window__header {
@@ -10,6 +21,7 @@
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+  margin-bottom: 26px;
 }
 
 .popup-window__text {
@@ -17,6 +29,7 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-darkblue;
+  margin-bottom: 37px;
 }
 
 .popup-window__button {

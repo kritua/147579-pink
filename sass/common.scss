@@ -71,6 +71,7 @@
     }
     @include adaptive(desktop) {
       margin: 0;
+      padding: 16px 52px;
     }
   }
   &--header {
@@ -94,9 +95,11 @@
       margin-left: 4px;
       padding: 15px 79px;
     }
-  }
-  @include adaptive(desktop) {
-    margin: 0;
+    @include adaptive(desktop) {
+      margin: 0;
+      padding: 15px 38px;
+      margin-right: 45px;
+    }
   }
 }
 

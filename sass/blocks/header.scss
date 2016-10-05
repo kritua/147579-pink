@@ -43,6 +43,9 @@
     &.header--menu-opened {
       background-position: 50% 255px;
       background-size: 700px auto;
+      & > .header__navbar {
+        background-color: $clr-darkblue;
+      }
       @include adaptive(tablet) {
         background-position: 50% 260px;
         background-size: 1200px auto;
@@ -144,6 +147,12 @@
       padding: 30px 0 67px;
     }
   }
+  &--form-page {
+    padding: 13px 0 39px;
+    @include adaptive(tablet) {
+      padding: 36px 0 47px;
+    }
+  }
 }
 
 .header__button-menu {
@@ -194,7 +203,7 @@
 .header__menu-list {
   display: flex;
   flex-direction: column;
-  background-color: $bg-darkblue;
+  background-color: $clr-darkblue;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -206,7 +215,6 @@
     flex-direction: row;
     margin-left: 48px;
     margin-top: 2px;
-
   }
 }
 

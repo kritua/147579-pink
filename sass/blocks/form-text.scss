@@ -2,27 +2,55 @@
 
 .form-text {
   margin-top: 44px;
+  @include adaptive(tablet) {
+    margin-top: 91px;
+  }
   &--contacts {
-    margin-top: 30px;
+    margin-top: -5px;
+    order: 4;
+  }
+  &--names {
+    order: 1;
   }
 }
-.form-text__header {
+.form-text__header,
+.form-text__secondary-header {
   @include font-regular();
   font-size: 14px;
   line-height: 30px;
   color: $clr-darkblue;
+  text-align: center;
+  &--hidden {
+    display: none;
+    @include adaptive(tablet) {
+      display: block;
+    }
+  }
+  @include adaptive(tablet) {
+    font-size: 18px;
+    padding: 0 50px;
+    margin: 0;
+  }
+
 }
 
 .form-text__fieldset {
   border: none;
   padding: 0;
-  margin: 33px 0 27px;
+  margin: 36px 0 26px;
+  @include adaptive(tablet) {
+    margin: 68px 0 26px;
+  }
 }
 
 .form-text__item {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   display: flex;
   flex-direction: column;
+  @include adaptive(tablet) {
+    flex-direction: row;
+    margin-bottom: 48px;
+  }
 }
 
 .form-text__label {
@@ -33,6 +61,13 @@
   text-transform: uppercase;
   padding-left: 23px;
   flex-basis: 100%;
+  @include adaptive(tablet) {
+    flex-basis: 0;
+    padding-left: 0;
+    padding-right: 20px;
+    align-self: center;
+    margin-top: 5px;
+  }
 }
 
 .form-text__text-input {
@@ -41,3 +76,4 @@
   margin-top: 5px;
   flex-basis: 100%;
 }
+

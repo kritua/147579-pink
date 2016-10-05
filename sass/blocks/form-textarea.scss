@@ -1,7 +1,10 @@
 @import '../vars';
 
 .form-textarea {
-
+  margin-top: 51px;
+  @include adaptive(tablet) {
+    order: 3;
+  }
 }
 
 .form-textarea__fieldset {
@@ -21,7 +24,8 @@
 
 .form-textarea__textarea-input {
   width: 100%;
-  padding: 20px;
+  padding: 15px 20px;
   min-height: 200px;
   box-sizing: border-box;
+  margin-top: 11px;
 }

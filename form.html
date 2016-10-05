@@ -9,35 +9,43 @@
 </head>
 <body>
   <div class="body-container">
-    <header class="header header--pages header--menu-opened">
-      <div class="header__logo">
-        <div class="header__logo-img">
-          <img src="./img/logo-pink-white-mobile.svg">
+    <header class="header header--pages header--background header--menu-opened">
+      <div class="header__navbar">
+        <div class="header__logo">
+          <div class="header__logo-img">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 700px)" srcset="./img/logo-pink-white-tablet.svg">
+              <img src="./img/logo-pink-white-mobile.svg" alt="Pink">
+            </picture>
+          </div>
+          <div class="header__button-menu">
+            <button class="header__button-burger header__button--hidden" type="button"><img
+              src="./img/icon-menu-burger.svg"></button>
+            <button class="header__button-close" type="button"><img src="./img/icon-menu-cross.svg"></button>
+          </div>
         </div>
-        <div class="header__button-menu">
-          <button class="header__button-burger header__button--hidden" type="button"><img
-            src="./img/icon-menu-burger.svg"></button>
-          <button class="header__button-close" type="button"><img src="./img/icon-menu-cross.svg"></button>
-        </div>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a href="#">Главная</a></li>
+            <li class="header__menu-item"><a href="photo.html">Фотографии</a></li>
+            <li class="header__menu-item"><a href="form.html">Конкурс</a></li>
+            <li class="header__menu-item"><a href="#">HTML Academy</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="#">Главная</a></li>
-          <li class="header__menu-item"><a href="photo.html">Фотографии</a></li>
-          <li class="header__menu-item"><a href="form.html">Конкурс</a></li>
-          <li class="header__menu-item"><a href="#">HTML Academy</a></li>
-        </ul>
-      </nav>
-      <div class="header__main-content header__main-content--pages">
-        <h1 class="header__form-header">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      <div class="header__main-content header__main-content--pages header__main-content--form-page">
+        <h1 class="header__photo-header">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
     </header>
     <main>
-      <form>
-        <section class="form-text">
+      <form class="main-form">
+        <section class="form-text form-text--names">
           <div class="main-container">
             <h2 class="form-text__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
               вашу бонусную карту!</h2>
+            <h2 class="form-text__secondary-header form-text__secondary-header--hidden">Пожалуйста, заполните форму ниже:</h2>
+
             <fieldset class="form-text__fieldset">
               <div class="form-text__item">
                 <label class="form-text__label" for="last-name">Фамилия:</label>
@@ -93,7 +101,7 @@
                 <input class="form-text__text-input" type="text" id="phone" placeholder="Номер, пожалуйста">
               </div>
               <div class="form-text__item">
-                <label class="form-text__label" for="mail">Введите почту</label>
+                <label class="form-text__label" for="mail">Адресок почты</label>
                 <input class="form-text__text-input" type="text" id="mail" placeholder="Введите почту">
               </div>
             </fieldset>
@@ -109,7 +117,7 @@
               </div>
               <div class="form-radio__item">
                 <input class="form-radio__radio-input" name="choose-os" id="android" type="radio">
-                <label class="form-radio__label" for="android">Pink для Android</label>
+                <label class="form-radio__label" for="android">Pink на Android</label>
               </div>
               <div class="form-radio__item">
                 <input class="form-radio__radio-input" name="choose-os" id="windows" type="radio">
@@ -130,7 +138,7 @@
         <div class="send-form">
           <div class="main-container">
             <button class="huge-button" type="button">Отправить форму</button>
-            <p class="send-form__required"><span class="send-form__required-star">*</span> - обязательные поля</p>
+            <p class="send-form__required"><span class="send-form__required-star">*</span> &mdash; обязательные поля</p>
           </div>
         </div>
       </form>

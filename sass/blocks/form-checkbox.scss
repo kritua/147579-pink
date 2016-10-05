@@ -5,6 +5,9 @@
   input[type='checkbox'] {
     display: none;
   }
+  @include adaptive(tablet) {
+    order: 5;
+  }
 }
 
 .form-checkbox__fieldset {
@@ -20,16 +23,13 @@
   color: $clr-pink;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 40px;
+  padding: 36px 20px;
 }
 
 .form-checkbox__item {
-  margin: 44px 0 44px 20px;
+  margin: 8px 0 52px 20px;
   position: relative;
   display: flex;
-  &:last-child {
-    margin-bottom: 85px;
-  }
 }
 
 .form-checkbox__label {

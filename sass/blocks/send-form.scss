@@ -1,7 +1,10 @@
 @import '../vars';
 
 .send-form {
-
+  margin-top: 44px;
+  @include adaptive(tablet) {
+    order: 6;
+  }
 }
 
 .send-form__required {
@@ -10,6 +13,8 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $clr-darkblue;
+  text-align: center;
+  margin-top: 34px;
 }
 
 .send-form__required-star {
