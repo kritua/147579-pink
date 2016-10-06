@@ -6,7 +6,9 @@
     display: none;
   }
   @include adaptive(tablet) {
-    order: 5;
+    order: 4;
+    background: none;
+    margin-top: 23px;
   }
 }
 
@@ -14,6 +16,10 @@
   border: none;
   padding: 0;
   margin: 0;
+  @include adaptive(tablet) {
+    border: 2px solid #eeeeee;
+    padding: 5px 58px 0;
+  }
 }
 
 .form-checkbox__header {
@@ -24,6 +30,9 @@
   text-align: center;
   text-transform: uppercase;
   padding: 36px 20px;
+  @include adaptive(tablet) {
+    padding: 36px 32px;
+  }
 }
 
 .form-checkbox__item {
@@ -47,6 +56,9 @@
     height: 34px;
     border: 2px solid #e5e5e5;
     background-color: #ffffff;
+  }
+  @include adaptive(tablet) {
+    margin-left: 39px;
   }
 }
 

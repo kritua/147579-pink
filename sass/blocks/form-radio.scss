@@ -2,7 +2,7 @@
 
 .form-radio {
   background: $bg-lightgrey;
-  margin-top: 36px;
+  margin-top: 10px;
   padding-top: 34px;
   padding-bottom: 4px;
   input[type="radio"] {
@@ -10,6 +10,8 @@
   }
   @include adaptive(tablet) {
     order: 2;
+    background: none;
+    padding-top: 0;
   }
 }
 
@@ -17,6 +19,10 @@
   border: none;
   padding: 0;
   margin: 0;
+  @include adaptive(tablet) {
+    border: 2px solid #eeeeee;
+    padding: 7px 58px 16px;
+  }
 }
 
 .form-radio__header {
@@ -26,6 +32,9 @@
   color: $clr-pink;
   text-transform: uppercase;
   text-align: center;
+  @include adaptive(tablet) {
+    padding: 0 25px;
+  }
 }
 
 .form-radio__item {
@@ -40,6 +49,10 @@
   font-size: 18px;
   line-height: 30px;
   color: $clr-darkblue;
+  @include adaptive(tablet) {
+    margin-left: 39px;
+  }
+
   &::before {
     content: '';
     position: absolute;

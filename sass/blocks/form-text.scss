@@ -1,18 +1,48 @@
 @import '../vars';
 
 .form-text {
-  margin-top: 44px;
+  margin-top: 31px;
   @include adaptive(tablet) {
     margin-top: 91px;
   }
   &--contacts {
     margin-top: -5px;
-    order: 4;
+    @include adaptive(tablet) {
+      order: 3;
+    }
+    .form-text__fieldset {
+      border: 2px solid #eeeeee;
+      margin: 58px 0 0;
+      padding: 34px 58px 0;
+    }
+    .form-text__item {
+      flex-direction: column;
+      margin-bottom: 25px;
+    }
+    .form-text__label {
+      order: 2;
+      align-self: flex-start;
+      padding-left: 19px;
+      margin-top: 9px;
+    }
+    .form-text__text-input {
+      order: 1;
+      padding: 20px 18px;
+    }
   }
   &--names {
-    order: 1;
+    @include adaptive(tablet) {
+      order: 1;
+    }
   }
 }
+
+.form-text__span {
+  @include adaptive(tablet) {
+    display: none;
+  }
+}
+
 .form-text__header,
 .form-text__secondary-header {
   @include font-regular();
@@ -31,7 +61,18 @@
     padding: 0 50px;
     margin: 0;
   }
+}
 
+.form-text__legend {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 18px;
+  color: $clr-pink;
+  text-transform: uppercase;
+  text-align: center;
+  @include adaptive(tablet) {
+    padding: 0 32px;
+  }
 }
 
 .form-text__fieldset {
@@ -39,17 +80,21 @@
   padding: 0;
   margin: 36px 0 26px;
   @include adaptive(tablet) {
-    margin: 68px 0 26px;
+    margin: 68px 0 0;
   }
 }
 
 .form-text__item {
+  position: relative;
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
   @include adaptive(tablet) {
     flex-direction: row;
     margin-bottom: 48px;
+  }
+  &::before {
+    content: '';
   }
 }
 

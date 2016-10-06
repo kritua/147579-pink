@@ -4,6 +4,12 @@
   margin-top: 44px;
   @include adaptive(tablet) {
     order: 6;
+    margin-top: 66px;
+    margin-right: -1px;
+    margin-bottom: 51px;
+  }
+  .main-container {
+    display: flex;
   }
 }
 
@@ -15,8 +21,24 @@
   color: $clr-darkblue;
   text-align: center;
   margin-top: 34px;
+  @include adaptive(tablet) {
+    text-align: right;
+    margin-top: 19px;
+  }
 }
 
 .send-form__required-star {
   color: $clr-pink;
+}
+
+.send-form__button {
+  @include adaptive(tablet) {
+    flex-basis: 48.5%;
+  }
+}
+
+.send-form__text {
+  @include adaptive(tablet) {
+    flex-basis: 51.5%;
+  }
 }

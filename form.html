@@ -27,7 +27,7 @@
         </div>
         <nav class="header__menu">
           <ul class="header__menu-list">
-            <li class="header__menu-item"><a href="#">Главная</a></li>
+            <li class="header__menu-item"><a href="index.html">Главная</a></li>
             <li class="header__menu-item"><a href="photo.html">Фотографии</a></li>
             <li class="header__menu-item"><a href="form.html">Конкурс</a></li>
             <li class="header__menu-item"><a href="#">HTML Academy</a></li>
@@ -96,12 +96,13 @@
         <div class="form-text form-text--contacts">
           <div class="main-container">
             <fieldset class="form-text__fieldset">
+              <legend class="form-text__legend">Контактная информация</legend>
               <div class="form-text__item">
-                <label class="form-text__label" for="phone">Номерок телефончика</label>
+                <label class="form-text__label" for="phone">Номер<span class="form-text__span">ок</span> телефон<span class="form-text__span">чик</span>а</label>
                 <input class="form-text__text-input" type="text" id="phone" placeholder="Номер, пожалуйста">
               </div>
               <div class="form-text__item">
-                <label class="form-text__label" for="mail">Адресок почты</label>
+                <label class="form-text__label" for="mail">Адрес<span class="form-text__span">ок</span> почты</label>
                 <input class="form-text__text-input" type="text" id="mail" placeholder="Введите почту">
               </div>
             </fieldset>
@@ -137,8 +138,12 @@
         </section>
         <div class="send-form">
           <div class="main-container">
-            <button class="huge-button" type="button">Отправить форму</button>
-            <p class="send-form__required"><span class="send-form__required-star">*</span> &mdash; обязательные поля</p>
+            <div class="send-form__button">
+              <button class="huge-button" type="button">Отправить форму</button>
+            </div>
+            <div class="send-form__text">
+              <p class="send-form__required"><span class="send-form__required-star">*</span> &mdash; обязательные поля</p>
+            </div>
           </div>
         </div>
       </form>
@@ -213,7 +218,7 @@
       <div class="main-container">
         <h2 class="popup-window__header">Что-то пошло не так!</h2>
         <p class="popup-window__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button type="button" class="huge-button">OK</button>
+        <button type="button" class="huge-button huge-button--fail">OK</button>
       </div>
     </div>
     <div class="popup-window popup-window--success popup-window--hidden">
@@ -224,7 +229,7 @@
           оповестим вас.</p>
       </div>
       <div class="popup-window__button">
-        <button type="button" class="huge-button">Закрыть окно</button>
+        <button type="button" class="huge-button huge-button--success">Закрыть окно</button>
       </div>
     </div>
   </div>

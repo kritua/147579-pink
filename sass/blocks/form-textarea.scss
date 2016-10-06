@@ -3,7 +3,7 @@
 .form-textarea {
   margin-top: 51px;
   @include adaptive(tablet) {
-    order: 3;
+    order: 5;
   }
 }
 
@@ -11,6 +11,10 @@
   border: none;
   padding: 0;
   margin: 0;
+  @include adaptive(tablet) {
+    border: 2px solid #eeeeee;
+    padding: 32px 58px 47px;
+  }
 }
 
 .form-textarea__header {
@@ -20,12 +24,17 @@
   color: $clr-pink;
   text-transform: uppercase;
   text-align: center;
+  @include adaptive(tablet) {
+    padding: 0 38px;
+  }
 }
 
 .form-textarea__textarea-input {
   width: 100%;
   padding: 15px 20px;
-  min-height: 200px;
   box-sizing: border-box;
-  margin-top: 11px;
+  min-height: 200px;
+  @include adaptive(tablet) {
+    min-height: 192px;
+  }
 }

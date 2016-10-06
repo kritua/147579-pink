@@ -43,9 +43,6 @@
     &.header--menu-opened {
       background-position: 50% 255px;
       background-size: 700px auto;
-      & > .header__navbar {
-        background-color: $clr-darkblue;
-      }
       @include adaptive(tablet) {
         background-position: 50% 260px;
         background-size: 1200px auto;
@@ -60,6 +57,12 @@
     background-position: 0 61.5%, 50% 49%;
     @include adaptive(tablet) {
       background-position: 50% 100%, 50% 100%;
+    }
+    & > .header__navbar {
+      background-color: $clr-darkblue;
+    }
+    .header__logo {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
   }
 }
@@ -220,7 +223,8 @@
 
 .header__menu-item {
   padding: 15px;
-  border-top: 2px solid #485461;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   a {
     @include font-bold();
     text-decoration: none;

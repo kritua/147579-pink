@@ -114,6 +114,10 @@
   line-height: 30px;
   text-transform: uppercase;
   color: #ffffff;
+  &--fail,
+  &--success {
+    width: 300px;
+  }
 }
 
 .pink-logo {
