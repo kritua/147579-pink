@@ -24,6 +24,9 @@
     border: 2px solid #eeeeee;
     padding: 5px 58px 0;
   }
+  @include adaptive(desktop) {
+    padding: 5px 49px 0 58px;
+  }
 }
 
 .form-checkbox__header {
@@ -42,19 +45,30 @@
 .form-checkbox__item-wrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 9px;
+  padding: 8px 0 0 21px;
+  @include adaptive(tablet) {
+    padding: 7px 20px 0;
+  }
   @include adaptive(desktop) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: -5px;
+    padding: 9px 0 7px 22px;
+  }
+}
+
+.form-checkbox__block {
+  @include adaptive(desktop) {
+    &:nth-child(2) {
+      margin-left: -10px;
+    }
   }
 }
 
 .form-checkbox__item {
-  margin: 8px 0 44px 20px;
   position: relative;
   display: flex;
+  margin-bottom: 52px;
 }
 
 .form-checkbox__label {

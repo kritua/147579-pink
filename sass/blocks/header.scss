@@ -97,7 +97,7 @@
   @include adaptive(desktop) {
     flex-direction: row;
     justify-content: space-around;
-    padding: 31px 8px;
+    padding: 29px 8px;
   }
 }
 
@@ -107,7 +107,7 @@
   align-items: center;
   padding: 20px;
   @include adaptive(tablet) {
-    padding: 30px 40px 40px;
+    padding: 28px 40px 37px;
     align-items: baseline;
   }
   @include adaptive(desktop) {

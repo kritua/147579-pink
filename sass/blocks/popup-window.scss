@@ -12,15 +12,31 @@
     padding-top: 6px;
   }
   &--success {
-      padding-bottom: 0;
+    padding-bottom: 0;
+    @include adaptive(desktop) {
+      width: 780px;
+    }
     .popup-window__text {
       margin-bottom: 33px;
+      @include adaptive(desktop) {
+        margin-bottom: 38px;
+      }
     }
     .popup-window__button {
       box-shadow: 0 0 13px 0 #ccc;
       padding: 46px 20px 51px;
       @include adaptive(tablet) {
         box-shadow: none;
+      }
+      @include adaptive(desktop) {
+        padding-top: 48px;
+      }
+    }
+  }
+  &--failure {
+    @include adaptive(desktop) {
+      .main-container {
+        padding: 0 40px;
       }
     }
   }

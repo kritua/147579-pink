@@ -1,7 +1,13 @@
 @import '../vars';
 
 .main-header {
-  margin-top: 44px;
+  margin-top: 45px;
+  @include adaptive(tablet) {
+    margin-top: 91px;
+  }
+  @include adaptive(desktop) {
+    margin-top: 89px;
+  }
 }
 
 .main-header__first-header,
@@ -25,12 +31,6 @@
   @include adaptive(desktop) {
     padding: 4px 70px 11px;
   }
-}
-
-.main-header__first-header {
-    @include adaptive(tablet) {
-      margin-top: 91px;
-    }
 }
 
 .main-header__secondary-header {

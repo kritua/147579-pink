@@ -20,7 +20,7 @@
         padding: 34px 58px 0;
       }
       @include adaptive(desktop) {
-        margin: 15px 0 0;
+        margin: 13px 0 0;
         padding: 30px 58px 0;
       }
     }
@@ -33,7 +33,7 @@
     .form-text__item {
       @include adaptive(tablet) {
         flex-direction: column;
-        margin-bottom: 25px;
+        margin-bottom: 26px;
       }
       @include adaptive(desktop) {
         flex-basis: 50%;
@@ -62,13 +62,14 @@
     margin-top: 0;
     @include adaptive(tablet) {
       order: 1;
-      margin-top: 46px;
+      margin-top: 45px;
     }
     @include adaptive(desktop) {
       flex-basis: 50%;
+      margin-top: 47px;
     }
     .form-text__fieldset {
-      margin: 22px 0 26px;
+      margin: 23px 0 26px;
       @include adaptive(tablet) {
         margin: 22px 0 0;
       }
@@ -118,7 +119,7 @@
   flex-direction: column;
   @include adaptive(tablet) {
     flex-direction: row;
-    margin-bottom: 48px;
+    margin-bottom: 49px;
   }
 }
 

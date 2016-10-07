@@ -8,6 +8,10 @@
     margin-right: -1px;
     margin-bottom: 51px;
   }
+  @include adaptive(desktop) {
+    flex-basis: 100%;
+    margin-bottom: 0;
+  }
   .main-container {
     display: flex;
     flex-direction: column;
@@ -39,10 +43,21 @@
   @include adaptive(tablet) {
     flex-basis: 48.5%;
   }
+  @include adaptive(desktop) {
+    flex-basis: 32%;
+    margin-right: auto;
+  }
 }
 
 .send-form__text {
   @include adaptive(tablet) {
     flex-basis: 51.5%;
+  }
+}
+
+.send-form__hidden-text {
+  display: none;
+  @include adaptive(desktop) {
+    display: inline;
   }
 }

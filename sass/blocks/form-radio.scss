@@ -12,10 +12,11 @@
     order: 2;
     background: none;
     padding-top: 0;
+    margin-top: 7px;
   }
   @include adaptive(desktop) {
     flex-basis: 50%;
-    margin-top: 58px;
+    margin-top: 60px;
   }
   .main-container {
     @include adaptive(desktop) {
@@ -57,7 +58,7 @@
 .form-radio__item {
   display: flex;
   position: relative;
-  margin: 41px 0 44px 20px;
+  margin: 41px 0 44px 21px;
 }
 
 .form-radio__label {
@@ -68,6 +69,9 @@
   color: $clr-darkblue;
   @include adaptive(tablet) {
     margin-left: 39px;
+  }
+  @include adaptive(desktop) {
+    margin-left: 41px;
   }
 
   &::before {

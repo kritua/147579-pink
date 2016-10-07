@@ -120,6 +120,11 @@
       width: 300px;
     }
   }
+  &--success {
+    @include adaptive(desktop) {
+      width: 460px;
+    }
+  }
 }
 
 .pink-logo {

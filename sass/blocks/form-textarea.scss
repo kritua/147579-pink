@@ -5,6 +5,9 @@
   @include adaptive(tablet) {
     order: 5;
   }
+  @include adaptive(desktop) {
+    flex-basis: 100%;
+  }
 }
 
 .form-textarea__fieldset {
@@ -14,6 +17,10 @@
   @include adaptive(tablet) {
     border: 2px solid #eeeeee;
     padding: 32px 58px 47px;
+  }
+  @include adaptive(desktop) {
+    padding-top: 26px;
+    padding-bottom: 39px;
   }
 }
 
@@ -36,7 +43,11 @@
   padding: 15px 20px;
   box-sizing: border-box;
   min-height: 200px;
+  border: 2px solid #eeeeee;
   @include adaptive(tablet) {
     min-height: 192px;
+  }
+  @include adaptive(desktop) {
+    min-height: 128px;
   }
 }
