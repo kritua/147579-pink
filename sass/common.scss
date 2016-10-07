@@ -116,7 +116,9 @@
   color: #ffffff;
   &--fail,
   &--success {
-    width: 300px;
+    @include adaptive(tablet) {
+      width: 300px;
+    }
   }
 }
 

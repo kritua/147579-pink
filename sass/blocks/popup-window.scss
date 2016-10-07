@@ -5,15 +5,14 @@
   box-shadow: 0 0 13px 0 #ccc;
   padding-top: 24px;
   padding-bottom: 55px;
+  margin-bottom: 20px;
   @include adaptive(tablet) {
     width: 460px;
     margin: 0 auto;
     padding-top: 6px;
   }
   &--success {
-    @include adaptive(tablet) {
       padding-bottom: 0;
-    }
     .popup-window__text {
       margin-bottom: 33px;
     }

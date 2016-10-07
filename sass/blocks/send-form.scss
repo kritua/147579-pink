@@ -10,6 +10,10 @@
   }
   .main-container {
     display: flex;
+    flex-direction: column;
+    @include adaptive(tablet) {
+      flex-direction: row;
+    }
   }
 }
 

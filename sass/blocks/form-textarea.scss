@@ -24,8 +24,10 @@
   color: $clr-pink;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 11px;
   @include adaptive(tablet) {
     padding: 0 38px;
+    margin-bottom: auto;
   }
 }
 

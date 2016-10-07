@@ -1,0 +1,40 @@
+@import '../vars';
+
+.main-header {
+  margin-top: 44px;
+}
+
+.main-header__first-header,
+.main-header__secondary-header {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  text-align: center;
+  &--hidden {
+    display: none;
+    @include adaptive(tablet) {
+      display: inline;
+    }
+  }
+  @include adaptive(tablet) {
+    font-size: 18px;
+    padding: 0 50px;
+    margin: 0;
+  }
+  @include adaptive(desktop) {
+    padding: 4px 70px 11px;
+  }
+}
+
+.main-header__first-header {
+    @include adaptive(tablet) {
+      margin-top: 91px;
+    }
+}
+
+.main-header__secondary-header {
+  @include adaptive(desktop) {
+    padding: 0;
+  }
+}

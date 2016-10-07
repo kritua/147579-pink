@@ -155,6 +155,9 @@
     @include adaptive(tablet) {
       padding: 36px 0 47px;
     }
+    @include adaptive(desktop) {
+      padding: 29px 0 67px;
+    }
   }
 }
 
@@ -331,4 +334,8 @@
   }
 }
 
-
+.header__form-header {
+  @include adaptive(desktop) {
+    padding: 0 200px;
+  }
+}

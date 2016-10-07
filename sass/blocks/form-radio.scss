@@ -13,6 +13,15 @@
     background: none;
     padding-top: 0;
   }
+  @include adaptive(desktop) {
+    flex-basis: 50%;
+    margin-top: 58px;
+  }
+  .main-container {
+    @include adaptive(desktop) {
+      padding-left: 35px;
+    }
+  }
 }
 
 .form-radio__fieldset {
@@ -21,7 +30,15 @@
   margin: 0;
   @include adaptive(tablet) {
     border: 2px solid #eeeeee;
+  }
+}
+
+.form-radio__item-wrapper {
+  @include adaptive(tablet) {
     padding: 7px 58px 16px;
+  }
+  @include adaptive(desktop) {
+    padding: 9px 73px 16px;
   }
 }
 
