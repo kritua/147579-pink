@@ -1,7 +1,7 @@
 @import '../vars';
 
 .main-header {
-  margin-top: 45px;
+  margin-top: 44px;
   @include adaptive(tablet) {
     margin-top: 91px;
   }

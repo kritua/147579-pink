@@ -60,14 +60,12 @@
     margin-bottom: -3px;
     margin-top: 0;
   }
-  @include adaptive(desktop) {
-
-  }
   &--hidden-mobile {
     display: none;
     @include adaptive(desktop) {
       display: block;
-      margin: 0 auto;
+      padding: 0 3px 0 7px;
+      margin: 0;
     }
   }
   &--hidden-desktop {
@@ -105,11 +103,13 @@
     flex-basis: 50%;
     text-align: left;
     padding-top: 26px;
+    margin-left: 4px;
   }
   @include adaptive(desktop) {
     flex-direction: row;
     flex-basis: 100%;
     text-align: center;
+    margin-left: 0;
   }
 }
 

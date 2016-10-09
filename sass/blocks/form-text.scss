@@ -9,6 +9,7 @@
     margin-top: -5px;
     @include adaptive(tablet) {
       order: 3;
+      margin-top: 5px;
     }
     @include adaptive(desktop) {
       flex-basis: 100%;
@@ -16,7 +17,7 @@
     .form-text__fieldset {
       @include adaptive(tablet) {
         border: 2px solid $clr-lightgrey-1;
-        margin: 58px 0 0;
+        margin: 56px 0 0;
         padding: 34px 58px 0;
       }
       @include adaptive(desktop) {
@@ -60,7 +61,7 @@
     }
   }
   &--names {
-    margin-top: 0;
+    margin-top: -1px;
     @include adaptive(tablet) {
       order: 1;
       margin-top: 45px;
@@ -72,7 +73,10 @@
     .form-text__fieldset {
       margin: 23px 0 26px;
       @include adaptive(tablet) {
-        margin: 22px 0 0;
+        margin: 23px 0 0;
+      }
+      @include adaptive(desktop) {
+        margin: 20px 0 0;
       }
     }
     .main-container {
@@ -89,8 +93,20 @@
   }
 }
 
+.form-text__header-block {
+  @include adaptive(tablet) {
+    background-color: #ffffff;
+    margin: -55px auto 33px;
+    width: 52.5%;
+    display: block;
+  }
+  @include adaptive(desktop) {
+    width: 32.5%;
+    margin: -53px auto 30px;
+  }
+}
 
-.form-text__legend {
+.form-text__header {
   display: none;
   @include font-regular();
   font-size: 14px;
@@ -152,13 +168,16 @@
   outline: none;
   min-height: 62px;
   box-sizing: border-box;
-  padding: 12px 20px;
+  padding: 12px 21px;
   margin-top: 5px;
   flex-basis: 100%;
   @include font-regular();
   font-size: 18px;
   line-height: 30px;
   color: $clr-darkblue;
+  @include adaptive(tablet) {
+    padding: 12px 18px;
+  }
   @include adaptive(desktop) {
     padding: 12px 18px;
   }

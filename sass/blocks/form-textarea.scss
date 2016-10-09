@@ -1,9 +1,10 @@
 @import '../vars';
 
 .form-textarea {
-  margin-top: 51px;
+  margin-top: 38px;
   @include adaptive(tablet) {
     order: 5;
+    margin-top: 65px;
   }
   @include adaptive(desktop) {
     flex-basis: 100%;
@@ -24,6 +25,19 @@
   }
 }
 
+.form-textarea___header-block {
+  @include adaptive(tablet) {
+    background-color: #ffffff;
+    margin: -57px auto 33px;
+    width: 52%;
+    display: block;
+  }
+  @include adaptive(desktop) {
+    width: 32%;
+    margin: -56px auto 28px;
+  }
+}
+
 .form-textarea__header {
   @include font-regular();
   font-size: 14px;
@@ -34,7 +48,6 @@
   margin-bottom: 11px;
   @include adaptive(tablet) {
     padding: 0 38px;
-    margin-bottom: auto;
   }
 }
 

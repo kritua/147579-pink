@@ -108,8 +108,7 @@
         <ul class='header__menu-list'>
           <li class='header__menu-item'><a class='header__menu-link' href='index.html'>Главная</a></li>
           <li class='header__menu-item'><a class='header__menu-link' href='photo.html'>Фотографии</a></li>
-          <li class='header__menu-item'><a class='header__menu-link header__menu-link--active'
-                                           href='form.html'>Конкурс</a></li>
+          <li class='header__menu-item'><a class='header__menu-link header__menu-link--active' href='form.html'>Конкурс</a></li>
           <li class='header__menu-item'><a class='header__menu-link' href='#'>HTML Academy</a></li>
         </ul>
       </nav>
@@ -149,7 +148,9 @@
       <section class='form-checkbox'>
         <div class='main-container'>
           <fieldset class='form-checkbox__fieldset'>
-            <legend align='center' class='form-checkbox__header'>Ваши безбашенные достижения в путешествии</legend>
+            <div class="form-checkbox__header-block">
+              <h2 class='form-checkbox__header'>Ваши безбашенные достижения в путешествии</h2>
+            </div>
             <div class='form-checkbox__item-wrapper'>
               <div class='form-checkbox__block'>
                 <div class='form-checkbox__item'>
@@ -188,7 +189,9 @@
       <section class='form-text form-text--contacts'>
         <div class='main-container'>
           <fieldset class='form-text__fieldset'>
-            <legend align='center' class='form-text__legend'>Контактная информация</legend>
+            <div class="form-text__header-block">
+              <h2 class='form-text__header'>Контактная информация</h2>
+            </div>
             <div class='form-text__item-wrapper'>
               <div class='form-text__item'>
                 <label class='form-text__label' for='phone'>Номер<span class='form-text__span'>ок</span> телефон<span
@@ -208,7 +211,9 @@
       <section class='form-radio'>
         <div class='main-container'>
           <fieldset class='form-radio__fieldset'>
-            <legend align='center' class='form-radio__header'>С каким приложением путешествовали?</legend>
+            <div class="form-radio__header-block">
+              <h2 class='form-radio__header'>С каким приложением путешествовали?</h2>
+            </div>
             <div class='form-radio__item-wrapper'>
               <div class='form-radio__item'>
                 <input class='form-radio__radio-input' name='choose-os' id='ios' type='radio' checked>
@@ -229,9 +234,10 @@
       <section class='form-textarea'>
         <div class='main-container'>
           <fieldset class='form-textarea__fieldset'>
-            <legend align='center' class='form-textarea__header'>Опишите свои эмоции</legend>
-              <textarea class='form-textarea__textarea-input'
-                        placeholder='Можно прям в красках, не стесняясь в выражениях'></textarea>
+            <div class="form-textarea___header-block">
+              <h2 class='form-textarea__header'>Опишите свои эмоции</h2>
+            </div>
+              <textarea class='form-textarea__textarea-input' placeholder='Можно прям в красках, не стесняясь в выражениях'></textarea>
           </fieldset>
         </div>
       </section>
