@@ -16,11 +16,12 @@
   line-height: 28px;
   color: $clr-darkblue;
   text-align: center;
-  margin-top: 34px;
+  margin-top: 36px;
   @include adaptive(tablet) {
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 0;
+    margin-top: 34px;
   }
   @include adaptive(desktop) {
     font-size: 50px;

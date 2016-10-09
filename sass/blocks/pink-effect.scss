@@ -23,6 +23,9 @@
 .pink-effect__timer,
 .pink-effect__text-block {
   flex-basis: 50%;
+  @include adaptive(tablet) {
+    margin-top: 4px;
+  }
   @include adaptive(desktop) {
     flex-basis: 39%;
   }
@@ -45,13 +48,13 @@
   }
 }
 
-.pink-effect_header {
+.pink-effect__header {
   @include font-bold();
   font-size: 30px;
   line-height: 36px;
   color: $clr-black;
   @include adaptive(tablet) {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }
   @include adaptive(desktop) {
     line-height: 30px;
