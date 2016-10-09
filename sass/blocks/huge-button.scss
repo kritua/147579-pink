@@ -1,0 +1,36 @@
+@import '../vars';
+
+.huge-button {
+  width: 100%;
+  outline: none;
+  background-color: $clr-green;
+  border: none;
+  border-radius: 2px;
+  padding: 17px;
+  @include font-bold();
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $clr-white;
+  &--fail,
+  &--success {
+    @include adaptive(tablet) {
+      width: 300px;
+    }
+  }
+  &--success {
+    @include adaptive(desktop) {
+      width: 460px;
+    }
+  }
+  &:hover {
+    background-color: $clr-darkgreen;
+  }
+  &:active {
+    color: transparentize($clr-white, 0.7);
+  }
+  &:disabled {
+    background-color: $clr-lightgrey-2;
+    color: $clr-white;
+  }
+}

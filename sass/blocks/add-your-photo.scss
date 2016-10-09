@@ -3,7 +3,7 @@
 .add-your-photo {
   margin-top: 22px;
   @include adaptive(tablet) {
-    margin-top: 47px;
+    margin-top: 44px;
   }
   @include adaptive(desktop) {
     margin-top: -9px;
@@ -12,7 +12,7 @@
 }
 
 .add-your-photo__editor {
-  background-color: $bg-lightgrey;
+  background-color: $clr-lightgrey;
   margin-top: 43px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
     margin-left: 40px;
   }
   @include adaptive(desktop) {
-    margin-left: 90px;
+    margin-left: 87px;
   }
 }
 
@@ -74,37 +74,37 @@
   @include adaptive(tablet) {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     flex-basis: 100%;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 18px;
-    padding-left: 3px;
+    padding-bottom: 19px;
+    margin-left: 3px;
   }
   @include adaptive(desktop) {
-    margin-left: -8px;
-    padding-left: 0;
-    padding-bottom: 7px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    align-items: center;
   }
 }
 
 .add-your-photo__tools {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid #dddfe0;
+  border-bottom: 1px solid transparentize($clr-darkblue, 0.9);
   margin-top: 40px;
   padding: 0 20px;
   @include adaptive(tablet) {
     flex-direction: column;
-    margin-top: 6px;
+    margin-top: 4px;
     padding: 0;
     border: 0;
   }
+  @include adaptive(desktop) {
+    margin-top: -18px;
+  }
 }
 
-.add-your-photo__fill-photo,
-.add-your-photo__cut-photo,
-.add-your-photo__bright-contrast,
-.add-your-photo__slider-control {
+.add-your-photo__editor-item {
   border: none;
   background: none;
   cursor: pointer;
@@ -114,22 +114,83 @@
     @include adaptive(tablet) {
       margin-left: 5px;
     }
+    @include adaptive(desktop) {
+      margin-left: 0;
+    }
+  }
+  &--slider {
+    margin: 31px 0 32px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    @include adaptive(tablet) {
+      display: none;
+    }
+  }
+  &--button {
+    fill: transparentize($clr-darkblue, 0.7);
+    @include adaptive(tablet) {
+      margin-right: 5px;
+      fill: $clr-pink;
+    }
+    @include adaptive(desktop) {
+      margin: 17px 23px 7px 0;
+      flex-basis: 97px;
+      text-align: left;
+    }
+    &:hover {
+      fill: transparentize($clr-darkblue, 0.5);
+    }
+    &:active {
+      fill: $clr-pink;
+    }
+  }
+  &--active {
+    fill: $clr-pink;
   }
 }
-.add-your-photo__fill-photo,
-.add-your-photo__cut-photo,
-.add-your-photo__bright-contrast {
+
+
+.add-your-photo__slider {
+  margin: 33px 0;
+  height: 2px;
+  background-color: #000;
+  position: relative;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
   @include adaptive(tablet) {
-    margin-right: 5px;
+    display: block;
+    order: 0;
+    margin: auto 20px;
   }
   @include adaptive(desktop) {
-    margin-right: 23px;
+    margin: auto 31px auto 0;
+  }
+  &--mobile {
+    display: block;
+    @include adaptive(tablet) {
+      display: none;
+    }
   }
 }
 
 .add-your-photo__slider-control {
-  flex-grow: 1;
-  position: relative;
+  padding: 0;
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 60px;
+  top: 1px;
+  transform: translate(-50%,-50%);
+  background-color: #f2f2f2;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  cursor: pointer;
   @include adaptive(tablet) {
     display: none;
   }
@@ -139,31 +200,14 @@
       display: block;
     }
   }
-}
-
-.add-your-photo__slider-control::before {
-  content: '';
-  position: absolute;
-  top: 7px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #283645;
-  margin-top: 23px;
-  @include adaptive(tablet) {
-    left: 18px;
-    right: 18px;
-    margin-top: 6px;
-  }
-  @include adaptive(desktop) {
-    right: 29px;
+  &:active {
+    background-color: $clr-pink;
   }
 }
 
 .add-your-photo__slider-control-svg {
   width: 14px;
   height: 14px;
-  fill: $clr-pink;
   margin: 23px auto 22px;
   position: relative;
   right: -34%;
@@ -178,7 +222,6 @@
 .add-your-photo__cut-photo-svg {
   width: 48px;
   height: 48px;
-  fill: $clr-pink;
   margin-top: -6px;
   @include adaptive(tablet) {
     width: 24px;
@@ -188,43 +231,41 @@
   @include adaptive(desktop) {
     width: 48px;
     height: 48px;
-    margin-top: -11px;
+    margin-left: -3px;
+    margin-top: -5px;
   }
 }
 
 .add-your-photo__fill-photo-svg {
   width: 48px;
   height: 48px;
-  fill: #b5b9be;
   margin-top: -4px;
   @include adaptive(tablet) {
     width: 24px;
     height: 24px;
-    fill: $clr-pink;
     margin-top: 6px;
   }
   @include adaptive(desktop) {
     width: 48px;
     height: 48px;
-    margin-top: -7px;
+    margin-top: -1px;
   }
 }
 
 .add-your-photo__bright-contrast-svg {
-  width: 32px;
-  height: 32px;
-  fill: #b5b9be;
-  margin-top: 1px;
+  width: 48px;
+  height: 48px;
+  margin-top: -4px;
   @include adaptive(tablet) {
-    width: 16px;
-    height: 16px;
-    fill: $clr-pink;
-    margin: 3px 3px 0 5px;
+    width: 24px;
+    height: 24px;
+    margin: 0;
   }
   @include adaptive(desktop) {
-    width: 32px;
-    height: 32px;
-    margin: -4px 9px 11px 7px;
+    width: 48px;
+    height: 48px;
+    margin-top: -11px;
+    margin-left: -3px;
   }
 }
 
@@ -234,7 +275,7 @@
   flex-direction: column;
   @include adaptive(desktop) {
     flex-direction: row;
-    margin-top: 121px;
+    margin-top: 146px;
   }
 }
 

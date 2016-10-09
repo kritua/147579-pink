@@ -1,0 +1,81 @@
+@import '../vars';
+
+.big-button {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid;
+  outline: none;
+  font-family: 'OpenSansBold', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 30px;
+  white-space: nowrap;
+  padding: 16px 86px;
+  cursor: pointer;
+  background: transparent;
+  &--cancel {
+    border-color: transparentize($clr-darkblue, 0.9);
+    color: transparentize($clr-darkblue, 0.9);
+    padding: 16px 100px;
+    @include adaptive(tablet) {
+      margin-top: 13px;
+      margin-left: 3px;
+      padding: 16px 92px;
+    }
+    @include adaptive(desktop) {
+      margin: 0;
+      padding: 16px 52px;
+    }
+    &:hover {
+      border-color: transparentize($clr-darkblue, 0.7);
+      color: transparentize($clr-darkblue, 0.7);
+    }
+    &:active {
+      border-color: transparentize($clr-darkblue, 1);
+      background-color: transparentize($clr-darkblue, 0.7);
+      color: transparentize($clr-white, 0.7);
+    }
+  }
+  &--header {
+    border-color: $clr-white;
+    color: white;
+    padding: 16px;
+    @include adaptive(tablet) {
+      padding: 16px 22px;
+    }
+    @include adaptive(desktop) {
+      font-size: 21px;
+    }
+    &:hover {
+      background-color: $clr-white;
+      color: $clr-pink;
+    }
+    &:active {
+      color: transparentize($clr-pink, 0.7);
+    }
+  }
+  &--add-photo {
+    border-color: $clr-pink;
+    color: $clr-pink;
+    margin-top: 38px;
+    margin-bottom: 12px;
+    @include adaptive(tablet) {
+      margin-top: 51px;
+      margin-left: 4px;
+      padding: 15px 79px;
+    }
+    @include adaptive(desktop) {
+      margin: 0 45px 0 3px;
+      padding: 15px 39px;
+    }
+    &:hover {
+      background-color: $clr-pink;
+      color: $clr-white;
+    }
+    &:active {
+      color: transparentize($clr-white, 0.7);
+    }
+  }
+}

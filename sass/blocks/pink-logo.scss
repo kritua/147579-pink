@@ -1,0 +1,22 @@
+@import '../vars';
+
+.pink-logo {
+  width: 150px;
+  height: 40px;
+  margin: 40px 0;
+  @include adaptive(tablet) {
+    margin: 35px 0 45px;
+  }
+  .st0 {
+    fill: $clr-darkblue;
+  }
+  .st1 {
+    fill: $clr-white;
+  }
+  .st2 {
+    fill: $clr-pink;
+  }
+  &--pages {
+    margin: 40px 0 34px;
+  }
+}

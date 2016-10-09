@@ -1,18 +1,18 @@
 @import '../vars';
 
 .form-radio {
-  background: $bg-lightgrey;
+  background: $clr-lightgrey;
   margin-top: 10px;
   padding-top: 34px;
   padding-bottom: 4px;
-  input[type="radio"] {
+  input[type='radio'] {
     display: none;
   }
   @include adaptive(tablet) {
     order: 2;
     background: none;
     padding-top: 0;
-    margin-top: 7px;
+    margin-top: 10px;
   }
   @include adaptive(desktop) {
     flex-basis: 50%;
@@ -30,7 +30,7 @@
   padding: 0;
   margin: 0;
   @include adaptive(tablet) {
-    border: 2px solid #eeeeee;
+    border: 2px solid $clr-lightgrey-1;
   }
 }
 
@@ -67,13 +67,10 @@
   font-size: 18px;
   line-height: 30px;
   color: $clr-darkblue;
+  cursor: pointer;
   @include adaptive(tablet) {
     margin-left: 39px;
   }
-  @include adaptive(desktop) {
-    margin-left: 41px;
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -82,8 +79,18 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 2px solid #e5e5e5;
-    background-color: #ffffff;
+    border: 2px solid $clr-lightgrey-2;
+    background-color: $clr-white;
+  }
+  &:hover {
+    &::before {
+      border: 2px solid $clr-darkblue;
+    }
+  }
+  &:active {
+    &::before {
+      border: 2px solid $clr-pink;
+    }
   }
 }
 

@@ -15,7 +15,7 @@
     }
     .form-text__fieldset {
       @include adaptive(tablet) {
-        border: 2px solid #eeeeee;
+        border: 2px solid $clr-lightgrey-1;
         margin: 58px 0 0;
         padding: 34px 58px 0;
       }
@@ -40,7 +40,9 @@
         margin-bottom: 14px;
       }
       &:first-child {
-        margin-right: 72px;
+        @include adaptive(desktop) {
+          margin-right: 72px;
+        }
       }
     }
     .form-text__label {
@@ -54,7 +56,6 @@
     .form-text__text-input {
       @include adaptive(tablet) {
         order: 1;
-        padding: 20px 18px;
       }
     }
   }
@@ -119,6 +120,9 @@
   flex-direction: column;
   @include adaptive(tablet) {
     flex-direction: row;
+    margin-bottom: 48px;
+  }
+  @include adaptive(desktop) {
     margin-bottom: 49px;
   }
 }
@@ -138,25 +142,43 @@
     align-self: center;
     margin-top: 5px;
   }
+  @include adaptive(desktop) {
+    margin-top: 8px;
+  }
 }
 
 .form-text__text-input {
-
-  border: 2px solid #e5e5e5;
-  padding: 20px;
+  border: 2px solid $clr-lightgrey-2;
+  outline: none;
+  min-height: 62px;
+  box-sizing: border-box;
+  padding: 12px 20px;
   margin-top: 5px;
   flex-basis: 100%;
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  @include adaptive(desktop) {
+    padding: 12px 18px;
+  }
+  &:hover {
+    border: 2px solid $clr-darkblue;
+  }
+  &:focus {
+    border: 2px solid $clr-pink;
+  }
 }
 
 .form-text__contact-icon {
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   position: absolute;
-  top: 6px;
-  right: 0;
+  top: 7px;
+  right: 2px;
   bottom: 0;
-  background-color: #e5e5e5;
+  background-color: $clr-lightgrey-2;
   @include adaptive(tablet) {
     display: block;
   }

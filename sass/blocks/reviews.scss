@@ -2,7 +2,7 @@
 
 .reviews {
   position: relative;
-  background-color: $bg-white;
+  background-color: $clr-white;
   text-align: center;
   padding-top: 26px;
   .main-container {
@@ -66,22 +66,6 @@
   @include adaptive(desktop) {
     padding: 0 86px;
     margin-bottom: 19px;
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 34%;
-      height: 40px;
-      width: 20px;
-    }
-    &::before {
-      left: 0;
-      background: url('../../img/icon-review-arrow-left.svg') no-repeat;
-    }
-    &::after {
-      right: 0;
-      background: url('../../img/icon-review-arrow-right.svg') no-repeat;
-    }
   }
 }
 
@@ -118,5 +102,34 @@
   display: none;
   @include adaptive(desktop) {
     display: block;
+  }
+}
+
+.reviews__control {
+  display: none;
+  position: absolute;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+  top: 55%;
+  height: 40px;
+  width: 20px;
+  z-index: 5;
+  @include adaptive(desktop) {
+    display: block;
+  }
+  fill: transparentize($clr-darkblue, 0.7);
+  &:hover {
+    fill: transparentize($clr-darkblue, 0.4);
+  }
+  &:active {
+    fill: transparentize($clr-darkblue, 0.9);
+  }
+  &--left {
+    left: 10.4%;
+  }
+  &--right {
+    right: 11.4%;
   }
 }

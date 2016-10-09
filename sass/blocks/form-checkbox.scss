@@ -1,7 +1,7 @@
 @import '../vars';
 
 .form-checkbox {
-  background: $bg-lightgrey;
+  background: $clr-lightgrey-1;
   input[type='checkbox'] {
     display: none;
   }
@@ -21,7 +21,7 @@
   padding: 0;
   margin: 0;
   @include adaptive(tablet) {
-    border: 2px solid #eeeeee;
+    border: 2px solid $clr-lightgrey-1;
     padding: 5px 58px 0;
   }
   @include adaptive(desktop) {
@@ -53,7 +53,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 9px 0 7px 22px;
+    padding: 9px 0 7px 20px;
   }
 }
 
@@ -71,8 +71,10 @@
   margin-bottom: 52px;
 }
 
+
 .form-checkbox__label {
   margin-left: 50px;
+  cursor: pointer;
   @include font-regular();
   font-size: 18px;
   line-height: 30px;
@@ -82,13 +84,23 @@
     position: absolute;
     left: -20px;
     top: -4px;
-    width: 34px;
-    height: 34px;
-    border: 2px solid #e5e5e5;
-    background-color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $clr-lightgrey-2;
+    background-color: $clr-white;
   }
   @include adaptive(tablet) {
     margin-left: 39px;
+  }
+  &:hover {
+    &::before {
+      border: 2px solid $clr-darkblue;
+    }
+  }
+  &:active {
+    &::before {
+      border: 2px solid $clr-pink;
+    }
   }
 }
 

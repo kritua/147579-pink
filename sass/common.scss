@@ -1,28 +1,28 @@
 @import 'vars';
 
 @font-face {
-  font-family: "OpenSans";
+  font-family: 'OpenSans';
   font-style: normal;
-  src: url('../fonts/opensans.woff'),
-       url('../fonts/opensans.woff2');
-}
-
-@font-face {
-  font-family: "OpenSansSemibold";
   src: url('../fonts/opensans.woff'),
   url('../fonts/opensans.woff2');
 }
 
 @font-face {
-  font-family: "OpenSansBold";
-  src: url('../fonts/opensansbold.woff'),
-       url('../fonts/opensansbold.woff2');
+  font-family: 'OpenSansSemibold';
+  src: url('../fonts/opensans.woff'),
+  url('../fonts/opensans.woff2');
 }
 
 @font-face {
-  font-family: "OpenSansLight";
+  font-family: 'OpenSansBold';
+  src: url('../fonts/opensansbold.woff'),
+  url('../fonts/opensansbold.woff2');
+}
+
+@font-face {
+  font-family: 'OpenSansLight';
   src: url('../fonts/opensanslight.woff'),
-       url('../fonts/opensanslight.woff2');
+  url('../fonts/opensanslight.woff2');
 }
 
 .body-container {
@@ -46,131 +46,6 @@
   }
 }
 
-.big-button {
-  display: block;
-  margin: 0 auto;
-  border: 3px solid;
-  font-family: "OpenSansBold", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  text-align: center;
-  border-radius: 30px;
-  white-space: nowrap;
-  padding: 16px 86px;
-  cursor: pointer;
-  background: transparent;
-  &--cancel {
-    border-color: transparentize($clr-darkblue, 0.9);
-    color: transparentize($clr-darkblue, 0.9);
-    padding: 16px 100px;
-    @include adaptive(tablet) {
-      margin-top: 13px;
-      margin-left: 3px;
-      padding: 16px 92px;
-    }
-    @include adaptive(desktop) {
-      margin: 0;
-      padding: 16px 52px;
-    }
-  }
-  &--header {
-    border-color: #ffffff;
-    color: white;
-    padding: 16px;
-    @include adaptive(tablet) {
-      padding: 16px 22px;
-    }
-    @include adaptive(desktop) {
-      font-size: 21px;
-    }
-  }
-  &--add-photo {
-    border-color: $clr-pink;
-    color: $clr-pink;
-    margin-top: 38px;
-    margin-bottom: 12px;
-    @include adaptive(tablet) {
-      margin-top: 44px;
-      margin-left: 4px;
-      padding: 15px 79px;
-    }
-    @include adaptive(desktop) {
-      margin: 0;
-      padding: 15px 38px;
-      margin-right: 45px;
-    }
-  }
-}
-
-.huge-button {
-  width: 100%;
-  background-color: $clr-green;
-  border: none;
-  border-radius: 2px;
-  padding: 17px;
-  @include font-bold();
-  font-size: 18px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #ffffff;
-  &--fail,
-  &--success {
-    @include adaptive(tablet) {
-      width: 300px;
-    }
-  }
-  &--success {
-    @include adaptive(desktop) {
-      width: 460px;
-    }
-  }
-}
-
-.pink-logo {
-  width: 150px;
-  height: 40px;
-  margin: 40px 0;
-  @include adaptive(tablet) {
-    margin: 35px 0 45px;
-  }
-  .st0 {
-    fill: $clr-darkblue;
-  }
-  .st1 {
-    fill: #ffffff;
-  }
-  .st2 {
-    fill: $clr-pink;
-  }
-  &--pages {
-    margin: 40px 0 34px;
-  }
-}
-
-.footer {
-  text-align: center;
-  @include adaptive(tablet) {
-    .main-container {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  @include adaptive(desktop) {
-    .main-container {
-      margin: 35px 0 45px;
-    }
-  }
-}
-
-.footer--hidden-mobile {
-  display: none;
-  @include adaptive(tablet) {
-    display: block;
-  }
-}
-
-
 ::-webkit-input-placeholder {
   @include placeholder-style();
 }
@@ -179,7 +54,7 @@
   @include placeholder-style();
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder { /* Firefox 19+ */
   @include placeholder-style();
 }
 

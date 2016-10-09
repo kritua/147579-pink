@@ -2,25 +2,36 @@
 //Colors
 
 $bg-darkblue: #1d2631;
-$bg-white: #ffffff;
-$bg-lightgrey: #f2f2f2;
-$no-bg-color: transparent;
 $clr-darkblue: #283645;
+
+$clr-white: #ffffff;
+
+$clr-lightgrey: #f2f2f2;
+$clr-lightgrey-1: #eeeeee;
+$clr-lightgrey-2: #e5e5e5;
+$clr-grey: #cccccc;
+$clr-black: #000000;
+
+$no-bg-color: transparent;
+
+
 $clr-pink: #d22856;
+$clr-red: #f25b26;
+
+$clr-lightgreen: #3dc644;
 $clr-green: #2aab6d;
+$clr-darkgreen: #1c9b5e;
 
 //Margin Padding
 
 $content-padding: 0 20px;
 
-
-
 //Media queries
 $mobile-width: 320px;
 $tablet-width: 700px;
 $desktop-width: 1200px;
-$retina: "min-resolution: 144dpi";
-$retina1: "min-resolution: 1.5dppx";
+$retina-res: "min-resolution: 144dpi";
+$retina-dpi: "min-resolution: 1.5dppx";
 
 //Mixins
 
@@ -56,13 +67,11 @@ $retina1: "min-resolution: 1.5dppx";
     }
   }
   @if $media == retina {
-    @media ($retina), ($retina1) {
+    @media ($retina-res), ($retina-dpi) {
     @content;
     }
   }
 }
-
-
 
 @mixin placeholder-style() {
   @include font-regular();

@@ -16,6 +16,14 @@
   }
 }
 
+.social__button-icon {
+  border: 3px solid transparentize($clr-darkblue, 0.9);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
 .social__button {
   flex-basis: 33.33%;
   @include adaptive(tablet) {
@@ -32,15 +40,20 @@
   svg {
     fill: $clr-pink;
   }
+  &:hover {
+    .social__button-icon {
+      border: 3px solid $clr-darkblue;
+    }
+  }
+  &:active {
+    .social__button-icon {
+      border: 3px solid transparentize($clr-darkblue, 0.7);
+      opacity: 0.3;
+    }
+  }
 }
 
-.social__button-icon {
-  border: 3px solid transparentize($clr-darkblue, 0.9);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  margin: 0 auto;
-}
+
 
 .social__button-twitter-svg {
   width: 18px;
@@ -78,6 +91,16 @@
   @include adaptive(tablet) {
     margin-top: 49px;
   }
+  &:hover {
+    .social__designed-by-svg {
+      fill: $clr-darkblue;
+    }
+  }
+  &:active {
+    .social__designed-by-svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__text {
@@ -96,11 +119,11 @@
   height: 34px;
   fill: $clr-pink;
   vertical-align: middle;
-  padding-left: 15px;
+  padding-left: 12px;
   @include adaptive(tablet) {
-    padding-left: 12px;
+    padding-left: 11px;
   }
-  @include adaptive(tablet) {
+  @include adaptive(desktop) {
     padding-left: 9px;
   }
 }
