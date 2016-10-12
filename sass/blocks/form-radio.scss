@@ -112,16 +112,32 @@
     &::before {
       border: 2px solid $clr-pink;
     }
+    &::after {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 7px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $clr-pink;
+    }
   }
 }
 
-.form-radio__radio-input:checked ~ .form-radio__label::after {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: $clr-pink;
+.form-radio__radio-input {
+  &:checked ~ .form-radio__label::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $clr-pink;
+  }
+
+  &:active:checked ~ .form-radio__label::after {
+    background: none;
+  }
 }

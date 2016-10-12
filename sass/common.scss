@@ -47,17 +47,33 @@
 }
 
 ::-webkit-input-placeholder {
-  @include placeholder-style();
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  opacity: 1;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  @include placeholder-style();
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  opacity: 1;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-  @include placeholder-style();
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  opacity: 1;
 }
 
 :-ms-input-placeholder {
-  @include placeholder-style();
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  opacity: 1;
 }

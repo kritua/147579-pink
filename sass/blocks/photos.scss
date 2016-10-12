@@ -124,6 +124,13 @@
   top: 0;
   right: 0;
   background-color: $clr-pink;
+  @include font-bold();
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $clr-white;
+  margin: 0;
+  padding: 5px 20px;
   @include adaptive(tablet) {
     top: 59px;
   }
@@ -133,13 +140,7 @@
 }
 
 .photos__photo-of-the-day-text {
-  @include font-bold();
-  font-size: 12px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: $clr-white;
-  margin: 0;
-  padding: 5px 20px;
+
 }
 
 .photos__user-review {
@@ -208,6 +209,7 @@
 
 .photos__user-likes {
   display: inline-block;
+  vertical-align: middle;
   @include font-regular();
   font-size: 12px;
   line-height: 24px;

@@ -47,6 +47,10 @@
         background-position: 50% 260px;
         background-size: 1200px auto;
       }
+      @include adaptive(desktop) {
+        background-position: 50% 0;
+        background-size: 2560px auto;
+      }
     }
   }
 
@@ -56,10 +60,13 @@
   &--menu-opened {
     background-position: 0 61.5%, 50% 49%;
     @include adaptive(tablet) {
-      background-position: 50% 100%, 50% 100%;
+      background-position: 98% 100%, 50% 100%;
     }
     & > .header__navbar {
       background-color: $clr-darkblue;
+      @include adaptive(desktop) {
+        background-color: rgba(29, 38, 49, 0.3);
+      }
     }
   }
 }
@@ -81,6 +88,9 @@
       line-height: 60px;
       margin-bottom: 51px;
     }
+  }
+  @include adaptive(tablet) {
+    padding: 0 30px;
   }
 }
 
@@ -349,6 +359,7 @@
     padding: 26px 20px 15px;
     @include adaptive(tablet) {
       padding: 65px 40px 93px;
+      max-width: 300px;
     }
     @include adaptive(desktop) {
       padding: 67px 130px 93px;
