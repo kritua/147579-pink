@@ -1,0 +1,10 @@
+@import '../vars';
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  @include adaptive(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

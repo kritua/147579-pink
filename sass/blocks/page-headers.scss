@@ -1,7 +1,13 @@
 @import '../vars';
 
 .page-headers {
-  padding-top: 10px;
+  padding-top: 6px;
+  @include adaptive(tablet) {
+    padding-top: 15px;
+  }
+  @include adaptive(desktop) {
+    padding-top: 35px;
+  }
 }
 
 .page-headers__item-h2 {
@@ -10,11 +16,16 @@
   line-height: 28px;
   color: $clr-darkblue;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 36px;
   @include adaptive(tablet) {
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 0;
+    margin-top: 34px;
+  }
+  @include adaptive(desktop) {
+    font-size: 50px;
+    line-height: 60px;
   }
 }
 
@@ -24,5 +35,8 @@
     margin-top: 0;
     margin-bottom: 50px;
     padding: 0 50px;
+  }
+  @include adaptive(desktop) {
+    padding: 0 260px;
   }
 }

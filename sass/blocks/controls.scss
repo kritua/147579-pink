@@ -13,6 +13,9 @@
     @include adaptive(desktop) {
       display: none;
     }
+    .controls__label {
+      margin: 17px 8px 26px;
+    }
   }
 }
 
@@ -26,13 +29,16 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #bec2c7;
+  background-color: transparentize($clr-darkblue, 0.7);
   margin: 22px 8px;
+  @include adaptive(tablet) {
+    margin: 20px 7px 24px;
+  }
   &:hover {
-    background-color: #7e868f;
+    background-color: transparentize($clr-darkblue, 0.4);
   }
   &:active {
-    background-color: #e9ebec;
+    background-color: transparentize($clr-darkblue, 0.9);
   }
 }
 
@@ -43,5 +49,5 @@
 #second-control:checked ~ .controls__label[for='second-control'],
 #third-control:checked ~ .controls__label[for='third-control'] {
   border: 3px solid $clr-darkblue;
-  background-color: #ffffff;
+  background-color: $clr-white;
 }

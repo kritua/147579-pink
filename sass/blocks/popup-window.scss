@@ -2,14 +2,57 @@
 
 .popup-window {
   text-align: center;
-  box-shadow: 0 0 13px 0 #ccc;
+  box-shadow: 0 0 13px 0 $clr-grey;
+  padding-top: 24px;
+  padding-bottom: 55px;
+  margin-bottom: 20px;
+  @include adaptive(tablet) {
+    width: 460px;
+    margin: 0 auto;
+    padding-top: 6px;
+    padding-bottom: 70px;
+  }
+  &--success {
+    padding-bottom: 0;
+    @include adaptive(desktop) {
+      width: 780px;
+    }
+    .popup-window__text {
+      margin-bottom: 33px;
+      @include adaptive(desktop) {
+        margin-bottom: 38px;
+      }
+    }
+    .popup-window__button {
+      box-shadow: 0 0 13px 0 $clr-grey;
+      padding: 61px 20px 69px;
+      @include adaptive(tablet) {
+        box-shadow: none;
+        padding: 65px 20px 69px;
+      }
+    }
+  }
+  &--failure {
+    @include adaptive(desktop) {
+      .main-container {
+        padding: 0 40px;
+      }
+    }
+  }
 }
 
 .popup-window__header {
   @include font-bold();
   font-size: 18px;
   line-height: 24px;
-  color: #000000;
+  color: $clr-black;
+  margin-bottom: 26px;
+  @include adaptive(tablet) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 60px;
+    margin-bottom: 23px;
+  }
 }
 
 .popup-window__text {
@@ -17,9 +60,14 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-darkblue;
+  margin-bottom: 54px;
+  @include adaptive(tablet) {
+    font-size: 18px;
+    padding: 0 30px;
+  }
 }
 
 .popup-window__button {
-  background-color: $bg-lightgrey;
+  background-color: $clr-lightgrey;
   padding: 50px 20px;
 }

@@ -1,9 +1,9 @@
 @import '../vars';
 
 .pink-effect {
-  background-color: $bg-white;
+  background-color: $clr-white;
   position: relative;
-  padding-top: 50px;
+  padding: 50px 0;
   .main-container {
     display: flex;
   }
@@ -12,22 +12,74 @@
   }
   @include adaptive(tablet) {
     display: block;
+    padding: 54px 0 47px;
+  }
+  @include adaptive(desktop) {
+    background-color: $clr-lightgrey;
+    padding: 49px 0 0;
   }
 }
 
-.pink-effect__clock {
-  flex-basis: 40%;
+.pink-effect__timer,
+.pink-effect__text-block {
+  flex-basis: 50%;
+  width: 238px;
+  height: 276px;
+  @include adaptive(tablet) {
+    margin-top: 4px;
+  }
+  @include adaptive(desktop) {
+    flex-basis: 32%;
+    margin-top: -3px;
+    width: 298px;
+    height: 345px;
+  }
+}
+
+.pink-effect__timer {
+  @include adaptive(tablet) {
+    flex-basis: 39%;
+  }
+  @include adaptive(desktop) {
+    flex-basis: 32%;
+  }
 }
 
 .pink-effect__text-block {
-  flex-basis: 60%;
+  margin-top: 17px;
+  @include adaptive(tablet) {
+    margin-left: auto;
+  }
+  @include adaptive(desktop) {
+    margin-top: 67px;
+    margin-left: auto;
+    flex-basis: 61%;
+    span {
+      padding-right: 60px;
+    }
+  }
 }
 
-.pink-effect_header {
+.pink-effect__header {
   @include font-bold();
   font-size: 30px;
   line-height: 36px;
-  color: #000000;
+  color: $clr-black;
+  @include adaptive(tablet) {
+    margin-bottom: 24px;
+  }
+  @include adaptive(desktop) {
+    line-height: 30px;
+    margin-bottom: 38px;
+  }
+  span {
+    @include adaptive(tablet) {
+      padding-right: 150px;
+    }
+    @include adaptive(desktop) {
+      padding-right: 0;
+    }
+  }
 }
 
 .pink-effect__text {
@@ -35,6 +87,18 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-darkblue;
+  margin-bottom: 9px;
+  margin-top: -14px;
+  @include adaptive(tablet) {
+    margin-right: 5px;
+  }
+  @include adaptive(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 31px;
+    margin-right: 0;
+
+  }
 }
 
 .pink-effect__link {
@@ -42,4 +106,14 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-pink;
+  @include adaptive(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  &:hover {
+    color: $clr-darkblue;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }

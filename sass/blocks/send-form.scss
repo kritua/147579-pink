@@ -1,7 +1,24 @@
 @import '../vars';
 
 .send-form {
-
+  margin-top: 44px;
+  @include adaptive(tablet) {
+    order: 6;
+    margin-top: 65px;
+    margin-right: -1px;
+    margin-bottom: 51px;
+  }
+  @include adaptive(desktop) {
+    flex-basis: 100%;
+    margin-bottom: 0;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    @include adaptive(tablet) {
+      flex-direction: row;
+    }
+  }
 }
 
 .send-form__required {
@@ -10,8 +27,37 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $clr-darkblue;
+  text-align: center;
+  margin-top: 34px;
+  @include adaptive(tablet) {
+    text-align: right;
+    margin-top: 19px;
+  }
 }
 
 .send-form__required-star {
   color: $clr-pink;
+}
+
+.send-form__button {
+  @include adaptive(tablet) {
+    flex-basis: 48.5%;
+  }
+  @include adaptive(desktop) {
+    flex-basis: 32%;
+    margin-right: auto;
+  }
+}
+
+.send-form__text {
+  @include adaptive(tablet) {
+    flex-basis: 51.5%;
+  }
+}
+
+.send-form__hidden-text {
+  display: none;
+  @include adaptive(desktop) {
+    display: inline;
+  }
 }

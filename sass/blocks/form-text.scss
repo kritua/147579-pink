@@ -1,28 +1,146 @@
 @import '../vars';
 
 .form-text {
-  margin-top: 44px;
+  margin-top: 31px;
+  @include adaptive(tablet) {
+    margin-top: 91px;
+  }
   &--contacts {
-    margin-top: 30px;
+    margin-top: -5px;
+    @include adaptive(tablet) {
+      order: 3;
+      margin-top: 5px;
+    }
+    @include adaptive(desktop) {
+      flex-basis: 100%;
+    }
+    .form-text__fieldset {
+      @include adaptive(tablet) {
+        border: 2px solid $clr-lightgrey-1;
+        margin: 56px 0 0;
+        padding: 34px 58px 0;
+      }
+      @include adaptive(desktop) {
+        margin: 13px 0 0;
+        padding: 30px 58px 0;
+      }
+    }
+    .form-text__item-wrapper {
+      @include adaptive(desktop) {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    .form-text__item {
+      @include adaptive(tablet) {
+        flex-direction: column;
+        margin-bottom: 26px;
+      }
+      @include adaptive(desktop) {
+        flex-basis: 50%;
+        margin-bottom: 14px;
+      }
+      &:first-child {
+        @include adaptive(desktop) {
+          margin-right: 72px;
+        }
+      }
+    }
+    .form-text__label {
+      @include adaptive(tablet) {
+        order: 2;
+        align-self: flex-start;
+        padding-left: 19px;
+        margin-top: 9px;
+      }
+    }
+    .form-text__text-input {
+      @include adaptive(tablet) {
+        order: 1;
+      }
+    }
+  }
+  &--names {
+    margin-top: -1px;
+    @include adaptive(tablet) {
+      order: 1;
+      margin-top: 45px;
+    }
+    @include adaptive(desktop) {
+      flex-basis: 50%;
+      margin-top: 47px;
+    }
+    .form-text__fieldset {
+      margin: 23px 0 26px;
+      @include adaptive(tablet) {
+        margin: 23px 0 0;
+      }
+      @include adaptive(desktop) {
+        margin: 20px 0 0;
+      }
+    }
+    .main-container {
+      @include adaptive(desktop) {
+        padding-right: 35px;
+      }
+    }
   }
 }
+
+.form-text__span {
+  @include adaptive(tablet) {
+    display: none;
+  }
+}
+
+.form-text__header-block {
+  @include adaptive(tablet) {
+    background-color: #ffffff;
+    margin: -55px auto 33px;
+    width: 52.5%;
+    display: block;
+  }
+  @include adaptive(desktop) {
+    width: 32.5%;
+    margin: -53px auto 30px;
+  }
+}
+
 .form-text__header {
+  display: none;
   @include font-regular();
   font-size: 14px;
-  line-height: 30px;
-  color: $clr-darkblue;
+  line-height: 18px;
+  color: $clr-pink;
+  text-transform: uppercase;
+  text-align: center;
+  @include adaptive(tablet) {
+    display: block;
+    padding: 0 32px;
+  }
 }
 
 .form-text__fieldset {
   border: none;
   padding: 0;
-  margin: 33px 0 27px;
+  margin: 36px 0 26px;
+  @include adaptive(tablet) {
+    margin: 68px 0 0;
+  }
 }
 
 .form-text__item {
-  margin-bottom: 16px;
+  position: relative;
+  margin-bottom: 18px;
   display: flex;
   flex-direction: column;
+  @include adaptive(tablet) {
+    flex-direction: row;
+    margin-bottom: 48px;
+  }
+  @include adaptive(desktop) {
+    margin-bottom: 49px;
+  }
 }
 
 .form-text__label {
@@ -33,11 +151,69 @@
   text-transform: uppercase;
   padding-left: 23px;
   flex-basis: 100%;
+  @include adaptive(tablet) {
+    flex-basis: 0;
+    padding-left: 0;
+    padding-right: 20px;
+    align-self: center;
+    margin-top: 5px;
+  }
+  @include adaptive(desktop) {
+    margin-top: 8px;
+  }
 }
 
 .form-text__text-input {
-  border: 2px solid #e5e5e5;
-  padding: 20px;
+  border: 2px solid $clr-lightgrey-2;
+  outline: none;
+  min-height: 62px;
+  box-sizing: border-box;
+  padding: 12px 21px;
   margin-top: 5px;
   flex-basis: 100%;
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  @include adaptive(tablet) {
+    padding: 12px 18px;
+  }
+  @include adaptive(desktop) {
+    padding: 12px 18px;
+  }
+  &:hover {
+    border: 2px solid $clr-darkblue;
+  }
+  &:focus {
+    border: 2px solid $clr-pink;
+  }
 }
+
+.form-text__contact-icon {
+  display: none;
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 7px;
+  right: 2px;
+  bottom: 0;
+  background-color: $clr-lightgrey-2;
+  @include adaptive(tablet) {
+    display: block;
+  }
+}
+
+.form-text__icon {
+  display: block;
+  &--phone {
+    width: 20px;
+    height: 20px;
+    margin: 19px auto;
+  }
+  &--mail {
+    width: 18px;
+    height: 14px;
+    margin: 23px auto;
+  }
+}
+

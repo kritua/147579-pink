@@ -1,0 +1,41 @@
+@import '../vars';
+
+.huge-button {
+  width: 100%;
+  outline: none;
+  text-decoration: none;
+  background-color: $clr-green;
+  border: none;
+  border-radius: 2px;
+  padding: 17px;
+  @include font-bold();
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $clr-white;
+  &--fail {
+    padding: 19px 127px;
+    @include adaptive(tablet) {
+      padding: 19px 137px;
+    }
+  }
+  &--success {
+    padding: 19px 67px;
+    @include adaptive(tablet) {
+      padding: 19px 77px;
+    }
+    @include adaptive(desktop) {
+      padding: 19px 157px;
+    }
+  }
+  &:hover {
+    background-color: $clr-darkgreen;
+  }
+  &:active {
+    color: transparentize($clr-white, 0.7);
+  }
+  &:disabled {
+    background-color: $clr-lightgrey-2;
+    color: $clr-white;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../vars';
+
+.footer {
+  text-align: center;
+  @include adaptive(tablet) {
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @include adaptive(desktop) {
+    .main-container {
+      margin: 35px 0 45px;
+    }
+  }
+}
+
+.footer--hidden-mobile {
+  display: none;
+  @include adaptive(tablet) {
+    display: block;
+  }
+}

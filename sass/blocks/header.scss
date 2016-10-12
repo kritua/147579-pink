@@ -3,24 +3,71 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
-
-  &--index {
-    background: url(../../img/iphone-hand-mobile@1x.png) no-repeat 50% 39%, url(../../img/bg-back-mobile@1x.jpg) no-repeat 50% 0%;
-  }
-  &--background {
-    background-color: #1d2631;
-  }
-  &--menu-opened {
-    background-position: 50% 62%, 50% 49%;
+  background: url('../../img/iphone-hand-mobile@1x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
+  @include adaptive(retina) {
+    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+    background-size: 258px auto, 700px auto;
   }
   @include adaptive(tablet) {
-    background-size: 470px 550px, cover;
-    background-position: 75% bottom, top;
+    background: url('../../img/iphone-hand-tablet@1x.png') no-repeat 0 100%, url('../../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
+    @include adaptive(retina) {
+      background: url('../../img/iphone-hand-tablet@2x.png') no-repeat 0 100%, url('../../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+      background-size: 700px auto, 1200px auto;
+    }
   }
   @include adaptive(desktop) {
-    background-size: 555px 645px, cover;
-    background-position: 75% bottom, top;
+    background: url('../../img/iphone-hand-desktop@1x.png') no-repeat 97% 100%, url('../../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
+    @include adaptive(retina) {
+      background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 100%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+      background-size: 700px auto, 1200px auto;
+    }
+  }
+
+  &--pages {
+    background: url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
+    @include adaptive(retina) {
+      background: url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+    }
+    @include adaptive(tablet) {
+      background: url('../../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
+      @include adaptive(retina) {
+        background: url('../../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+      }
+    }
+    @include adaptive(desktop) {
+      background: url('../../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
+      @include adaptive(retina) {
+        background: url('../../img/bg-back-desktop@2x.jpg') no-repeat 50% 0;
+      }
+    }
+    &.header--menu-opened {
+      background-position: 50% 255px;
+      background-size: 700px auto;
+      @include adaptive(tablet) {
+        background-position: 50% 260px;
+        background-size: 1200px auto;
+      }
+      @include adaptive(desktop) {
+        background-position: 50% 0;
+        background-size: 2560px auto;
+      }
+    }
+  }
+
+  &--background {
+    background-color: $bg-darkblue;
+  }
+  &--menu-opened {
+    background-position: 0 61.5%, 50% 49%;
+    @include adaptive(tablet) {
+      background-position: 98% 100%, 50% 100%;
+    }
+    & > .header__navbar {
+      background-color: $clr-darkblue;
+      @include adaptive(desktop) {
+        background-color: rgba(29, 38, 49, 0.3);
+      }
+    }
   }
 }
 
@@ -29,35 +76,93 @@
   font-size: 40px;
   line-height: 48px;
   text-align: center;
-  color: #ffffff;
+  color: $clr-white;
   &--hidden {
     display: none;
     @include adaptive(tablet) {
       display: block;
+      margin-bottom: 30px;
     }
+    @include adaptive(desktop) {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 51px;
+    }
+  }
+  @include adaptive(tablet) {
+    padding: 0 30px;
   }
 }
 
 .header__navbar {
   display: flex;
   flex-direction: column;
-
+  background-color: transparentize($bg-darkblue, 0.7);
   @include adaptive(tablet) {
 
   }
   @include adaptive(desktop) {
     flex-direction: row;
+    justify-content: space-around;
+    padding: 29px 8px;
+  }
+}
+
+.header__logo-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  padding: 20px;
+  @include adaptive(tablet) {
+    padding: 24px 40px 39px;
+    align-items: baseline;
+  }
+  @include adaptive(desktop) {
+    padding: 0;
+    flex-basis: 0;
+    margin-left: 69px;
   }
 }
 
 .header__logo {
-  display: flex;
-  flex-basis: 100%;
-  align-items: center;
-  background-color: transparentize($bg-darkblue, 0.7);
-  padding: 20px;
-  @include adaptive(tablet) {
-    padding: 40px;
+  &:hover {
+    .st0 {
+      fill: $clr-pink;
+    }
+  }
+  &:active {
+    opacity: 0.3;
+    .st0 {
+      fill: $clr-white;
+    }
+  }
+  &--small {
+    fill: $clr-white;
+    @include adaptive(tablet) {
+      display: none;
+    }
+  }
+  &--medium {
+    display: none;
+    @include adaptive(tablet) {
+      fill: $clr-white;
+      display: block;
+    }
+    @include adaptive(desktop) {
+      display: none;
+    }
+  }
+  &--large {
+    display :none;
+    @include adaptive(desktop) {
+      display: block;
+      .st0 {
+        fill: $clr-white;
+      }
+      .st1 {
+        fill: $clr-pink;
+      }
+    }
   }
 }
 
@@ -73,11 +178,9 @@
 .header__main-content {
   position: relative;
   text-align: center;
+  padding-top: 395px;
   @include adaptive(tablet) {
-
-  }
-  @include adaptive(desktop) {
-
+    padding-top: 0;
   }
   &--main-page {
     display: flex;
@@ -88,7 +191,22 @@
     }
   }
   &--pages {
+    padding: 13px 0 68px;
+    @include adaptive(tablet) {
+      padding: 36px 0 106px;
+    }
+    @include adaptive(desktop) {
+      padding: 30px 0 67px;
+    }
+  }
+  &--form-page {
     padding: 13px 0 39px;
+    @include adaptive(tablet) {
+      padding: 36px 0 47px;
+    }
+    @include adaptive(desktop) {
+      padding: 29px 0 67px;
+    }
   }
 }
 
@@ -102,13 +220,42 @@
 .header__button-burger,
 .header__button-close {
   border: none;
+  outline: none;
   background-color: $no-bg-color;
   padding: 0;
+  cursor: pointer;
+  svg {
+    height: 24px;
+    fill: $clr-white;
+  }
+  &:hover {
+    svg {
+      fill: $clr-pink;
+    }
+  }
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.header__menu {
+  @include adaptive(desktop) {
+    flex-basis: 0;
+    white-space: nowrap;
+  }
 }
 
 .header__button--hidden,
 .header__menu--hidden {
   display: none;
+}
+
+.header__menu--hidden {
+  @include adaptive(desktop) {
+    display: block;
+  }
 }
 
 .header__pink-image {
@@ -127,24 +274,77 @@
 .header__menu-list {
   display: flex;
   flex-direction: column;
-  background-color: $bg-darkblue;
+  background-color: $clr-darkblue;
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  @include adaptive(desktop) {
+    background: none;
+    flex-direction: row;
+    margin-left: 48px;
+    margin-top: 2px;
+  }
 }
 
 .header__menu-item {
   padding: 15px;
-  border-top: 2px solid #485461;
-  a {
-    @include font-bold();
-    text-decoration: none;
-    color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  @include adaptive(desktop) {
+    border: none;
+  }
+}
+
+.header__menu-link {
+  position: relative;
+  @include font-bold();
+  text-decoration: none;
+  color: $clr-white;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 11px 0;
+  @include adaptive(desktop) {
+    @include font-regular();
     font-size: 18px;
-    line-height: 32px;
+    line-height: 18px;
+    text-transform: none;
+    margin-right: 50px;
+    &--active {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: $clr-white;
+      }
+      &:hover {
+        &::after {
+          background: $clr-pink;
+        }
+      }
+      &:active {
+        &::after {
+          background: $clr-white;
+          opacity: 0.3;
+        }
+      }
+    }
+    &:active {
+      color: $clr-white;
+      opacity: 0.3;
+    }
+  }
+  &:hover {
+    color: $clr-pink;
+  }
+  &:active {
+    color: $clr-white;
+    opacity: 0.3;
   }
 }
 
@@ -153,11 +353,21 @@
   @include adaptive(tablet) {
     background-color: transparent;
     position: relative;
-    flex-basis: 55%;
+    flex-basis: 54%;
   }
   .main-container {
-    padding-top: 66px;
-    padding-bottom: 93px;
+    padding: 26px 20px 15px;
+    @include adaptive(tablet) {
+      padding: 65px 40px 93px;
+      max-width: 300px;
+    }
+    @include adaptive(desktop) {
+      padding: 67px 130px 93px;
+    }
+  }
+  @include adaptive(desktop) {
+    flex-basis: 47%;
+    margin-top: 7px;
   }
 }
 
@@ -168,13 +378,18 @@
   align-items: baseline;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding-left: 37px;
+  padding-left: 38px;
   @include adaptive(tablet) {
-    list-style: none;
-    display: flex;
-    align-items: baseline;
+    text-align: center;
     margin-top: 45px;
     margin-bottom: 32px;
+    padding: 0 30px;
+  }
+  @include adaptive(desktop) {
+    margin-top: 65px;
+    margin-bottom: 53px;
+    margin-left: -4px;
+    padding: 0 34px;
   }
 }
 
@@ -193,12 +408,15 @@
 
 .header__download-description {
   @include font-light();
-  color: #ffffff;
+  color: $clr-white;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   @include adaptive(tablet) {
     font-size: 18px;
+  }
+  @include adaptive(desktop) {
+    margin-bottom: 27px;
   }
 }
 
@@ -207,8 +425,20 @@
   @include font-light();
   font-size: 24px;
   line-height: 29px;
-  color: #ffffff;
+  color: $clr-white;
   padding: $content-padding;
+  @include adaptive(tablet) {
+    font-size: 50px;
+    line-height: 60px;
+    padding: 0 100px;
+  }
+  @include adaptive(desktop) {
+    padding: 0 300px;
+  }
 }
 
-
+.header__form-header {
+  @include adaptive(desktop) {
+    padding: 0 200px;
+  }
+}
