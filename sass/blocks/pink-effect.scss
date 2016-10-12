@@ -36,6 +36,15 @@
   }
 }
 
+.pink-effect__timer {
+  @include adaptive(tablet) {
+    flex-basis: 39%;
+  }
+  @include adaptive(desktop) {
+    flex-basis: 32%;
+  }
+}
+
 .pink-effect__text-block {
   margin-top: 17px;
   @include adaptive(tablet) {
