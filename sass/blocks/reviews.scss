@@ -9,11 +9,11 @@
     overflow: hidden;
   }
   @include adaptive(tablet) {
-    padding-top: 51px;
+    padding-top: 41px;
     margin-bottom: -7px;
   }
   @include adaptive(desktop) {
-    padding-top: 74px;
+    padding-top: 69px;
   }
 }
 
@@ -44,6 +44,7 @@
     font-size: 20px;
     order: 2;
     margin-bottom: -5px;
+    margin-top: 22px;
   }
   @include adaptive(desktop) {
     font-size: 24px;

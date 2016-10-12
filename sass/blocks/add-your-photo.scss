@@ -40,6 +40,8 @@
 }
 
 .add-your-photo__image {
+  width: auto;
+  height: auto;
   @include adaptive(tablet) {
     flex-basis: 50%;
   }
@@ -226,7 +228,7 @@
   @include adaptive(tablet) {
     width: 24px;
     height: 24px;
-    margin-top: 2px;
+    margin-top: 4px;
   }
   @include adaptive(desktop) {
     width: 48px;
@@ -275,7 +277,7 @@
   flex-direction: column;
   @include adaptive(desktop) {
     flex-direction: row;
-    margin-top: 146px;
+    margin-top: 144px;
   }
 }
 

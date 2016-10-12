@@ -13,6 +13,9 @@
     @include adaptive(desktop) {
       display: none;
     }
+    .controls__label {
+      margin: 17px 8px 26px;
+    }
   }
 }
 

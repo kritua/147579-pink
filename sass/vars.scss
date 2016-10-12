@@ -30,28 +30,28 @@ $content-padding: 0 20px;
 $mobile-width: 320px;
 $tablet-width: 700px;
 $desktop-width: 1200px;
-$retina-res: "min-resolution: 144dpi";
-$retina-dpi: "min-resolution: 1.5dppx";
+$retina-res: 'min-resolution: 144dpi';
+$retina-dpi: 'min-resolution: 1.5dppx';
 
 //Mixins
 
 @mixin font-regular() {
-  font-family: "OpenSans", 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'OpenSans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: normal;
 }
 
 @mixin font-light() {
-  font-family: "OpenSansLight", 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'OpenSansLight', 'Helvetica Neue', Arial, sans-serif;
   font-weight: lighter;
 }
 
 @mixin font-semibold() {
-  font-family: "OpenSans", 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'OpenSans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
 }
 
 @mixin font-bold() {
-  font-family: "OpenSansBold", 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'OpenSansBold', 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
 }
 
