@@ -28,6 +28,9 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+  @include adaptive(desktop) {
+    margin: 0 120px;
+  }
 }
 
 .photos__item {
@@ -36,9 +39,11 @@
   background-color: $clr-lightgrey;
   margin-bottom: 20px;
   position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
   @include adaptive(tablet) {
     margin-bottom: 20px;
-    flex-basis: 48.5%;
+    flex-basis: 42.5%;
     min-height: 454px;
     &:nth-child(2n+2) {
       margin-right: auto;
@@ -61,7 +66,6 @@
     .photos__item-img {
       margin: 0 -20px -4px;
       @include adaptive(tablet) {
-        margin: 0 -40px;
         flex-grow: 1;
         flex-basis: 100%;
       }

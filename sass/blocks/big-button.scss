@@ -20,8 +20,7 @@
     color: transparentize($clr-darkblue, 0.9);
     padding: 16px 100px;
     @include adaptive(tablet) {
-      margin-top: 13px;
-      margin-left: 3px;
+      margin: 0 auto;
       padding: 16px 92px;
     }
     @include adaptive(desktop) {
@@ -59,11 +58,9 @@
   &--add-photo {
     border-color: $clr-pink;
     color: $clr-pink;
-    margin-top: 38px;
-    margin-bottom: 12px;
+    margin: 38px auto 12px;
     @include adaptive(tablet) {
-      margin-top: 46px;
-      margin-left: 4px;
+      margin: 46px auto 20px;
       padding: 15px 79px;
     }
     @include adaptive(desktop) {

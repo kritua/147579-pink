@@ -12,7 +12,7 @@
     z-index: 3;
   }
   @include adaptive(desktop) {
-    background: linear-gradient(-3.7deg, $clr-lightgrey 87%, $clr-white 87%);
+    background: linear-gradient(-2deg, $clr-lightgrey 87%, $clr-white 87%);
     padding-top: 141px;
     margin-top: 34px;
     padding-bottom: 95px;

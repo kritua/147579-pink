@@ -2,29 +2,29 @@
 
 .add-your-photo {
   margin-top: 22px;
+  padding-top: 22px;
+  background-color: $clr-lightgrey;
   @include adaptive(tablet) {
     margin-top: 44px;
   }
   @include adaptive(desktop) {
     margin-top: -9px;
-    padding: 0 130px 28px;
+    padding: 20px 130px 28px;
   }
 }
 
 .add-your-photo__editor {
-  background-color: $clr-lightgrey;
-  margin-top: 43px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 20px;
+  text-align: center;
   @include adaptive(tablet) {
-    margin-top: 69px;
     padding: 57px 40px 32px;
     display: flex;
     flex-direction: row;
   }
   @include adaptive(desktop) {
-    margin-top: 66px;
     padding: 57px 81px 37px;
   }
 }
@@ -275,6 +275,7 @@
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   @include adaptive(desktop) {
     flex-direction: row;
     margin-top: 144px;

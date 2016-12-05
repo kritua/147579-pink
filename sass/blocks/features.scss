@@ -13,7 +13,7 @@
   @include adaptive(desktop) {
     position: relative;
     margin-bottom: 0;
-    background: linear-gradient(-4.5deg, $clr-lightgrey 83%, $clr-white 83%);
+    background: linear-gradient(-3deg, $clr-lightgrey 83%, $clr-white 83%);
   }
 }
 
@@ -65,8 +65,7 @@
     display: none;
     @include adaptive(desktop) {
       display: block;
-      padding: 0 3px 0 7px;
-      margin: 0;
+      margin: 0 auto;
     }
   }
   &--hidden-desktop {

@@ -31,10 +31,10 @@ gulp.task('style', function() {
         'last 2 Edge versions'
       ]})
     ]))
-    .pipe(gulp.dest('build/css'))
-    .pipe(minify())
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('css'))
+    //.pipe(minify())
+    //.pipe(rename('style.min.css'))
+    //.pipe(gulp.dest('build/css'))
     .pipe(server.stream());
 });
 

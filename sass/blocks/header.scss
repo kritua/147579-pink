@@ -3,41 +3,41 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: url('../../img/iphone-hand-mobile@1x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
+  background: url('../img/iphone-hand-mobile@1x.png') no-repeat 0 39%, url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
   @include adaptive(retina) {
-    background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 39%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+    background: url('../img/iphone-hand-mobile@2x.png') no-repeat 0 39%, url('../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
     background-size: 258px auto, 700px auto;
   }
   @include adaptive(tablet) {
-    background: url('../../img/iphone-hand-tablet@1x.png') no-repeat 0 100%, url('../../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
+    background: url('../img/iphone-hand-tablet@1x.png') no-repeat 0 100%, url('../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
     @include adaptive(retina) {
-      background: url('../../img/iphone-hand-tablet@2x.png') no-repeat 0 100%, url('../../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+      background: url('../img/iphone-hand-tablet@2x.png') no-repeat 0 100%, url('../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
       background-size: 700px auto, 1200px auto;
     }
   }
   @include adaptive(desktop) {
-    background: url('../../img/iphone-hand-desktop@1x.png') no-repeat 97% 100%, url('../../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
+    background: url('../img/iphone-hand-desktop@1x.png') no-repeat 97% 100%, url('../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
     @include adaptive(retina) {
-      background: url('../../img/iphone-hand-mobile@2x.png') no-repeat 0 100%, url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+      background: url('../img/iphone-hand-mobile@2x.png') no-repeat 0 100%, url('../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
       background-size: 700px auto, 1200px auto;
     }
   }
 
   &--pages {
-    background: url('../../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
+    background: url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
     @include adaptive(retina) {
-      background: url('../../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+      background: url('../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
     }
     @include adaptive(tablet) {
-      background: url('../../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
+      background: url('../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
       @include adaptive(retina) {
-        background: url('../../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+        background: url('../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
       }
     }
     @include adaptive(desktop) {
-      background: url('../../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
+      background: url('../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
       @include adaptive(retina) {
-        background: url('../../img/bg-back-desktop@2x.jpg') no-repeat 50% 0;
+        background: url('../img/bg-back-desktop@2x.jpg') no-repeat 50% 0;
       }
     }
     &.header--menu-opened {
@@ -60,7 +60,7 @@
   &--menu-opened {
     background-position: 0 61.5%, 50% 49%;
     @include adaptive(tablet) {
-      background-position: 98% 100%, 50% 100%;
+      background-position: 50% 100%, 50% 100%;
     }
     & > .header__navbar {
       background-color: $clr-darkblue;
@@ -178,7 +178,7 @@
 .header__main-content {
   position: relative;
   text-align: center;
-  padding-top: 395px;
+  padding-top: 438px;
   @include adaptive(tablet) {
     padding-top: 0;
   }
